@@ -77,15 +77,17 @@ function displayStartups(startups) {
 function createStartupCard(startup) {
     const card = document.createElement('div');
     card.className = 'startup-card';
+    card.id = `startup-${startup.id}`;
     
     // Create logo section
     const logoDiv = document.createElement('div');
     logoDiv.className = 'startup-logo';
     const logoImg = document.createElement('img');
     logoImg.src = startup.logo;
-    logoImg.alt = `${startup.name} logo`;
+    logoImg.alt = `${startup.name} - ${startup.description}`;
     logoImg.onerror = function() {
         this.src = 'assets/logos/placeholder.svg';
+        this.alt = 'Placeholder logo';
     };
     logoDiv.appendChild(logoImg);
     

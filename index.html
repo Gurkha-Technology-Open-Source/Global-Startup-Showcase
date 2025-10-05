@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nepali Startup Showcase</title>
-    <meta name="description" content="A curated showcase of innovative Nepali startups across various industries.">
     
+    <!-- Primary Meta Tags -->
+    <title>Nepali Startup Showcase</title>
+    <meta name="title" content="Nepali Startup Showcase">
+    <meta name="description" content="A curated showcase of innovative Nepali startups across various industries. Discover the next big thing from Nepal.">
+    <meta name="keywords" content="Nepali startups, Nepal, startups, tech, innovation, Foodmandu, eSewa, Pathao, Sastodeal, Khalti, Tootle, Daraz, Bhoj Deals, VIANET, Gyapu, Mero Share, Hamro Patro">
+    <meta name="author" content="Nepali Startup Showcase">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gurkha-technology-open-source.github.io/Nepali-Startup-Showcase/">
+    <meta property="og:title" content="Nepali Startup Showcase">
+    <meta property="og:description" content="A curated showcase of innovative Nepali startups across various industries. Discover the next big thing from Nepal.">
+    <meta property="og:image" content="https://gurkha-technology-open-source.github.io/Nepali-Startup-Showcase/assets/logos/placeholder.svg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gurkha-technology-open-source.github.io/Nepali-Startup-Showcase/">
+    <meta property="twitter:title" content="Nepali Startup Showcase">
+    <meta property="twitter:description" content="A curated showcase of innovative Nepali startups across various industries. Discover the next big thing from Nepal.">
+    <meta property="twitter:image" content="https://gurkha-technology-open-source.github.io/Nepali-Startup-Showcase/assets/logos/placeholder.svg">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -25,55 +44,59 @@
         </div>
     </header>
 
-    <!-- Search and Filter Section -->
-    <section class="container mx-auto px-4 py-8">
-        <div class="bg-white rounded-lg shadow-md p-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Search Box -->
-                <div>
-                    <label for="searchInput" class="block text-sm font-medium text-gray-700 mb-2">
-                        Search Startups
-                    </label>
-                    <input 
-                        type="text" 
-                        id="searchInput" 
-                        placeholder="Search by name or description..."
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
+    <main>
+        <!-- Search and Filter Section -->
+        <section class="container mx-auto px-4 py-8">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Search Box -->
+                    <div>
+                        <label for="searchInput" class="block text-sm font-medium text-gray-700 mb-2">
+                            Search Startups
+                        </label>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Search by name or description..."
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                    </div>
+                    
+                    <!-- Category Filter -->
+                    <div>
+                        <label for="categoryFilter" class="block text-sm font-medium text-gray-700 mb-2">
+                            Filter by Category
+                        </label>
+                        <select 
+                            id="categoryFilter"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
                 </div>
                 
-                <!-- Category Filter -->
-                <div>
-                    <label for="categoryFilter" class="block text-sm font-medium text-gray-700 mb-2">
-                        Filter by Category
-                    </label>
-                    <select 
-                        id="categoryFilter"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                        <option value="all">All Categories</option>
-                    </select>
+                <!-- Results Count -->
+                <div class="mt-4 text-sm text-gray-600">
+                    <span id="resultsCount">Loading startups...</span>
                 </div>
             </div>
-            
-            <!-- Results Count -->
-            <div class="mt-4 text-sm text-gray-600">
-                <span id="resultsCount">Loading startups...</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Startups Grid -->
-    <section class="container mx-auto px-4 pb-12">
-        <div id="startupsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <!-- Startup cards will be dynamically inserted here -->
-        </div>
-        
-        <!-- No Results Message -->
-        <div id="noResults" class="hidden text-center py-12">
-            <p class="text-gray-500 text-lg">No startups found matching your criteria.</p>
-        </div>
-    </section>
+        <!-- Startups Grid -->
+        <section class="container mx-auto px-4 pb-12">
+            <div id="startupsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Startup cards will be dynamically inserted here -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center py-12">
+                <p class="text-gray-500 text-lg">No startups found matching your criteria.</p>
+            </div>
+        </section>
+    </main>
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6 mt-12">
