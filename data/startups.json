@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "name": "Foodmandu",
+    "logo": "assets/logos/foodmandu.svg",
+    "description": "Nepal's first online food ordering and delivery service connecting customers with restaurants.",
+    "category": "Food & Beverage",
+    "website": "https://foodmandu.com",
+    "socials": {
+      "facebook": "https://facebook.com/foodmandu",
+      "twitter": "https://twitter.com/foodmandu",
+      "instagram": "https://instagram.com/foodmandu"
+    }
+  },
+  {
+    "id": 2,
+    "name": "eSewa",
+    "logo": "assets/logos/esewa.svg",
+    "description": "Leading digital payment solution in Nepal, offering online payment, fund transfer, and utility bill payments.",
+    "category": "Fintech",
+    "website": "https://esewa.com.np",
+    "socials": {
+      "facebook": "https://facebook.com/esewa",
+      "twitter": "https://twitter.com/esewa",
+      "linkedin": "https://linkedin.com/company/esewa"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Pathao",
+    "logo": "assets/logos/pathao.svg",
+    "description": "On-demand ride-sharing and delivery service platform operating across Nepal.",
+    "category": "Transportation",
+    "website": "https://pathao.com",
+    "socials": {
+      "facebook": "https://facebook.com/pathao",
+      "instagram": "https://instagram.com/pathao",
+      "twitter": "https://twitter.com/pathao"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Sastodeal",
+    "logo": "assets/logos/sastodeal.svg",
+    "description": "Nepal's largest online marketplace offering a wide range of products at competitive prices.",
+    "category": "E-commerce",
+    "website": "https://sastodeal.com",
+    "socials": {
+      "facebook": "https://facebook.com/sastodeal",
+      "instagram": "https://instagram.com/sastodeal",
+      "linkedin": "https://linkedin.com/company/sastodeal"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Khalti",
+    "logo": "assets/logos/khalti.svg",
+    "description": "Digital wallet and payment gateway enabling seamless online transactions and bill payments.",
+    "category": "Fintech",
+    "website": "https://khalti.com",
+    "socials": {
+      "facebook": "https://facebook.com/khalti",
+      "twitter": "https://twitter.com/khalti",
+      "instagram": "https://instagram.com/khalti"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Tootle",
+    "logo": "assets/logos/tootle.svg",
+    "description": "Ride-sharing service connecting riders with bike and scooter drivers across Nepal.",
+    "category": "Transportation",
+    "website": "https://tootle.com.np",
+    "socials": {
+      "facebook": "https://facebook.com/tootle",
+      "instagram": "https://instagram.com/tootle",
+      "twitter": "https://twitter.com/tootle"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Daraz Nepal",
+    "logo": "assets/logos/daraz.svg",
+    "description": "Leading e-commerce platform in Nepal offering electronics, fashion, home goods, and more.",
+    "category": "E-commerce",
+    "website": "https://daraz.com.np",
+    "socials": {
+      "facebook": "https://facebook.com/daraz.com.np",
+      "instagram": "https://instagram.com/daraznepal",
+      "twitter": "https://twitter.com/DarazNepal"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Bhoj Deals",
+    "logo": "assets/logos/bhojdeals.svg",
+    "description": "Food delivery and restaurant discovery platform helping customers find the best dining options.",
+    "category": "Food & Beverage",
+    "website": "https://bhojdeals.com",
+    "socials": {
+      "facebook": "https://facebook.com/bhojdeals",
+      "instagram": "https://instagram.com/bhojdeals"
+    }
+  },
+  {
+    "id": 9,
+    "name": "VIANET",
+    "logo": "assets/logos/vianet.svg",
+    "description": "Leading internet service provider delivering high-speed broadband and digital TV services.",
+    "category": "Technology",
+    "website": "https://vianet.com.np",
+    "socials": {
+      "facebook": "https://facebook.com/vianet",
+      "twitter": "https://twitter.com/vianet",
+      "linkedin": "https://linkedin.com/company/vianet"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Gyapu",
+    "logo": "assets/logos/gyapu.svg",
+    "description": "Digital marketplace connecting local vendors with customers for groceries and daily essentials.",
+    "category": "E-commerce",
+    "website": "https://gyapu.com",
+    "socials": {
+      "facebook": "https://facebook.com/gyapu",
+      "instagram": "https://instagram.com/gyapu"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Mero Share",
+    "logo": "assets/logos/meroshare.svg",
+    "description": "Online platform for applying and managing share applications in Nepal's stock market.",
+    "category": "Fintech",
+    "website": "https://meroshare.com.np",
+    "socials": {
+      "facebook": "https://facebook.com/meroshare"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Hamro Patro",
+    "logo": "assets/logos/hamropatro.svg",
+    "description": "Popular Nepali calendar app providing festivals, news, and cultural information.",
+    "category": "Technology",
+    "website": "https://hamropatro.com",
+    "socials": {
+      "facebook": "https://facebook.com/hamropatro",
+      "twitter": "https://twitter.com/hamropatro",
+      "instagram": "https://instagram.com/hamropatro"
+    }
+  }
+]
