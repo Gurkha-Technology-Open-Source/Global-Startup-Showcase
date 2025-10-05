@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gurkha-technology-open-source.github.io/Nepali-Startup-Showcase/sitemap.xml
