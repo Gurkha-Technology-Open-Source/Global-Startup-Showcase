@@ -1,4 +1,4 @@
-/* Custom styles for Nepali Startup Showcase */
+/* Custom styles for Global Startup Showcase */
 
 :root {
     --primary-color: #3b82f6;
@@ -50,6 +50,12 @@
     font-size: 1.25rem;
     font-weight: 700;
     color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.startup-location {
+    font-size: 0.875rem;
+    color: #6b7280;
     margin-bottom: 0.5rem;
 }
 

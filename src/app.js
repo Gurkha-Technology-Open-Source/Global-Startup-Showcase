@@ -1,4 +1,4 @@
-// Nepali Startup Showcase - Main JavaScript
+// Global Startup Showcase - Main JavaScript
 
 let allStartups = [];
 let filteredStartups = [];
@@ -7,6 +7,8 @@ let filteredStartups = [];
 const startupsGrid = document.getElementById('startupsGrid');
 const searchInput = document.getElementById('searchInput');
 const categoryFilter = document.getElementById('categoryFilter');
+const countryFilter = document.getElementById('countryFilter');
+const regionFilter = document.getElementById('regionFilter');
 const resultsCount = document.getElementById('resultsCount');
 const noResults = document.getElementById('noResults');
 
@@ -14,7 +16,7 @@ const noResults = document.getElementById('noResults');
 async function init() {
     try {
         await loadStartups();
-        populateCategoryFilter();
+        populateFilters();
         displayStartups(allStartups);
         setupEventListeners();
     } catch (error) {
@@ -39,15 +41,23 @@ async function loadStartups() {
     }
 }
 
-// Populate category filter dropdown
-function populateCategoryFilter() {
+// Populate filter dropdowns
+function populateFilters() {
     const categories = [...new Set(allStartups.map(startup => startup.category))].sort();
-    
-    categories.forEach(category => {
+    const countries = [...new Set(allStartups.map(startup => startup.country))].sort();
+    const regions = [...new Set(allStartups.map(startup => startup.region))].sort();
+
+    populateDropdown(categoryFilter, categories);
+    populateDropdown(countryFilter, countries);
+    populateDropdown(regionFilter, regions);
+}
+
+function populateDropdown(selectElement, items) {
+    items.forEach(item => {
         const option = document.createElement('option');
-        option.value = category;
-        option.textContent = category;
-        categoryFilter.appendChild(option);
+        option.value = item;
+        option.textContent = item;
+        selectElement.appendChild(option);
     });
 }
 
@@ -99,6 +109,11 @@ function createStartupCard(startup) {
     const nameH3 = document.createElement('h3');
     nameH3.className = 'startup-name';
     nameH3.textContent = startup.name;
+
+    // Location
+    const locationDiv = document.createElement('div');
+    locationDiv.className = 'startup-location';
+    locationDiv.textContent = `${startup.country} - ${startup.region}`;
     
     // Category badge
     const categorySpan = document.createElement('span');
@@ -144,6 +159,7 @@ function createStartupCard(startup) {
     
     // Assemble the card
     contentDiv.appendChild(nameH3);
+    contentDiv.appendChild(locationDiv);
     contentDiv.appendChild(categorySpan);
     contentDiv.appendChild(descP);
     contentDiv.appendChild(linksDiv);
@@ -158,6 +174,8 @@ function createStartupCard(startup) {
 function filterStartups() {
     const searchTerm = searchInput.value.toLowerCase().trim();
     const selectedCategory = categoryFilter.value;
+    const selectedCountry = countryFilter.value;
+    const selectedRegion = regionFilter.value;
     
     filteredStartups = allStartups.filter(startup => {
         // Check search term
@@ -169,8 +187,16 @@ function filterStartups() {
         // Check category
         const matchesCategory = selectedCategory === 'all' || 
             startup.category === selectedCategory;
+
+        // Check country
+        const matchesCountry = selectedCountry === 'all' ||
+            startup.country === selectedCountry;
+
+        // Check region
+        const matchesRegion = selectedRegion === 'all' ||
+            startup.region === selectedRegion;
         
-        return matchesSearch && matchesCategory;
+        return matchesSearch && matchesCategory && matchesCountry && matchesRegion;
     });
     
     displayStartups(filteredStartups);
@@ -195,8 +221,10 @@ function setupEventListeners() {
         searchTimeout = setTimeout(filterStartups, 300);
     });
     
-    // Category filter
+    // Filters
     categoryFilter.addEventListener('change', filterStartups);
+    countryFilter.addEventListener('change', filterStartups);
+    regionFilter.addEventListener('change', filterStartups);
 }
 
 // Initialize the app when DOM is ready

@@ -10,7 +10,9 @@
       "facebook": "https://facebook.com/foodmandu",
       "twitter": "https://twitter.com/foodmandu",
       "instagram": "https://instagram.com/foodmandu"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
       "facebook": "https://facebook.com/esewa",
       "twitter": "https://twitter.com/esewa",
       "linkedin": "https://linkedin.com/company/esewa"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 3,
@@ -36,7 +40,9 @@
       "facebook": "https://facebook.com/pathao",
       "instagram": "https://instagram.com/pathao",
       "twitter": "https://twitter.com/pathao"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 4,
@@ -49,7 +55,9 @@
       "facebook": "https://facebook.com/sastodeal",
       "instagram": "https://instagram.com/sastodeal",
       "linkedin": "https://linkedin.com/company/sastodeal"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 5,
@@ -62,7 +70,9 @@
       "facebook": "https://facebook.com/khalti",
       "twitter": "https://twitter.com/khalti",
       "instagram": "https://instagram.com/khalti"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 6,
@@ -75,7 +85,9 @@
       "facebook": "https://facebook.com/tootle",
       "instagram": "https://instagram.com/tootle",
       "twitter": "https://twitter.com/tootle"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 7,
@@ -88,7 +100,9 @@
       "facebook": "https://facebook.com/daraz.com.np",
       "instagram": "https://instagram.com/daraznepal",
       "twitter": "https://twitter.com/DarazNepal"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 8,
@@ -100,7 +114,9 @@
     "socials": {
       "facebook": "https://facebook.com/bhojdeals",
       "instagram": "https://instagram.com/bhojdeals"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 9,
@@ -113,7 +129,9 @@
       "facebook": "https://facebook.com/vianet",
       "twitter": "https://twitter.com/vianet",
       "linkedin": "https://linkedin.com/company/vianet"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 10,
@@ -125,7 +143,9 @@
     "socials": {
       "facebook": "https://facebook.com/gyapu",
       "instagram": "https://instagram.com/gyapu"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 11,
@@ -136,7 +156,9 @@
     "website": "https://meroshare.com.np",
     "socials": {
       "facebook": "https://facebook.com/meroshare"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
   },
   {
     "id": 12,
@@ -149,6 +171,50 @@
       "facebook": "https://facebook.com/hamropatro",
       "twitter": "https://twitter.com/hamropatro",
       "instagram": "https://instagram.com/hamropatro"
-    }
+    },
+    "country": "Nepal",
+    "region": "Asia"
+  },
+  {
+    "id": 13,
+    "name": "Stripe",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A technology company that builds economic infrastructure for the internet.",
+    "category": "Fintech",
+    "website": "https://stripe.com",
+    "socials": {
+      "twitter": "https://twitter.com/stripe",
+      "linkedin": "https://www.linkedin.com/company/stripe"
+    },
+    "country": "USA",
+    "region": "North America"
+  },
+  {
+    "id": 14,
+    "name": "Klarna",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A Swedish fintech company that provides online financial services.",
+    "category": "Fintech",
+    "website": "https://www.klarna.com/",
+    "socials": {
+      "twitter": "https://twitter.com/klarna",
+      "linkedin": "https://www.linkedin.com/company/klarna"
+    },
+    "country": "Sweden",
+    "region": "Europe"
+  },
+  {
+    "id": 15,
+    "name": "Canva",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A graphic design platform, used to create social media graphics, presentations, posters, documents and other visual content.",
+    "category": "Design",
+    "website": "https://www.canva.com/",
+    "socials": {
+      "twitter": "https://twitter.com/canva",
+      "instagram": "https://www.instagram.com/canva/"
+    },
+    "country": "Australia",
+    "region": "Oceania"
   }
 ]
