@@ -1,6 +1,8 @@
-# Nepali Startup Showcase 🇳🇵
+# Global Startup Showcase 🌍
 
-A responsive web application showcasing innovative startups from Nepal. Browse, search, and discover Nepali startups across various industries.
+[![Hacktoberfest 2025](https://img.shields.io/badge/Hacktoberfest-2025-blue.svg)](https://hacktoberfest.digitalocean.com/)
+
+A responsive web application showcasing innovative startups from around the world. Browse, search, and discover startups across various industries.
 
 ## Features
 
@@ -25,14 +27,14 @@ A responsive web application showcasing innovative startups from Nepal. Browse, 
 
 ## Live Demo
 
-Visit the live site: [Nepali Startup Showcase](https://gurkha-technology-open-source.github.io/Nepali-Startup-Showcase/)
+Visit the live site: [Global Startup Showcase](https://gurkha-technology-open-source.github.io/Global-Startup-Showcase/)
 
 ## Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Gurkha-Technology-Open-Source/Nepali-Startup-Showcase.git
-cd Nepali-Startup-Showcase
+git clone https://github.com/Gurkha-Technology-Open-Source/Global-Startup-Showcase.git
+cd Global-Startup-Showcase
 ```
 
 2. Start a local server:
@@ -80,7 +82,25 @@ To add your startup to the showcase:
 
 ## Contributing
 
-We welcome contributions! Please feel free to submit a Pull Request.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more information.
+
+## Documentation
+
+For more detailed information about the project, please see our [documentation](docs/documentation.md).
+
+## Changelog
+
+For a list of all the recent changes, please see our [changelog](CHANGELOG.md).
+
+## Our Contributors
+
+This project exists thanks to all the people who contribute. 
+
+<a href="https://github.com/Gurkha-Technology-Open-Source/Global-Startup-Showcase/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Gurkha-Technology-Open-Source/Global-Startup-Showcase" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
