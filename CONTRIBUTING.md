@@ -64,7 +64,7 @@ If you're new to open source, we recommend starting with one of our `good first 
 ### Installation
 
 1.  Fork the repository.
-2.  Clone your fork: `git clone https://github.com/your-username/global-startup-showcase.git`
+2.  Clone your fork: `git clone https://github.com/YOUR-USERNAME/global-startup-showcase.git`
 3.  Navigate to the project directory: `cd global-startup-showcase`
 4.  Start a local web server:
     ```bash
