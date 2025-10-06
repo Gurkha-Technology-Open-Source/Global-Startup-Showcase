@@ -58,23 +58,29 @@ If you're new to open source, we recommend starting with one of our `good first 
 
 ### Prerequisites
 
-*   [Node.js](https://nodejs.org/en/)
 *   [Git](https://git-scm.com/)
+*   A local web server (Python, Node.js with npx, or any other HTTP server)
 
 ### Installation
 
 1.  Fork the repository.
 2.  Clone your fork: `git clone https://github.com/your-username/global-startup-showcase.git`
 3.  Navigate to the project directory: `cd global-startup-showcase`
-4.  Install the dependencies: `npm install`
-5.  Run the development server: `npm start`
+4.  Start a local web server:
+    ```bash
+    # Using Python
+    python3 -m http.server 8000
+    
+    # Or using Node.js (no installation required)
+    npx serve
+    ```
+5.  Open your browser and navigate to `http://localhost:8000`
 
 ## Pull Request Process
 
-1.  Ensure any install or build dependencies are removed before the end of the layer when doing a build.
-2.  Update the `README.md` with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
-3.  Increase the version numbers in any examples and the `README.md` to the new version that this Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4.  You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
+1.  Update the `README.md` with details of changes to the interface, this includes new file locations and any new features.
+2.  Increase the version numbers in any examples and the `README.md` to the new version that this Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
+3.  You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
 
 ## License
 
