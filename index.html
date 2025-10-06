@@ -49,6 +49,7 @@
         </div>
     </header>
 
+    <main>
     <!-- Search and Filter Section -->
     <section class="container mx-auto px-4 py-8">
         <div class="bg-white rounded-lg shadow-md p-6">
@@ -65,10 +66,18 @@
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                 </div>
-                
-                <!-- Results Count -->
-                <div class="mt-4 text-sm text-gray-600">
-                    <span id="resultsCount">Loading startups...</span>
+
+                <!-- Category Filter -->
+                <div>
+                    <label for="categoryFilter" class="block text-sm font-medium text-gray-700 mb-2">
+                        Filter by Category
+                    </label>
+                    <select 
+                        id="categoryFilter"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    >
+                        <option value="all">All Categories</option>
+                    </select>
                 </div>
 
                 <!-- Country Filter -->
@@ -96,6 +105,11 @@
                         <option value="all">All Regions</option>
                     </select>
                 </div>
+            </div>
+
+            <!-- Results Count -->
+            <div class="mt-4 text-sm text-gray-600">
+                <span id="resultsCount">Loading startups...</span>
             </div>
         </div>
     </section>
