@@ -34,7 +34,7 @@ This project and everyone participating in it is governed by the [Contributor Co
 
 ### Reporting Bugs
 
-If you find a bug, please open an issue on our [issue tracker](https://github.com/your-username/global-startup-showcase/issues). Please include as much detail as possible, including:
+If you find a bug, please open an issue on our [issue tracker](https://github.com/YOUR-USERNAME/global-startup-showcase/issues). Please include as much detail as possible, including:
 
 *   A clear and descriptive title.
 *   A detailed description of the bug.
@@ -43,7 +43,7 @@ If you find a bug, please open an issue on our [issue tracker](https://github.co
 
 ### Suggesting Enhancements
 
-If you have an idea for an enhancement, please open an issue on our [issue tracker](https://github.com/your-username/global-startup-showcase/issues). Please include as much detail as possible, including:
+If you have an idea for an enhancement, please open an issue on our [issue tracker](https://github.com/YOUR-USERNAME/global-startup-showcase/issues). Please include as much detail as possible, including:
 
 *   A clear and descriptive title.
 *   A detailed description of the enhancement.
@@ -64,7 +64,7 @@ If you're new to open source, we recommend starting with one of our `good first 
 ### Installation
 
 1.  Fork the repository.
-2.  Clone your fork: `git clone https://github.com/your-username/global-startup-showcase.git`
+2.  Clone your fork: `git clone https://github.com/YOUR-USERNAME/global-startup-showcase.git`
 3.  Navigate to the project directory: `cd global-startup-showcase`
 4.  Install the dependencies: `npm install`
 5.  Run the development server: `npm start`
