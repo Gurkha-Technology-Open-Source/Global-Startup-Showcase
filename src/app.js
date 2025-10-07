@@ -93,7 +93,7 @@ function createStartupCard(startup) {
     const logoDiv = document.createElement('div');
     logoDiv.className = 'startup-logo';
     const logoImg = document.createElement('img');
-    logoImg.src = startup.logo;
+    logoImg.src = startup.logoUrl;
     logoImg.alt = `${startup.name} - ${startup.description}`;
     logoImg.onerror = function() {
         this.src = 'assets/logos/placeholder.svg';
