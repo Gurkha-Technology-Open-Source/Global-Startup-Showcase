@@ -133,10 +133,11 @@ function createStartupCard(startup) {
     const logoDiv = document.createElement('div');
     logoDiv.className = 'startup-logo';
     const logoImg = document.createElement('img');
+    logoImg.crossOrigin = 'anonymous';
     logoImg.src = startup.logoUrl;
     logoImg.alt = `${startup.name} - ${startup.description}`;
     logoImg.onerror = function() {
-        this.src = 'assets/logos/placeholder.svg';
+        this.src = startup.logo;
         this.alt = 'Placeholder logo';
     };
     logoDiv.appendChild(logoImg);
@@ -160,10 +161,10 @@ function createStartupCard(startup) {
     categorySpan.className = 'startup-category';
     categorySpan.textContent = startup.category;
     
-    // Description
-    const descP = document.createElement('p');
-    descP.className = 'startup-description';
-    descP.textContent = startup.description;
+    contentDiv.appendChild(nameH3);
+    contentDiv.appendChild(locationDiv);
+    contentDiv.appendChild(categorySpan);
+    contentDiv.appendChild(descP);
 
     // Founded
     if (startup.founded) {

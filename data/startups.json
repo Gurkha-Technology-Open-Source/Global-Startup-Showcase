@@ -1,193 +1,4117 @@
 [
   {
     "id": 1,
-    "name": "Perplexity AI",
+    "name": "Stripe",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://www.perplexity.ai/images/logo.svg",
-    "description": "An AI-powered conversational search engine.",
-    "category": "Artificial Intelligence",
-    "website": "https://www.perplexity.ai/",
+    "logoUrl": "https://stripe.com/img/v3/home/social.png",
+    "description": "Stripe is a financial infrastructure platform for businesses, providing payment processing software and APIs for internet businesses.",
+    "category": "Fintech",
+    "website": "https://stripe.com",
     "socials": {
-      "twitter": "https://twitter.com/perplexity_ai",
-      "linkedin": "https://www.linkedin.com/company/perplexityai"
+      "twitter": "https://twitter.com/stripe",
+      "linkedin": "https://www.linkedin.com/company/stripe/"
     },
     "country": "USA",
     "region": "North America",
-    "founded": 2022,
-    "founders": ["Aravind Srinivas", "Denis Yarats", "Johnny Ho", "Andy Konwinski"],
-    "funding": "$1.5B+",
-    "investors": ["Jeff Bezos", "Nvidia", "New Enterprise Associates (NEA)", "IVP", "SoftBank Vision Fund", "Databricks", "Tobias Lütke", "Nat Friedman"]
+    "founded": 2010,
+    "founders": [
+      "Patrick Collison",
+      "John Collison"
+    ],
+    "funding": "$8.7B",
+    "investors": [
+      "Sequoia Capital",
+      "Andreessen Horowitz",
+      "General Catalyst"
+    ],
+    "ceo": "Patrick Collison"
   },
   {
     "id": 2,
-    "name": "LangChain",
+    "name": "OpenAI",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://www.langchain.com/assets/images/logo.svg",
-    "description": "A framework for developing applications powered by language models.",
+    "logoUrl": "https://images.openai.com/social/openai-og.jpg",
+    "description": "OpenAI is an AI research and deployment company that aims to ensure that artificial general intelligence benefits all of humanity.",
     "category": "Artificial Intelligence",
-    "website": "https://www.langchain.com/",
+    "website": "https://openai.com",
     "socials": {
-      "twitter": "https://twitter.com/langchainai",
-      "linkedin": "https://www.linkedin.com/company/langchain"
+      "twitter": "https://twitter.com/OpenAI",
+      "linkedin": "https://www.linkedin.com/company/openai/"
     },
     "country": "USA",
     "region": "North America",
-    "founded": 2023,
-    "founders": ["Harrison Chase", "Ankush Gola"],
-    "funding": "$135M",
-    "investors": ["Benchmark", "Sequoia Capital", "IVP", "Amplify Partners", "Conviction", "Lux Capital"]
+    "founded": 2015,
+    "founders": [
+      "Sam Altman",
+      "Greg Brockman",
+      "Ilya Sutskever",
+      "John Schulman",
+      "Vicki Cheung",
+      "Andrej Karpathy",
+      "Durk King",
+      "Jessica Livingston",
+      "Helen Toner"
+    ],
+    "funding": "$11B",
+    "investors": [
+      "Microsoft",
+      "Khosla Ventures",
+      "Reid Hoffman"
+    ],
+    "ceo": "Sam Altman"
   },
   {
     "id": 3,
-    "name": "RunPod",
+    "name": "Anthropic",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://www.runpod.io/brand-resources/logo-dark.svg",
-    "description": "A cloud platform for AI and machine learning that provides GPU instances, serverless GPUs, and AI endpoints.",
-    "category": "Cloud Computing",
-    "website": "https://www.runpod.io/",
+    "logoUrl": "https://www.anthropic.com/images/logos/logo-anthropic-blue.svg",
+    "description": "Anthropic is an AI safety and research company that builds reliable, interpretable, and steerable AI systems, including the Claude chatbot.",
+    "category": "Artificial Intelligence",
+    "website": "https://www.anthropic.com",
     "socials": {
-      "twitter": "https://twitter.com/runpod_io",
-      "linkedin": "https://www.linkedin.com/company/runpod"
+      "twitter": "https://twitter.com/AnthropicAI",
+      "linkedin": "https://www.linkedin.com/company/anthropicai/"
     },
     "country": "USA",
     "region": "North America",
-    "founded": 2022,
-    "founders": ["Zhen Lu", "Pardeep Singh"],
-    "funding": "$38.5M",
-    "investors": ["Intel Capital", "Dell Technologies Capital", "Julien Chaummond", "Nat Friedman", "Adam Lewis"]
+    "founded": 2021,
+    "founders": [
+      "Dario Amodei",
+      "Daniela Amodei"
+    ],
+    "funding": "$7.3B",
+    "investors": [
+      "Google",
+      "Amazon",
+      "Spark Capital"
+    ],
+    "ceo": "Dario Amodei"
   },
   {
     "id": 4,
-    "name": "Scribe",
+    "name": "Revolut",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://scribehow.com/images/logo.svg",
-    "description": "An AI-powered tool that automatically creates step-by-step guides for any process.",
-    "category": "Productivity",
-    "website": "https://scribehow.com/",
+    "logoUrl": "https://www.revolut.com/app/themes/revolut2020/assets/img/revolut-logo.svg",
+    "description": "Revolut is a global financial superapp, offering banking services, money transfers, currency exchange, and more.",
+    "category": "Fintech",
+    "website": "https://www.revolut.com",
     "socials": {
-      "twitter": "https://twitter.com/scribehow",
-      "linkedin": "https://www.linkedin.com/company/scribehow"
+      "twitter": "https://twitter.com/RevolutApp",
+      "linkedin": "https://www.linkedin.com/company/revolut/"
     },
-    "country": "USA",
-    "region": "North America",
-    "founded": 2019,
-    "founders": ["Aaron Podolny", "Jennifer Smith"],
-    "funding": "$53M",
-    "investors": ["Redpoint Ventures", "Tiger Global Management", "AME Cloud Ventures", "Amplify Partners", "New York Life Ventures"]
+    "country": "United Kingdom",
+    "region": "Europe",
+    "founded": 2015,
+    "founders": [
+      "Nikolay Storonsky",
+      "Vlad Yatsenko"
+    ],
+    "funding": "$1.7B",
+    "investors": [
+      "SoftBank Vision Fund",
+      "Tiger Global Management",
+      "TCV"
+    ],
+    "ceo": "Nikolay Storonsky"
   },
   {
     "id": 5,
-    "name": "Replicate",
+    "name": "Celonis",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://replicate.com/images/logo.svg",
-    "description": "A platform for running and sharing open-source machine learning models.",
-    "category": "Artificial Intelligence",
-    "website": "https://replicate.com/",
+    "logoUrl": "https://www.celonis.com/fileadmin/templates/images/celonis-logo-blue.svg",
+    "description": "Celonis is a process mining and execution management company that helps businesses discover and fix inefficiencies in their operations.",
+    "category": "Enterprise Software",
+    "website": "https://www.celonis.com",
     "socials": {
-      "twitter": "https://twitter.com/replicate",
-      "linkedin": "https://www.linkedin.com/company/replicate"
+      "twitter": "https://twitter.com/Celonis",
+      "linkedin": "https://www.linkedin.com/company/celonis/"
     },
-    "country": "USA",
-    "region": "North America",
-    "founded": null,
-    "founders": [],
-    "funding": null,
-    "investors": []
+    "country": "Germany",
+    "region": "Europe",
+    "founded": 2011,
+    "founders": [
+      "Bastian Nominacher",
+      "Martin Klenk",
+      "Alexander Rinke"
+    ],
+    "funding": "$1.4B",
+    "investors": [
+      "Accel",
+      "Andreessen Horowitz",
+      "Arena Holdings"
+    ],
+    "ceo": "Alexander Rinke"
   },
   {
     "id": 6,
-    "name": "FlutterFlow",
+    "name": "Doctolib",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://flutterflow.io/images/logo.svg",
-    "description": "A low-code platform for building native mobile and web applications.",
-    "category": "Developer Tools",
-    "website": "https://flutterflow.io/",
+    "logoUrl": "https://pro.doctolib.fr/static/img/logo-doctolib.svg",
+    "description": "Doctolib is a healthcare booking platform and software provider for medical professionals in Europe.",
+    "category": "Healthtech",
+    "website": "https://www.doctolib.fr",
     "socials": {
-      "twitter": "https://twitter.com/flutterflow",
-      "linkedin": "https://www.linkedin.com/company/flutterflow"
+      "twitter": "https://twitter.com/Doctolib",
+      "linkedin": "https://www.linkedin.com/company/doctolib/"
     },
-    "country": "USA",
-    "region": "North America",
-    "founded": 2020,
-    "founders": ["Alex Greaves", "Abel Mengistu"],
-    "funding": "$28M",
-    "investors": ["Google Ventures (GV)", "Gradient Ventures", "Xoogler Ventures", "Y Combinator", "Gaingels", "CRV", "10X Capital", "Leonis Investment", "SB Opportunity Fund"]
+    "country": "France",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Stanislas Niox-Chateau",
+      "Ivan Schneider",
+      "Jessy Bernal"
+    ],
+    "funding": "$800M",
+    "investors": [
+      "Accel",
+      "Eurazeo",
+      "Bpifrance"
+    ],
+    "ceo": "Stanislas Niox-Chateau"
   },
   {
     "id": 7,
-    "name": "ClickUp",
+    "name": "LayerZero Labs",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://clickup.com/brand/logos/logo-dark.svg",
-    "description": "A cloud-based collaboration and project management tool.",
-    "category": "Productivity",
-    "website": "https://clickup.com/",
+    "logoUrl": "https://layerzero.network/layerzero-logo-dark.svg",
+    "description": "LayerZero is an omnichain interoperability protocol that enables decentralized applications across multiple blockchains.",
+    "category": "Blockchain",
+    "website": "https://layerzero.network",
     "socials": {
-      "twitter": "https://twitter.com/clickup",
-      "linkedin": "https://www.linkedin.com/company/clickup-app"
+      "twitter": "https://twitter.com/LayerZero_Labs",
+      "linkedin": "https://www.linkedin.com/company/layerzerolabs/"
     },
-    "country": "USA",
+    "country": "Canada",
     "region": "North America",
-    "founded": 2017,
-    "founders": ["Zeb Evans", "Alex Yurkowski"],
-    "funding": "$535M",
-    "investors": ["Andreessen Horowitz", "Tiger Global Management", "Craft Ventures", "Georgian", "Lightspeed Venture Partners", "Meritech Capital Partners", "468 Capital", "HubSpot Ventures"]
+    "founded": 2021,
+    "founders": [
+      "Bryan Pellegrino",
+      "Ryan Zarick",
+      "Caleb Banister"
+    ],
+    "funding": "$293M",
+    "investors": [
+      "Andreessen Horowitz",
+      "Sequoia Capital",
+      "Tiger Global"
+    ],
+    "ceo": "Bryan Pellegrino"
   },
   {
     "id": 8,
+    "name": "Razorpay",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://razorpay.com/assets/razorpay-logo.svg",
+    "description": "Razorpay provides payment solutions to businesses, enabling them to accept, process, and disburse payments.",
+    "category": "Fintech",
+    "website": "https://razorpay.com",
+    "socials": {
+      "twitter": "https://twitter.com/Razorpay",
+      "linkedin": "https://www.linkedin.com/company/razorpay/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2014,
+    "founders": [
+      "Harshil Mathur",
+      "Shashank Kumar"
+    ],
+    "funding": "$741M",
+    "investors": [
+      "Sequoia Capital India",
+      "Tiger Global Management",
+      "GIC"
+    ],
+    "ceo": "Harshil Mathur"
+  },
+  {
+    "id": 9,
+    "name": "Nium",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.nium.com/wp-content/uploads/2021/08/logo-nium.svg",
+    "description": "Nium is a global payments platform that provides real-time cross-border payments and financial services for businesses.",
+    "category": "Fintech",
+    "website": "https://www.nium.com",
+    "socials": {
+      "twitter": "https://twitter.com/NiumPayments",
+      "linkedin": "https://www.linkedin.com/company/nium-payments/"
+    },
+    "country": "Singapore",
+    "region": "Asia",
+    "founded": 2014,
+    "founders": [
+      "Prajit Nanu",
+      "Michael Bermingham"
+    ],
+    "funding": "$300M",
+    "investors": [
+      "Riverwood Capital",
+      "Temasek",
+      "Visa"
+    ],
+    "ceo": "Prajit Nanu"
+  },
+  {
+    "id": 10,
+    "name": "Monday.com",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://monday.com/static/images/monday-logo-icon.svg",
+    "description": "monday.com is a work operating system (Work OS) that powers organizations to manage projects and workflows.",
+    "category": "Enterprise Software",
+    "website": "https://monday.com",
+    "socials": {
+      "twitter": "https://twitter.com/mondaydotcom",
+      "linkedin": "https://www.linkedin.com/company/mondaydotcom/"
+    },
+    "country": "Israel",
+    "region": "Asia",
+    "founded": 2012,
+    "founders": [
+      "Roy Man",
+      "Eran Zinman"
+    ],
+    "funding": "$234M",
+    "investors": [
+      "Insight Partners",
+      "Sapphire Ventures",
+      "Hamilton Lane"
+    ],
+    "ceo": "Roy Man"
+  },
+  {
+    "id": 11,
+    "name": "Voi Technology",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.voiapp.io/static/images/logo_voi_blue.svg",
+    "description": "Voi Technology is a Swedish micro-mobility company offering electric scooter and bike sharing services.",
+    "category": "Transportation",
+    "website": "https://www.voiapp.io",
+    "socials": {
+      "twitter": "https://twitter.com/VoiTechnology",
+      "linkedin": "https://www.linkedin.com/company/voitechnology/"
+    },
+    "country": "Sweden",
+    "region": "Europe",
+    "founded": 2018,
+    "founders": [
+      "Fredrik Hjelm",
+      "Adam Jafery",
+      "Douglas Stark"
+    ],
+    "funding": "$470M",
+    "investors": [
+      "Vostok New Ventures",
+      "Balderton Capital",
+      "Creandum"
+    ],
+    "ceo": "Fredrik Hjelm"
+  },
+  {
+    "id": 12,
     "name": "Airwallex",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://www.airwallex.com/static/images/logo.svg",
-    "description": "A global fintech platform for businesses, providing international payments, currency exchange, and other financial services.",
+    "logoUrl": "https://www.airwallex.com/static/airwallex-logo-light.svg",
+    "description": "Airwallex is a fintech company offering global payments and financial infrastructure to businesses.",
     "category": "Fintech",
-    "website": "https://www.airwallex.com/",
+    "website": "https://www.airwallex.com",
     "socials": {
-      "twitter": "https://twitter.com/airwallex",
-      "linkedin": "https://www.linkedin.com/company/airwallex"
+      "twitter": "https://twitter.com/Airwallex",
+      "linkedin": "https://www.linkedin.com/company/airwallex/"
     },
     "country": "Australia",
     "region": "Oceania",
     "founded": 2015,
-    "founders": ["Jack Zhang", "Lucy Liu", "Max Li", "Xijing Dai", "Ki-Lok Wong"],
-    "funding": "$1.2B",
-    "investors": ["Square Peg", "DST Global", "Lone Pine Capital", "Blackbird", "Airtree", "Salesforce Ventures", "Visa Ventures", "Tencent", "HongShan (formerly Sequoia Capital China)", "Hillhouse Capital", "Horizons Ventures", "Gobi Partners"]
+    "founders": [
+      "Jack Zhang",
+      "Lucy Liu",
+      "Max Li",
+      "Qun Liu",
+      "Xijing Dai"
+    ],
+    "funding": "$900M",
+    "investors": [
+      "DST Global",
+      "Salesforce Ventures",
+      "Grok Ventures"
+    ],
+    "ceo": "Jack Zhang"
   },
   {
-    "id": 9,
-    "name": "Pipe",
+    "id": 13,
+    "name": "Creditas",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://pipe.com/images/logo.svg",
-    "description": "A trading platform for companies with recurring revenue streams.",
+    "logoUrl": "https://credit.as/assets/images/creditas-logo.svg",
+    "description": "Creditas is a Brazilian fintech company offering secured loans, payroll-deductible loans, and home equity.",
     "category": "Fintech",
-    "website": "https://pipe.com/",
+    "website": "https://www.creditas.com.br",
     "socials": {
-      "twitter": "https://twitter.com/pipe",
-      "linkedin": "https://www.linkedin.com/company/pipe-trading"
+      "twitter": "https://twitter.com/creditas",
+      "linkedin": "https://www.linkedin.com/company/creditas/"
     },
-    "country": "USA",
-    "region": "North America",
-    "founded": 2019,
-    "founders": [],
-    "funding": "$316M",
-    "investors": ["Craft Ventures", "Greenspring Associates", "Anthemis Group", "Fin Capital", "Next47", "Raptor Group", "Victory Park Capital"],
-    "ceo": "Luke Voiles"
+    "country": "Brazil",
+    "region": "South America",
+    "founded": 2012,
+    "founders": [
+      "Sergio Furió",
+      "Renato Ruiz",
+      "Jose Gabriel Rodriguez"
+    ],
+    "funding": "$800M",
+    "investors": [
+      "SoftBank Vision Fund",
+      "Kaszek Ventures",
+      "Vostok New Ventures"
+    ],
+    "ceo": "Sergio Furió"
   },
   {
-    "id": 10,
-    "name": "Gopuff",
+    "id": 14,
+    "name": "SmartNews",
     "logo": "assets/logos/placeholder.svg",
-    "logoUrl": "https://gopuff.com/images/logo.svg",
-    "description": "An instant commerce platform that delivers a variety of items, including food, drinks, and home essentials.",
-    "category": "E-commerce",
-    "website": "https://gopuff.com/",
+    "logoUrl": "https://assets.smartnews.com/brand/logo_smartnews_black_2.svg",
+    "description": "SmartNews is a news aggregation app that delivers high-quality news from various publishers to users worldwide.",
+    "category": "Media",
+    "website": "https://www.smartnews.com",
     "socials": {
-      "twitter": "https://twitter.com/gopuff",
-      "linkedin": "https://www.linkedin.com/company/gopuff"
+      "twitter": "https://twitter.com/smartnews",
+      "linkedin": "https://www.linkedin.com/company/smartnews-inc-/"
+    },
+    "country": "Japan",
+    "region": "Asia",
+    "founded": 2012,
+    "founders": [
+      "Ken Suzuki",
+      "Takeshi Shimada"
+    ],
+    "funding": "$490M",
+    "investors": [
+      "Globis Capital Partners",
+      "SMBC Venture Capital",
+      "Japan Co-invest IV"
+    ],
+    "ceo": "Ken Suzuki"
+  },
+  {
+    "id": 15,
+    "name": "Viva Republica (Toss)",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://toss.im/img/toss_logo.svg",
+    "description": "Viva Republica operates Toss, a financial super app in South Korea offering a wide range of financial services.",
+    "category": "Fintech",
+    "website": "https://toss.im",
+    "socials": {
+      "twitter": null,
+      "linkedin": "https://www.linkedin.com/company/viva-republica-toss/"
+    },
+    "country": "South Korea",
+    "region": "Asia",
+    "founded": 2013,
+    "founders": [
+      "Lee Seung-gun"
+    ],
+    "funding": "$940M",
+    "investors": [
+      "Sequoia Capital China",
+      "Kleiner Perkins",
+      "Goodwater Capital"
+    ],
+    "ceo": "Lee Seung-gun"
+  },
+  {
+    "id": 16,
+    "name": "MessageBird",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.messagebird.com/img/messagebird-logo.svg",
+    "description": "MessageBird is a cloud communications platform that connects enterprises to their customers globally via various channels.",
+    "category": "SaaS",
+    "website": "https://www.messagebird.com",
+    "socials": {
+      "twitter": "https://twitter.com/messagebird",
+      "linkedin": "https://www.linkedin.com/company/messagebird/"
+    },
+    "country": "Netherlands",
+    "region": "Europe",
+    "founded": 2011,
+    "founders": [
+      "Robert Vis"
+    ],
+    "funding": "$1.1B",
+    "investors": [
+      "BlackRock",
+      "Atomico",
+      "Y Combinator"
+    ],
+    "ceo": "Robert Vis"
+  },
+  {
+    "id": 17,
+    "name": "Wallbox",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://wallbox.com/wp-content/themes/wallbox/assets/img/logo-white.svg",
+    "description": "Wallbox designs, develops, and manufactures smart electric vehicle charging solutions for home, public, and business use.",
+    "category": "Clean Energy",
+    "website": "https://wallbox.com",
+    "socials": {
+      "twitter": "https://twitter.com/wallbox_chargers",
+      "linkedin": "https://www.linkedin.com/company/wallboxchargers/"
+    },
+    "country": "Spain",
+    "region": "Europe",
+    "founded": 2015,
+    "founders": [
+      "Enric Asunción",
+      "Mateu Platon"
+    ],
+    "funding": "$217M",
+    "investors": [
+      "Iberdrola",
+      "Endesa",
+      "Seaya Ventures"
+    ],
+    "ceo": "Enric Asunción"
+  },
+  {
+    "id": 18,
+    "name": "Nexthink",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.nexthink.com/wp-content/uploads/2021/02/nexthink-logo-red.svg",
+    "description": "Nexthink provides digital employee experience management software that helps IT teams improve workforce productivity.",
+    "category": "Enterprise Software",
+    "website": "https://www.nexthink.com",
+    "socials": {
+      "twitter": "https://twitter.com/nexthink",
+      "linkedin": "https://www.linkedin.com/company/nexthink/"
+    },
+    "country": "Switzerland",
+    "region": "Europe",
+    "founded": 2004,
+    "founders": [
+      "Pedro Bados",
+      "Yassine Zaied"
+    ],
+    "funding": "$400M",
+    "investors": [
+      "Permira",
+      "Highland Europe",
+      "Forestay Capital"
+    ],
+    "ceo": "Pedro Bados"
+  },
+  {
+    "id": 19,
+    "name": "Intercom",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.intercom.com/static/brand/Intercom-Logo-Red.svg",
+    "description": "Intercom offers a customer messaging platform that helps businesses communicate with customers across the customer journey.",
+    "category": "SaaS",
+    "website": "https://www.intercom.com",
+    "socials": {
+      "twitter": "https://twitter.com/intercom",
+      "linkedin": "https://www.linkedin.com/company/intercom/"
+    },
+    "country": "Ireland",
+    "region": "Europe",
+    "founded": 2011,
+    "founders": [
+      "Eoghan McCabe",
+      "Des Traynor",
+      "Ciaran Lee",
+      "Bobby Pinero"
+    ],
+    "funding": "$241M",
+    "investors": [
+      "Kleiner Perkins",
+      "Bessemer Venture Partners",
+      "Index Ventures"
+    ],
+    "ceo": "Karen Peacock"
+  },
+  {
+    "id": 20,
+    "name": "Kavak",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://kavak.com/static/icons/logo-header-desktop.svg",
+    "description": "Kavak is an online platform for buying and selling pre-owned cars in Latin America, aiming to digitize the auto industry.",
+    "category": "Automotive",
+    "website": "https://kavak.com",
+    "socials": {
+      "twitter": "https://twitter.com/KavakMX",
+      "linkedin": "https://www.linkedin.com/company/kavak-com/"
+    },
+    "country": "Mexico",
+    "region": "North America",
+    "founded": 2016,
+    "founders": [
+      "Carlos Garcia Ottati",
+      "Loreanne Garcia Ottati",
+      "Roger Laughlin"
+    ],
+    "funding": "$1.6B",
+    "investors": [
+      "SoftBank Vision Fund",
+      "Greenoaks Capital",
+      "General Atlantic"
+    ],
+    "ceo": "Carlos Garcia Ottati"
+  },
+  {
+    "id": 21,
+    "name": "Flutterwave",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://flutterwave.com/images/fw-logo-colored-dark.svg",
+    "description": "Flutterwave is a payments technology company that provides a payment infrastructure for global merchants and payment service providers.",
+    "category": "Fintech",
+    "website": "https://flutterwave.com",
+    "socials": {
+      "twitter": "https://twitter.com/theflutterwave",
+      "linkedin": "https://www.linkedin.com/company/flutterwave/"
+    },
+    "country": "Nigeria",
+    "region": "Africa",
+    "founded": 2016,
+    "founders": [
+      "Olugbenga Agboola",
+      "Iyinoluwa Aboyeji"
+    ],
+    "funding": "$480M",
+    "investors": [
+      "Tiger Global Management",
+      "Avenir Growth Capital",
+      "Visa"
+    ],
+    "ceo": "Olugbenga Agboola"
+  },
+  {
+    "id": 22,
+    "name": "Pargo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://pargo.co.za/wp-content/uploads/2021/05/Pargo-Logo-Primary-blue-small.svg",
+    "description": "Pargo offers a network of parcel pick-up points in South Africa, enabling convenient e-commerce deliveries and returns.",
+    "category": "Logistics",
+    "website": "https://pargo.co.za",
+    "socials": {
+      "twitter": "https://twitter.com/PargoSA",
+      "linkedin": "https://www.linkedin.com/company/pargo/"
+    },
+    "country": "South Africa",
+    "region": "Africa",
+    "founded": 2015,
+    "founders": [
+      "Lars Veul",
+      "Derk Hoekert"
+    ],
+    "funding": null,
+    "investors": [
+      "Standard Bank",
+      "Small Enterprise Finance Agency"
+    ],
+    "ceo": "Lars Veul"
+  },
+  {
+    "id": 23,
+    "name": "Xendit",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://xendit.co/static/xendit-logo-dark.svg",
+    "description": "Xendit is a financial technology company that provides payment solutions and digital infrastructure for businesses in Southeast Asia.",
+    "category": "Fintech",
+    "website": "https://xendit.co",
+    "socials": {
+      "twitter": "https://twitter.com/xendit",
+      "linkedin": "https://www.linkedin.com/company/xendit/"
+    },
+    "country": "Indonesia",
+    "region": "Asia",
+    "founded": 2015,
+    "founders": [
+      "Moses Lo",
+      "Teguh Koot",
+      "Bo Chen"
+    ],
+    "funding": "$538M",
+    "investors": [
+      "Tiger Global Management",
+      "Accel",
+      "Insight Partners"
+    ],
+    "ceo": "Moses Lo"
+  },
+  {
+    "id": 24,
+    "name": "Kitopi",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://kitopi.com/wp-content/themes/kitopi/assets/img/Kitopi-Logo.svg",
+    "description": "Kitopi operates a network of cloud kitchens, partnering with restaurants to expand their delivery reach and efficiency.",
+    "category": "Food & Beverage",
+    "website": "https://kitopi.com",
+    "socials": {
+      "twitter": "https://twitter.com/Kitopi",
+      "linkedin": "https://www.linkedin.com/company/kitopi/"
+    },
+    "country": "UAE",
+    "region": "Asia",
+    "founded": 2018,
+    "founders": [
+      "Mohamad Ballout",
+      "Samer Hamadeh",
+      "Andy Tarabay",
+      "Samira Farmer"
+    ],
+    "funding": "$770M",
+    "investors": [
+      "SoftBank Vision Fund 2",
+      "Chimera Capital",
+      "B. Riley Principal Investments"
+    ],
+    "ceo": "Mohamad Ballout"
+  },
+  {
+    "id": 25,
+    "name": "Oura Health",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://ouraring.com/assets/img/logo-dark.svg",
+    "description": "Oura Health develops the Oura Ring, a smart ring that tracks sleep, activity, and readiness to provide personalized health insights.",
+    "category": "Wearable Tech",
+    "website": "https://ouraring.com",
+    "socials": {
+      "twitter": "https://twitter.com/ouraring",
+      "linkedin": "https://www.linkedin.com/company/ouraring/"
+    },
+    "country": "Finland",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Petteri Lahtela",
+      "Hannu Kinnunen",
+      "Markku Koskela"
+    ],
+    "funding": "$300M",
+    "investors": [
+      "Forerunner Ventures",
+      "Temasek",
+      "Elysian Park Ventures"
+    ],
+    "ceo": "Tom Hale"
+  },
+  {
+    "id": 26,
+    "name": "Pleo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.pleo.io/wp-content/themes/pleo/assets/images/pleo-logo.svg",
+    "description": "Pleo offers smart company cards and spend management software to automate expense reports and control business spending.",
+    "category": "Fintech",
+    "website": "https://www.pleo.io",
+    "socials": {
+      "twitter": "https://twitter.com/PleoHQ",
+      "linkedin": "https://www.linkedin.com/company/pleo-io/"
+    },
+    "country": "Denmark",
+    "region": "Europe",
+    "founded": 2015,
+    "founders": [
+      "Jeppe Rindom",
+      "Niccolo Perra"
+    ],
+    "funding": "$487M",
+    "investors": [
+      "Bain Capital Ventures",
+      "Lightspeed Venture Partners",
+      "Accel"
+    ],
+    "ceo": "Jeppe Rindom"
+  },
+  {
+    "id": 27,
+    "name": "Oda",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://oda.com/static/img/oda-logo.svg",
+    "description": "Oda is an online grocery store and delivery service in Norway and Finland, known for its efficient logistics and last-mile delivery.",
+    "category": "E-commerce",
+    "website": "https://oda.com",
+    "socials": {
+      "twitter": "https://twitter.com/oda_online",
+      "linkedin": "https://www.linkedin.com/company/oda-norge/"
+    },
+    "country": "Norway",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Karl Munthe-Kaas",
+      "Mats Martinsen",
+      "Jon Kåre Helland"
+    ],
+    "funding": "$390M",
+    "investors": [
+      "Kinnevik",
+      "Summa Equity",
+      "SoftBank Vision Fund"
+    ],
+    "ceo": "Karl Munthe-Kaas"
+  },
+  {
+    "id": 28,
+    "name": "Collibra",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.collibra.com/wp-content/themes/collibra/assets/images/logo.svg",
+    "description": "Collibra provides a data intelligence cloud platform that helps organizations understand and trust their data assets.",
+    "category": "Enterprise Software",
+    "website": "https://www.collibra.com",
+    "socials": {
+      "twitter": "https://twitter.com/Collibra",
+      "linkedin": "https://www.linkedin.com/company/collibra/"
+    },
+    "country": "Belgium",
+    "region": "Europe",
+    "founded": 2008,
+    "founders": [
+      "Felix Van de Maele",
+      "Stijn Christiaens",
+      "Damien Dubois",
+      "Pieter De Leenheer"
+    ],
+    "funding": "$543M",
+    "investors": [
+      "Insight Partners",
+      "ICONIQ Capital",
+      "Sofina"
+    ],
+    "ceo": "Felix Van de Maele"
+  },
+  {
+    "id": 29,
+    "name": "Satispay",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://satispay.com/static/satispay-logo-white-on-blue-b3c9780a.svg",
+    "description": "Satispay is an Italian mobile payment system that allows users to pay in stores, exchange money with friends, and pay bills.",
+    "category": "Fintech",
+    "website": "https://satispay.com",
+    "socials": {
+      "twitter": "https://twitter.com/satispay",
+      "linkedin": "https://www.linkedin.com/company/satispay/"
+    },
+    "country": "Italy",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Alberto Dalmasso",
+      "Dario Brignone",
+      "Samuele Pinta"
+    ],
+    "funding": "$400M",
+    "investors": [
+      "Square Enix",
+      "Tencent Holdings",
+      "Addition"
+    ],
+    "ceo": "Alberto Dalmasso"
+  },
+  {
+    "id": 30,
+    "name": "Ualá",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets-global.website-files.com/6249257bbdf62f47387431c1/627a8581e285d1e43e1d13d7_logo-uala-white.svg",
+    "description": "Ualá is an Argentine fintech company that offers a mobile banking app, prepaid Mastercard, and financial services.",
+    "category": "Fintech",
+    "website": "https://www.uala.com.ar",
+    "socials": {
+      "twitter": "https://twitter.com/ualacard",
+      "linkedin": "https://www.linkedin.com/company/uala/"
+    },
+    "country": "Argentina",
+    "region": "South America",
+    "founded": 2017,
+    "founders": [
+      "Pierpaolo Barbieri"
+    ],
+    "funding": "$560M",
+    "investors": [
+      "Tencent Holdings",
+      "SoftBank Group",
+      "Soros Fund Management"
+    ],
+    "ceo": "Pierpaolo Barbieri"
+  },
+  {
+    "id": 31,
+    "name": "NotCo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://notco.com/us/img/notco-logo-white.svg",
+    "description": "NotCo is a food tech company that uses AI to create plant-based food alternatives, such as milk, burgers, and ice cream.",
+    "category": "Food & Beverage",
+    "website": "https://notco.com",
+    "socials": {
+      "twitter": "https://twitter.com/NotCoUS",
+      "linkedin": "https://www.linkedin.com/company/notco/"
+    },
+    "country": "Chile",
+    "region": "South America",
+    "founded": 2015,
+    "founders": [
+      "Matías Muchnick",
+      "Karim Pichara",
+      "Pablo Zamora"
+    ],
+    "funding": "$360M",
+    "investors": [
+      "Tiger Global Management",
+      "Enzyme",
+      "Jeff Bezos (via Bezos Expeditions)"
+    ],
+    "ceo": "Matías Muchnick"
+  },
+  {
+    "id": 32,
+    "name": "Platzi",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://static.platzi.com/static/images/logo.svg",
+    "description": "Platzi is an online education platform offering courses in web development, design, marketing, and business.",
+    "category": "Edtech",
+    "website": "https://platzi.com",
+    "socials": {
+      "twitter": "https://twitter.com/platzi",
+      "linkedin": "https://www.linkedin.com/company/platzi/"
+    },
+    "country": "Colombia",
+    "region": "South America",
+    "founded": 2014,
+    "founders": [
+      "Freddy Vega",
+      "Christian Van Der Henst"
+    ],
+    "funding": "$80M",
+    "investors": [
+      "Founders Fund",
+      "Y Combinator",
+      "Foundation Capital"
+    ],
+    "ceo": "Freddy Vega"
+  },
+  {
+    "id": 33,
+    "name": "MNT-Halan",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://halan.com/static/media/logo-halan-dark.14811a76.svg",
+    "description": "MNT-Halan is an Egyptian fintech company providing digital banking services, including microfinance, payments, and consumer finance.",
+    "category": "Fintech",
+    "website": "https://halan.com",
+    "socials": {
+      "twitter": "https://twitter.com/MNTHalan",
+      "linkedin": "https://www.linkedin.com/company/mnt-halan/"
+    },
+    "country": "Egypt",
+    "region": "Africa",
+    "founded": 2017,
+    "founders": [
+      "Mounir Nakhla"
+    ],
+    "funding": "$400M",
+    "investors": [
+      "Apis Partners",
+      "Chimera Capital",
+      "Majid Al Futtaim Holding"
+    ],
+    "ceo": "Mounir Nakhla"
+  },
+  {
+    "id": 34,
+    "name": "M-Kopa",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://m-kopa.com/wp-content/themes/mkopa/assets/img/logo.svg",
+    "description": "M-Kopa provides pay-as-you-go solar energy, smartphones, and financial services to underserved customers in Africa.",
+    "category": "Clean Energy",
+    "website": "https://m-kopa.com",
+    "socials": {
+      "twitter": "https://twitter.com/MKOPA",
+      "linkedin": "https://www.linkedin.com/company/m-kopa/"
+    },
+    "country": "Kenya",
+    "region": "Africa",
+    "founded": 2011,
+    "founders": [
+      "Chad Larson",
+      "Jesse Moore",
+      "Nick Hughes"
+    ],
+    "funding": "$300M",
+    "investors": [
+      "Generation Investment Management",
+      "CDC Group",
+      "Lightrock"
+    ],
+    "ceo": "Jesse Moore"
+  },
+  {
+    "id": 35,
+    "name": "MoMo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://static.mservice.io/img/logo-momo.svg",
+    "description": "MoMo is a leading mobile e-wallet and payment application in Vietnam, offering a wide range of financial services.",
+    "category": "Fintech",
+    "website": "https://momo.vn",
+    "socials": {
+      "twitter": "https://twitter.com/MoMoVietnam",
+      "linkedin": "https://www.linkedin.com/company/momo-payment/"
+    },
+    "country": "Vietnam",
+    "region": "Asia",
+    "founded": 2009,
+    "founders": [
+      "Nguyen Manh Tuong"
+    ],
+    "funding": "$300M",
+    "investors": [
+      "Warburg Pincus",
+      "Goodwater Capital",
+      "Affinity Equity Partners"
+    ],
+    "ceo": "Pham Thanh Duc"
+  },
+  {
+    "id": 36,
+    "name": "Flash Express",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.flashexpress.com/assets/img/logo.svg",
+    "description": "Flash Express is a comprehensive e-commerce logistics and delivery service provider in Thailand and Southeast Asia.",
+    "category": "Logistics",
+    "website": "https://www.flashexpress.com",
+    "socials": {
+      "twitter": null,
+      "linkedin": "https://www.linkedin.com/company/flash-express-thailand/"
+    },
+    "country": "Thailand",
+    "region": "Asia",
+    "founded": 2018,
+    "founders": [
+      "Komsan Saelee"
+    ],
+    "funding": "$1.5B",
+    "investors": [
+      "Tencent Holdings",
+      "Jungle Ventures",
+      "SCB 10X"
+    ],
+    "ceo": "Komsan Saelee"
+  },
+  {
+    "id": 37,
+    "name": "Carsome",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.carsome.com/my/logo.svg",
+    "description": "Carsome is Southeast Asia's largest integrated car e-commerce platform, simplifying the car buying and selling process.",
+    "category": "Automotive",
+    "website": "https://www.carsome.com",
+    "socials": {
+      "twitter": "https://twitter.com/CarsomeGroup",
+      "linkedin": "https://www.linkedin.com/company/carsome/"
+    },
+    "country": "Malaysia",
+    "region": "Asia",
+    "founded": 2015,
+    "founders": [
+      "Eric Cheng",
+      "Teoh Jiun Ee"
+    ],
+    "funding": "$1B",
+    "investors": [
+      "65 Equity Partners",
+      "Asia Partners",
+      "Gobi Partners"
+    ],
+    "ceo": "Eric Cheng"
+  },
+  {
+    "id": 38,
+    "name": "Sharesies",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.sharesies.nz/images/sharesies-logo.svg",
+    "description": "Sharesies is an investment platform that makes investing accessible for everyone, allowing users to buy fractional shares in companies.",
+    "category": "Fintech",
+    "website": "https://www.sharesies.nz",
+    "socials": {
+      "twitter": "https://twitter.com/sharesies",
+      "linkedin": "https://www.linkedin.com/company/sharesies/"
+    },
+    "country": "New Zealand",
+    "region": "Oceania",
+    "founded": 2017,
+    "founders": [
+      "Brooke Roberts",
+      "Leighton Roberts",
+      "Richard Francis",
+      "Marty Venter",
+      "Rustem Hayroudinov",
+      "Vincent Lim"
+    ],
+    "funding": "$100M",
+    "investors": [
+      "Brand new Co",
+      "Wellington Management",
+      "NZ Growth Capital Partners"
+    ],
+    "ceo": "Brooke Roberts"
+  },
+  {
+    "id": 39,
+    "name": "GoStudent",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.gostudent.org/hubfs/GoStudent_logo.svg",
+    "description": "GoStudent is an online tutoring platform that connects students with qualified teachers for personalized learning experiences.",
+    "category": "Edtech",
+    "website": "https://www.gostudent.org",
+    "socials": {
+      "twitter": "https://twitter.com/GoStudent_DE",
+      "linkedin": "https://www.linkedin.com/company/gostudent/"
+    },
+    "country": "Austria",
+    "region": "Europe",
+    "founded": 2016,
+    "founders": [
+      "Felix Ohswald",
+      "Gregor Müller"
+    ],
+    "funding": "$691M",
+    "investors": [
+      "Left Lane Capital",
+      "SoftBank Vision Fund 2",
+      "Tencent"
+    ],
+    "ceo": "Felix Ohswald"
+  },
+  {
+    "id": 40,
+    "name": "DocPlanner",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.docplanner.com/logo-docplanner.svg",
+    "description": "DocPlanner operates a leading platform for booking medical appointments and managing patient reviews in Europe and Latin America.",
+    "category": "Healthtech",
+    "website": "https://www.docplanner.com",
+    "socials": {
+      "twitter": "https://twitter.com/DocPlanner",
+      "linkedin": "https://www.linkedin.com/company/docplanner/"
+    },
+    "country": "Poland",
+    "region": "Europe",
+    "founded": 2010,
+    "founders": [
+      "Mariusz Gralewski"
+    ],
+    "funding": "$400M",
+    "investors": [
+      "One Peak Partners",
+      "Goldman Sachs Asset Management",
+      "Accel"
+    ],
+    "ceo": "Mariusz Gralewski"
+  },
+  {
+    "id": 41,
+    "name": "Feedzai",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://feedzai.com/assets/img/feedzai-logo.svg",
+    "description": "Feedzai is an AI-powered risk management platform that helps financial institutions detect and prevent financial crime.",
+    "category": "Fintech",
+    "website": "https://feedzai.com",
+    "socials": {
+      "twitter": "https://twitter.com/feedzai",
+      "linkedin": "https://www.linkedin.com/company/feedzai/"
+    },
+    "country": "Portugal",
+    "region": "Europe",
+    "founded": 2009,
+    "founders": [
+      "Nuno Sebastião",
+      "Paulo Marques",
+      "Pedro Bizarro"
+    ],
+    "funding": "$255M",
+    "investors": [
+      "KKR",
+      "Sapphire Ventures",
+      "Citi Ventures"
+    ],
+    "ceo": "Nuno Sebastião"
+  },
+  {
+    "id": 42,
+    "name": "Rohlik Group",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.rohlik.group/static/img/rohlik-group-logo.svg",
+    "description": "Rohlik Group is a leading European online grocery delivery service, operating under brands like Rohlik.cz and Knuspr.de.",
+    "category": "E-commerce",
+    "website": "https://www.rohlik.group",
+    "socials": {
+      "twitter": "https://twitter.com/RohlikGroup",
+      "linkedin": "https://www.linkedin.com/company/rohlikgroup/"
+    },
+    "country": "Czech Republic",
+    "region": "Europe",
+    "founded": 2014,
+    "founders": [
+      "Tomáš Čupr"
+    ],
+    "funding": "$600M",
+    "investors": [
+      "Par Invest",
+      "Quadrille Capital",
+      "Index Ventures"
+    ],
+    "ceo": "Tomáš Čupr"
+  },
+  {
+    "id": 43,
+    "name": "Bolt",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://bolt.eu/static/images/bolt-logo-black.svg",
+    "description": "Bolt is an Estonian transportation platform offering ride-hailing, micromobility, food delivery, and grocery delivery services.",
+    "category": "Transportation",
+    "website": "https://bolt.eu",
+    "socials": {
+      "twitter": "https://twitter.com/Boltapp",
+      "linkedin": "https://www.linkedin.com/company/bolt/"
+    },
+    "country": "Estonia",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Markus Villig"
+    ],
+    "funding": "$2.3B",
+    "investors": [
+      "Sequoia Capital",
+      "D1 Capital Partners",
+      "Naya Capital Management"
+    ],
+    "ceo": "Markus Villig"
+  },
+  {
+    "id": 44,
+    "name": "Vinted",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.vinted.co.uk/assets/vinted_logo-8c35b0b182d8d8ce35df1789c6ec1d15582f3475f91e3e7f33d7120a28f8f2d5.svg",
+    "description": "Vinted is a second-hand fashion marketplace that allows users to buy, sell, and swap pre-owned clothing and accessories.",
+    "category": "E-commerce",
+    "website": "https://www.vinted.com",
+    "socials": {
+      "twitter": "https://twitter.com/Vinted",
+      "linkedin": "https://www.linkedin.com/company/vinted/"
+    },
+    "country": "Lithuania",
+    "region": "Europe",
+    "founded": 2008,
+    "founders": [
+      "Milda Mitkute",
+      "Justas Janauskas",
+      "Donatas Srederis"
+    ],
+    "funding": "$560M",
+    "investors": [
+      "Accel",
+      "Insight Partners",
+      "Lightspeed Venture Partners"
+    ],
+    "ceo": "Thomas Plantenga"
+  },
+  {
+    "id": 45,
+    "name": "Printful",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.printful.com/static/images/logo.svg",
+    "description": "Printful is an on-demand printing and dropshipping company that helps e-commerce businesses create and sell custom products.",
+    "category": "E-commerce",
+    "website": "https://www.printful.com",
+    "socials": {
+      "twitter": "https://twitter.com/Printful",
+      "linkedin": "https://www.linkedin.com/company/printful/"
+    },
+    "country": "Latvia",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Davis Siksnans",
+      "Lauris Liberts"
+    ],
+    "funding": "$130M",
+    "investors": [
+      "Bregal Sagemount"
+    ],
+    "ceo": "Davis Siksnans"
+  },
+  {
+    "id": 46,
+    "name": "Bitrise",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.bitrise.io/assets/images/logo.svg",
+    "description": "Bitrise is a mobile CI/CD platform that automates the development and testing of mobile applications.",
+    "category": "Developer Tools",
+    "website": "https://www.bitrise.io",
+    "socials": {
+      "twitter": "https://twitter.com/bitrise",
+      "linkedin": "https://www.linkedin.com/company/bitrise/"
+    },
+    "country": "Hungary",
+    "region": "Europe",
+    "founded": 2014,
+    "founders": [
+      "Barnabas Birmacher",
+      "Viktor Benei",
+      "Daniel Szoke"
+    ],
+    "funding": "$80M",
+    "investors": [
+      "Insight Partners",
+      "Partech",
+      "OpenOcean"
+    ],
+    "ceo": "Barnabas Birmacher"
+  },
+  {
+    "id": 47,
+    "name": "MultiversX (formerly Elrond)",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://multiversx.com/assets/images/logo.svg",
+    "description": "MultiversX is a highly scalable blockchain platform for the new internet economy, aiming to provide a high-bandwidth, low-latency, and low-cost execution environment.",
+    "category": "Blockchain",
+    "website": "https://multiversx.com",
+    "socials": {
+      "twitter": "https://twitter.com/MultiversX",
+      "linkedin": "https://www.linkedin.com/company/multiversx/"
+    },
+    "country": "Romania",
+    "region": "Europe",
+    "founded": 2017,
+    "founders": [
+      "Beniamin Mincu",
+      "Lucian Mincu",
+      "Lucian Todea"
+    ],
+    "funding": "$10M",
+    "investors": [
+      "Binance Labs",
+      "Electric Capital",
+      "NGC Ventures"
+    ],
+    "ceo": "Beniamin Mincu"
+  },
+  {
+    "id": 48,
+    "name": "Trendyol",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://cdn.dsmcdn.com/web/production/trendyol-logo-black.svg",
+    "description": "Trendyol is a leading e-commerce platform in Turkey, offering fashion, electronics, home goods, and groceries.",
+    "category": "E-commerce",
+    "website": "https://www.trendyol.com",
+    "socials": {
+      "twitter": "https://twitter.com/trendyol",
+      "linkedin": "https://www.linkedin.com/company/trendyol/"
+    },
+    "country": "Turkey",
+    "region": "Asia",
+    "founded": 2010,
+    "founders": [
+      "Demet Mutlu"
+    ],
+    "funding": "$2.5B",
+    "investors": [
+      "Alibaba Group",
+      "SoftBank Vision Fund 2",
+      "General Atlantic"
+    ],
+    "ceo": "Çağlayan Çetin"
+  },
+  {
+    "id": 49,
+    "name": "STC Pay",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://stcpay.com.sa/assets/images/logo.svg",
+    "description": "STC Pay is a digital wallet and financial services provider, offering seamless payments and money transfers in Saudi Arabia.",
+    "category": "Fintech",
+    "website": "https://stcpay.com.sa",
+    "socials": {
+      "twitter": "https://twitter.com/stcpay_ksa",
+      "linkedin": "https://www.linkedin.com/company/stc-pay/"
+    },
+    "country": "Saudi Arabia",
+    "region": "Asia",
+    "founded": 2018,
+    "founders": [
+      "Ahmed Alenazi"
+    ],
+    "funding": null,
+    "investors": [
+      "STC Group"
+    ],
+    "ceo": "Ahmed Alenazi"
+  },
+  {
+    "id": 50,
+    "name": "Snoonu",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.snoonu.com/themes/snoonu/assets/images/logo.svg",
+    "description": "Snoonu is a leading tech startup in Qatar offering on-demand delivery services for food, groceries, and more.",
+    "category": "E-commerce",
+    "website": "https://www.snoonu.com",
+    "socials": {
+      "twitter": "https://twitter.com/SnoonuQatar",
+      "linkedin": "https://www.linkedin.com/company/snoonu/"
+    },
+    "country": "Qatar",
+    "region": "Asia",
+    "founded": 2019,
+    "founders": [
+      "Hamad Al-Hajri"
+    ],
+    "funding": "$15M",
+    "investors": [
+      "Dukhan Bank"
+    ],
+    "ceo": "Hamad Al-Hajri"
+  },
+  {
+    "id": 51,
+    "name": "Maya (formerly PayMaya)",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.maya.ph/static/media/maya_logo_dark.3639d67b.svg",
+    "description": "Maya is a digital financial services app in the Philippines, offering an e-wallet, digital bank, and crypto services.",
+    "category": "Fintech",
+    "website": "https://www.maya.ph",
+    "socials": {
+      "twitter": "https://twitter.com/MayaBankInc",
+      "linkedin": "https://www.linkedin.com/company/maya-bank-inc/"
+    },
+    "country": "Philippines",
+    "region": "Asia",
+    "founded": 2007,
+    "founders": [
+      "Orlando B. Vea",
+      "Manuel V. Pangilinan"
+    ],
+    "funding": "$210M",
+    "investors": [
+      "KKR",
+      "Tencent Holdings",
+      "PLDT"
+    ],
+    "ceo": "Orlando B. Vea"
+  },
+  {
+    "id": 52,
+    "name": "Bykea",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://bykea.com/logo-new.svg",
+    "description": "Bykea is a Pakistani on-demand ride-hailing, logistics, and payments app, primarily using motorcycles.",
+    "category": "Transportation",
+    "website": "https://bykea.com",
+    "socials": {
+      "twitter": "https://twitter.com/bykeapk",
+      "linkedin": "https://www.linkedin.com/company/bykea-pk/"
+    },
+    "country": "Pakistan",
+    "region": "Asia",
+    "founded": 2016,
+    "founders": [
+      "Muneeb Maayr",
+      "Jahanzaib Khan"
+    ],
+    "funding": "$40M",
+    "investors": [
+      "Prosus Ventures",
+      "Middle East Venture Partners",
+      "Mezan Bank"
+    ],
+    "ceo": "Muneeb Maayr"
+  },
+  {
+    "id": 53,
+    "name": "Bkash",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.bkash.com/uploaded_images/bkash-logo.svg",
+    "description": "bKash is a leading mobile financial service provider in Bangladesh, offering payments, money transfers, and other financial services.",
+    "category": "Fintech",
+    "website": "https://www.bkash.com",
+    "socials": {
+      "twitter": "https://twitter.com/bkash_official",
+      "linkedin": "https://www.linkedin.com/company/bkash-limited/"
+    },
+    "country": "Bangladesh",
+    "region": "Asia",
+    "founded": 2011,
+    "founders": [
+      "Kamal Quadir"
+    ],
+    "funding": "$300M",
+    "investors": [
+      "SoftBank Vision Fund 2",
+      "Alibaba Group",
+      "International Finance Corporation"
+    ],
+    "ceo": "Kamal Quadir"
+  },
+  {
+    "id": 54,
+    "name": "PickMe",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://pickme.lk/assets/images/logo.svg",
+    "description": "PickMe is a Sri Lankan ride-hailing and logistics company, providing transportation, food delivery, and logistics services.",
+    "category": "Transportation",
+    "website": "https://pickme.lk",
+    "socials": {
+      "twitter": "https://twitter.com/PickMeLK",
+      "linkedin": "https://www.linkedin.com/company/pickmelk/"
+    },
+    "country": "Sri Lanka",
+    "region": "Asia",
+    "founded": 2015,
+    "founders": [
+      "Jiffry Zulfer"
+    ],
+    "funding": null,
+    "investors": [
+      "Hemas Holdings",
+      "Taprobane Holdings"
+    ],
+    "ceo": "Jiffry Zulfer"
+  },
+  {
+    "id": 55,
+    "name": "Crehana",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://crehana.com/static/images/crehana_logo.svg",
+    "description": "Crehana is a Peruvian online education platform offering courses in creative and digital skills for professionals in Latin America.",
+    "category": "Edtech",
+    "website": "https://crehana.com",
+    "socials": {
+      "twitter": "https://twitter.com/Crehana",
+      "linkedin": "https://www.linkedin.com/company/crehana/"
+    },
+    "country": "Peru",
+    "region": "South America",
+    "founded": 2015,
+    "founders": [
+      "Diego Olcese",
+      "Rodolfo Dañino"
+    ],
+    "funding": "$95M",
+    "investors": [
+      "General Atlantic",
+      "Mountain Nazca",
+      "Acumen LatAm Capital Partners"
+    ],
+    "ceo": "Diego Olcese"
+  },
+  {
+    "id": 56,
+    "name": "GeneXus",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.genexus.com/media/2065/genexus_logo.svg",
+    "description": "GeneXus is a software development platform that uses AI to automatically generate, maintain, and evolve enterprise applications.",
+    "category": "Enterprise Software",
+    "website": "https://www.genexus.com",
+    "socials": {
+      "twitter": "https://twitter.com/genexus",
+      "linkedin": "https://www.linkedin.com/company/genexus/"
+    },
+    "country": "Uruguay",
+    "region": "South America",
+    "founded": 1989,
+    "founders": [
+      "Nicolás Jodal",
+      "Breogán Gonda"
+    ],
+    "funding": null,
+    "investors": [
+      "Globant"
+    ],
+    "ceo": "Nicolás Jodal"
+  },
+  {
+    "id": 57,
+    "name": "Skroutz",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.skroutz.gr/assets/logo-skroutz-dark.svg",
+    "description": "Skroutz is a leading e-commerce marketplace and price comparison platform in Greece.",
+    "category": "E-commerce",
+    "website": "https://www.skroutz.gr",
+    "socials": {
+      "twitter": "https://twitter.com/SkroutzGR",
+      "linkedin": "https://www.linkedin.com/company/skroutz/"
+    },
+    "country": "Greece",
+    "region": "Europe",
+    "founded": 2005,
+    "founders": [
+      "George Chatzigeorgiou",
+      "Vassilis Dimos",
+      "Evangelos Chatzigeorgiou"
+    ],
+    "funding": null,
+    "investors": [
+      "CVC Capital Partners"
+    ],
+    "ceo": "George Chatzigeorgiou"
+  },
+  {
+    "id": 58,
+    "name": "MacPaw",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://macpaw.com/assets/images/macpaw-logo.svg",
+    "description": "MacPaw develops software for macOS and iOS, including popular utilities like CleanMyMac and Setapp.",
+    "category": "Software",
+    "website": "https://macpaw.com",
+    "socials": {
+      "twitter": "https://twitter.com/MacPaw",
+      "linkedin": "https://www.linkedin.com/company/macpaw/"
+    },
+    "country": "Ukraine",
+    "region": "Europe",
+    "founded": 2008,
+    "founders": [
+      "Oleksandr Kosovan"
+    ],
+    "funding": null,
+    "investors": [],
+    "ceo": "Oleksandr Kosovan"
+  },
+  {
+    "id": 59,
+    "name": "Kerecis",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://kerecis.com/wp-content/uploads/2021/04/kerecis-logo.svg",
+    "description": "Kerecis develops innovative solutions for tissue regeneration using sustainably sourced fish skin.",
+    "category": "Biotechnology",
+    "website": "https://kerecis.com",
+    "socials": {
+      "twitter": "https://twitter.com/Kerecis_Wound",
+      "linkedin": "https://www.linkedin.com/company/kerecis/"
+    },
+    "country": "Iceland",
+    "region": "Europe",
+    "founded": 2009,
+    "founders": [
+      "Fertram Sigurjonsson"
+    ],
+    "funding": "$100M",
+    "investors": [
+      "Kirkbi A/S",
+      "Omega Funds",
+      "Mubadala Investment Company"
+    ],
+    "ceo": "Fertram Sigurjonsson"
+  },
+  {
+    "id": 60,
+    "name": "Talkwalker",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.talkwalker.com/assets/images/logo_talkwalker_small.svg",
+    "description": "Talkwalker is a social media analytics and listening company that helps brands track, analyze, and understand online conversations.",
+    "category": "Marketing Tech",
+    "website": "https://www.talkwalker.com",
+    "socials": {
+      "twitter": "https://twitter.com/Talkwalker",
+      "linkedin": "https://www.linkedin.com/company/talkwalker/"
+    },
+    "country": "Luxembourg",
+    "region": "Europe",
+    "founded": 2009,
+    "founders": [
+      "Thierry Favier",
+      "Christophe Folschette"
+    ],
+    "funding": null,
+    "investors": [
+      "Main Capital Partners"
+    ],
+    "ceo": "Thierry Favier"
+  },
+  {
+    "id": 61,
+    "name": "Databricks",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.databricks.com/wp-content/uploads/2022/02/databricks-logo.svg",
+    "description": "Databricks provides a unified data platform for data engineering, machine learning, and data warehousing.",
+    "category": "Enterprise Software",
+    "website": "https://www.databricks.com",
+    "socials": {
+      "twitter": "https://twitter.com/databricks",
+      "linkedin": "https://www.linkedin.com/company/databricks/"
     },
     "country": "USA",
     "region": "North America",
     "founded": 2013,
-    "founders": ["Rafael Ilishayev", "Yakir Gola"],
-    "funding": "$5.14B",
-    "investors": ["Guggenheim Partners", "Blackstones' Horizon platform", "Guggenheim Investments", "Hedosophia", "MSD Partners", "Adage Capital", "Fidelity Management and Research Company", "Softbank Vision Fund 1", "Atreides Management", "Eldridge Capital", "D1 Capital Partners", "Luxor Capital", "Accel", "SoftBank"]
+    "founders": [
+      "Ali Ghodsi",
+      "Scott Shenker",
+      "Ion Stoica",
+      "Matei Zaharia",
+      "Patrick Wendell",
+      "Arsalan Tavakoli-Shiraji",
+      "Andy Konwinski"
+    ],
+    "funding": "$4B",
+    "investors": [
+      "Andreessen Horowitz",
+      "Microsoft",
+      "Amazon Web Services"
+    ],
+    "ceo": "Ali Ghodsi"
+  },
+  {
+    "id": 62,
+    "name": "Canva",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.canva.com/images/favicon-32x32.png",
+    "description": "Canva is an online graphic design platform that allows users to create professional designs with ease.",
+    "category": "Design Software",
+    "website": "https://www.canva.com",
+    "socials": {
+      "twitter": "https://twitter.com/canva",
+      "linkedin": "https://www.linkedin.com/company/canva/"
+    },
+    "country": "Australia",
+    "region": "Oceania",
+    "founded": 2012,
+    "founders": [
+      "Melanie Perkins",
+      "Cliff Obrecht",
+      "Cameron Adams"
+    ],
+    "funding": "$572M",
+    "investors": [
+      "Blackbird Ventures",
+      "Sequoia Capital Global Equities",
+      "Franklin Templeton"
+    ],
+    "ceo": "Melanie Perkins"
+  },
+  {
+    "id": 63,
+    "name": "Meesho",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://supplier.meesho.com/asset/image/Meesho-logo.svg",
+    "description": "Meesho is an Indian social commerce platform that enables small businesses and individuals to start online stores.",
+    "category": "E-commerce",
+    "website": "https://meesho.com",
+    "socials": {
+      "twitter": "https://twitter.com/meeshoapp",
+      "linkedin": "https://www.linkedin.com/company/meesho/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2015,
+    "founders": [
+      "Vidit Aatrey",
+      "Sanjeev Barnwal"
+    ],
+    "funding": "$1.1B",
+    "investors": [
+      "SoftBank Vision Fund 2",
+      "Prosus Ventures",
+      "Sequoia Capital India"
+    ],
+    "ceo": "Vidit Aatrey"
+  },
+  {
+    "id": 64,
+    "name": "Checkout.com",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.checkout.com/static/checkoutcom-logo-1x.svg",
+    "description": "Checkout.com is a global payment solutions provider that helps businesses accept payments online and offline.",
+    "category": "Fintech",
+    "website": "https://www.checkout.com",
+    "socials": {
+      "twitter": "https://twitter.com/Checkout",
+      "linkedin": "https://www.linkedin.com/company/checkout-com/"
+    },
+    "country": "United Kingdom",
+    "region": "Europe",
+    "founded": 2012,
+    "founders": [
+      "Guillaume Pousaz"
+    ],
+    "funding": "$1.8B",
+    "investors": [
+      "Tiger Global Management",
+      "Insight Partners",
+      "DST Global"
+    ],
+    "ceo": "Guillaume Pousaz"
+  },
+  {
+    "id": 65,
+    "name": "Trade Republic",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.traderepublic.com/logo.svg",
+    "description": "Trade Republic is a German neo-broker offering commission-free trading of stocks, ETFs, and cryptocurrencies.",
+    "category": "Fintech",
+    "website": "https://traderepublic.com",
+    "socials": {
+      "twitter": "https://twitter.com/TradeRepublic",
+      "linkedin": "https://www.linkedin.com/company/trade-republic/"
+    },
+    "country": "Germany",
+    "region": "Europe",
+    "founded": 2015,
+    "founders": [
+      "Christian Hecker",
+      "Marco Cancellieri",
+      "Thomas Pischke"
+    ],
+    "funding": "$1.3B",
+    "investors": [
+      "Sequoia Capital",
+      "Founders Fund",
+      "Creandum"
+    ],
+    "ceo": "Christian Hecker"
+  },
+  {
+    "id": 66,
+    "name": "Contentsquare",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://contentsquare.com/wp-content/themes/contentsquare/assets/images/logo.svg",
+    "description": "Contentsquare is an AI-powered experience analytics platform that helps businesses understand customer behavior online.",
+    "category": "Analytics",
+    "website": "https://contentsquare.com",
+    "socials": {
+      "twitter": "https://twitter.com/Contentsquare",
+      "linkedin": "https://www.linkedin.com/company/contentsquare/"
+    },
+    "country": "France",
+    "region": "Europe",
+    "founded": 2012,
+    "founders": [
+      "Jonathan Cherki"
+    ],
+    "funding": "$800M",
+    "investors": [
+      "BlackRock",
+      "SoftBank Vision Fund 2",
+      "Bpifrance"
+    ],
+    "ceo": "Jonathan Cherki"
+  },
+  {
+    "id": 67,
+    "name": "Wealthsimple",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.wealthsimple.com/_next/static/images/logo-dark-441315664d68e578c79213554e12e3fb.svg",
+    "description": "Wealthsimple is an online investment management service that makes smart investing simple and affordable.",
+    "category": "Fintech",
+    "website": "https://www.wealthsimple.com",
+    "socials": {
+      "twitter": "https://twitter.com/Wealthsimple",
+      "linkedin": "https://www.linkedin.com/company/wealthsimple/"
+    },
+    "country": "Canada",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Michael Katchen",
+      "Brett Huneycutt",
+      "Dave Nugent"
+    ],
+    "funding": "$1.5B",
+    "investors": [
+      "TCI Fund Management",
+      "Meridian Credit Union",
+      "Power Corporation of Canada"
+    ],
+    "ceo": "Michael Katchen"
+  },
+  {
+    "id": 68,
+    "name": "PhonePe",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.phonepe.com/images/phonepe-logo.svg",
+    "description": "PhonePe is an Indian digital payments and financial services company that uses the UPI platform.",
+    "category": "Fintech",
+    "website": "https://www.phonepe.com",
+    "socials": {
+      "twitter": "https://twitter.com/PhonePe",
+      "linkedin": "https://www.linkedin.com/company/phonepe/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2015,
+    "founders": [
+      "Sameer Nigam",
+      "Rahul Chari",
+      "Burzin Engineer"
+    ],
+    "funding": "$1.1B",
+    "investors": [
+      "Walmart",
+      "Tencent",
+      "Tiger Global Management"
+    ],
+    "ceo": "Sameer Nigam"
+  },
+  {
+    "id": 69,
+    "name": "Nio",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.nio.com/assets/images/logo.svg",
+    "description": "Nio is a Chinese multinational automobile manufacturer specializing in designing and developing electric vehicles.",
+    "category": "Automotive",
+    "website": "https://www.nio.com",
+    "socials": {
+      "twitter": "https://twitter.com/NIOGlobal",
+      "linkedin": "https://www.linkedin.com/company/nio/"
+    },
+    "country": "China",
+    "region": "Asia",
+    "founded": 2014,
+    "founders": [
+      "William Li"
+    ],
+    "funding": "$10B",
+    "investors": [
+      "Tencent Holdings",
+      "Baillie Gifford",
+      "CPE"
+    ],
+    "ceo": "William Li"
+  },
+  {
+    "id": 70,
+    "name": "Lendable",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.lendable.co.uk/images/logo_lendable.svg",
+    "description": "Lendable is a UK-based lending platform that uses AI and machine learning to provide instant credit decisions.",
+    "category": "Fintech",
+    "website": "https://www.lendable.co.uk",
+    "socials": {
+      "twitter": "https://twitter.com/Lendable",
+      "linkedin": "https://www.linkedin.com/company/lendable/"
+    },
+    "country": "United Kingdom",
+    "region": "Europe",
+    "founded": 2014,
+    "founders": [
+      "Martin Kissinger",
+      "Victoria Van Lennep"
+    ],
+    "funding": "$275M",
+    "investors": [
+      "Goldman Sachs",
+      "Ontario Teachers' Pension Plan Board"
+    ],
+    "ceo": "Martin Kissinger"
+  },
+  {
+    "id": 71,
+    "name": "Contentful",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.contentful.com/v3/assets/img/contentful_logo.svg",
+    "description": "Contentful is a headless content management system (CMS) that enables developers and content creators to build and publish digital experiences.",
+    "category": "SaaS",
+    "website": "https://www.contentful.com",
+    "socials": {
+      "twitter": "https://twitter.com/contentful",
+      "linkedin": "https://www.linkedin.com/company/contentful/"
+    },
+    "country": "Germany",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Sascha Konietzke",
+      "Paolo Negri"
+    ],
+    "funding": "$333M",
+    "investors": [
+      "Sapphire Ventures",
+      "General Catalyst",
+      "Balderton Capital"
+    ],
+    "ceo": "Steve Sloan"
+  },
+  {
+    "id": 72,
+    "name": "Mirakl",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.mirakl.com/wp-content/themes/mirakl/assets/img/mirakl-logo-black.svg",
+    "description": "Mirakl provides a marketplace SaaS platform that enables businesses to launch and operate their own online marketplaces.",
+    "category": "E-commerce",
+    "website": "https://www.mirakl.com",
+    "socials": {
+      "twitter": "https://twitter.com/mirakl",
+      "linkedin": "https://www.linkedin.com/company/mirakl/"
+    },
+    "country": "France",
+    "region": "Europe",
+    "founded": 2012,
+    "founders": [
+      "Philippe Corrot",
+      "Adrien Nussenbaum"
+    ],
+    "funding": "$948M",
+    "investors": [
+      "Permira",
+      "Silver Lake",
+      "Insight Partners"
+    ],
+    "ceo": "Philippe Corrot"
+  },
+  {
+    "id": 73,
+    "name": "Mindbody",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.mindbodyonline.com/static/images/Mindbody_logo_white.svg",
+    "description": "Mindbody is a leading technology platform for the wellness services industry, connecting clients with fitness, beauty, and wellness businesses.",
+    "category": "Health & Wellness",
+    "website": "https://www.mindbodyonline.com",
+    "socials": {
+      "twitter": "https://twitter.com/mindbodyonline",
+      "linkedin": "https://www.linkedin.com/company/mindbody/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2001,
+    "founders": [
+      "Rick Stollmeyer",
+      "Robert Sufit"
+    ],
+    "funding": "$100M",
+    "investors": [
+      "Vista Equity Partners"
+    ],
+    "ceo": "Josh McCarter"
+  },
+  {
+    "id": 74,
+    "name": "Gojek",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.gojek.com/static/images/gojek-logo-2020.svg",
+    "description": "Gojek is an Indonesian on-demand multi-service platform and digital payment technology group.",
+    "category": "Transportation",
+    "website": "https://www.gojek.com",
+    "socials": {
+      "twitter": "https://twitter.com/gojekindonesia",
+      "linkedin": "https://www.linkedin.com/company/gojekindonesia/"
+    },
+    "country": "Indonesia",
+    "region": "Asia",
+    "founded": 2010,
+    "founders": [
+      "Nadiem Makarim"
+    ],
+    "funding": "$6.3B",
+    "investors": [
+      "Google",
+      "Tencent",
+      "Temasek"
+    ],
+    "ceo": "Kevin Aluwi"
+  },
+  {
+    "id": 75,
+    "name": "N26",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://n26.com/images/n26-logo-blue.svg",
+    "description": "N26 is a mobile-first bank offering a digital banking experience without physical branches.",
+    "category": "Fintech",
+    "website": "https://n26.com",
+    "socials": {
+      "twitter": "https://twitter.com/N26",
+      "linkedin": "https://www.linkedin.com/company/n26/"
+    },
+    "country": "Germany",
+    "region": "Europe",
+    "founded": 2013,
+    "founders": [
+      "Valentin Stalf",
+      "Maximilian Tayenthal"
+    ],
+    "funding": "$1.7B",
+    "investors": [
+      "Insight Partners",
+      "Tencent",
+      "Valar Ventures"
+    ],
+    "ceo": "Valentin Stalf"
+  },
+  {
+    "id": 76,
+    "name": "Gymshark",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://cdn.shopify.com/s/files/1/0098/8822/files/logo_black_571a806c-8424-4f05-8640-c9a9d20c242c.png",
+    "description": "Gymshark is a British fitness apparel and accessories brand, manufacturer, and online retailer.",
+    "category": "E-commerce",
+    "website": "https://uk.gymshark.com",
+    "socials": {
+      "twitter": "https://twitter.com/Gymshark",
+      "linkedin": "https://www.linkedin.com/company/gymshark/"
+    },
+    "country": "United Kingdom",
+    "region": "Europe",
+    "founded": 2012,
+    "founders": [
+      "Ben Francis",
+      "Lewis Morgan"
+    ],
+    "funding": "$300M",
+    "investors": [
+      "General Atlantic"
+    ],
+    "ceo": "Ben Francis"
+  },
+  {
+    "id": 77,
+    "name": "Chime",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.chime.com/images/logo.svg",
+    "description": "Chime is a leading US challenger bank offering mobile-first banking services with no hidden fees.",
+    "category": "Fintech",
+    "website": "https://www.chime.com",
+    "socials": {
+      "twitter": "https://twitter.com/Chime",
+      "linkedin": "https://www.linkedin.com/company/chime/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Chris Britt",
+      "Ryan King"
+    ],
+    "funding": "$2.3B",
+    "investors": [
+      "Insight Partners",
+      "Tiger Global Management",
+      "DST Global"
+    ],
+    "ceo": "Chris Britt"
+  },
+  {
+    "id": 78,
+    "name": "Zapier",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://cdn.zapier.com/zapier/img/z-logo.svg",
+    "description": "Zapier is an online automation tool that connects apps and services, automating workflows without coding.",
+    "category": "SaaS",
+    "website": "https://zapier.com",
+    "socials": {
+      "twitter": "https://twitter.com/zapier",
+      "linkedin": "https://www.linkedin.com/company/zapier/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2011,
+    "founders": [
+      "Bryan Helmig",
+      "Wade Foster",
+      "Mike Knoop"
+    ],
+    "funding": "$1.3M",
+    "investors": [
+      "Y Combinator",
+      "DFJ Growth"
+    ],
+    "ceo": "Wade Foster"
+  },
+  {
+    "id": 79,
+    "name": "Scale AI",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://scale.com/static/brand/Scale-logo-dark.svg",
+    "description": "Scale AI provides data labeling and annotation for AI applications, including autonomous driving, robotics, and computer vision.",
+    "category": "Artificial Intelligence",
+    "website": "https://scale.com",
+    "socials": {
+      "twitter": "https://twitter.com/scale_ai",
+      "linkedin": "https://www.linkedin.com/company/scale-ai/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2016,
+    "founders": [
+      "Alexandr Wang",
+      "Lucy Guo"
+    ],
+    "funding": "$1.6B",
+    "investors": [
+      "Accel",
+      "Founders Fund",
+      "Wellington Management"
+    ],
+    "ceo": "Alexandr Wang"
+  },
+  {
+    "id": 80,
+    "name": "Carta",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://carta.com/assets/img/logo/carta-logo-fullcolor-dark.svg",
+    "description": "Carta is a global ownership management platform that helps companies, investors, and employees manage equity and cap tables.",
+    "category": "Fintech",
+    "website": "https://carta.com",
+    "socials": {
+      "twitter": "https://twitter.com/Carta",
+      "linkedin": "https://www.linkedin.com/company/carta-inc/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Henry Ward",
+      "Manuel Medrano"
+    ],
+    "funding": "$1.2B",
+    "investors": [
+      "Andreessen Horowitz",
+      "Lightspeed Venture Partners",
+      "Silver Lake"
+    ],
+    "ceo": "Henry Ward"
+  },
+  {
+    "id": 81,
+    "name": "Brex",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://brex.com/assets/images/BrexLogoDark.svg",
+    "description": "Brex provides corporate credit cards and financial software for startups and scaling businesses.",
+    "category": "Fintech",
+    "website": "https://www.brex.com",
+    "socials": {
+      "twitter": "https://twitter.com/BrexHQ",
+      "linkedin": "https://www.linkedin.com/company/brexhq/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2017,
+    "founders": [
+      "Henrique Dubugras",
+      "Pedro Franceschi"
+    ],
+    "funding": "$1.2B",
+    "investors": [
+      "Y Combinator",
+      "Kleiner Perkins",
+      "Tiger Global Management"
+    ],
+    "ceo": "Henrique Dubugras"
+  },
+  {
+    "id": 82,
+    "name": "Deel",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.deel.com/_next/static/media/logo-light.43f21183.svg",
+    "description": "Deel is a global payroll and compliance platform for hiring and paying international teams.",
+    "category": "HR Tech",
+    "website": "https://www.deel.com",
+    "socials": {
+      "twitter": "https://twitter.com/Deel",
+      "linkedin": "https://www.linkedin.com/company/deelinc/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2019,
+    "founders": [
+      "Alex Bouaziz",
+      "Shuo Wang"
+    ],
+    "funding": "$679M",
+    "investors": [
+      "Andreessen Horowitz",
+      "Spark Capital",
+      "Coatue"
+    ],
+    "ceo": "Alex Bouaziz"
+  },
+  {
+    "id": 83,
+    "name": "Webflow",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets-global.website-files.com/583347ca8f6c382103348661/5c9aa3f885e353240e4f8d55_webflow-logo-black.svg",
+    "description": "Webflow is a no-code development platform that allows users to design, build, and launch responsive websites visually.",
+    "category": "Software",
+    "website": "https://webflow.com",
+    "socials": {
+      "twitter": "https://twitter.com/webflow",
+      "linkedin": "https://www.linkedin.com/company/webflow/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2013,
+    "founders": [
+      "Vlad Magdalin",
+      "Sergie Magdalin",
+      "Bryant Chou"
+    ],
+    "funding": "$335M",
+    "investors": [
+      "Accel",
+      "Lightspeed Venture Partners",
+      "CapitalG"
+    ],
+    "ceo": "Vlad Magdalin"
+  },
+  {
+    "id": 84,
+    "name": "ClickUp",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://clickup.com/blog/wp-content/uploads/2021/08/clickup-logo-black-text.svg",
+    "description": "ClickUp is an all-in-one productivity platform that offers tasks, docs, chat, goals, and more for teams.",
+    "category": "Productivity",
+    "website": "https://clickup.com",
+    "socials": {
+      "twitter": "https://twitter.com/ClickUp",
+      "linkedin": "https://www.linkedin.com/company/clickup/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2017,
+    "founders": [
+      "Zeb Evans"
+    ],
+    "funding": "$535M",
+    "investors": [
+      "Andreessen Horowitz",
+      "Tiger Global Management",
+      "Lightspeed Venture Partners"
+    ],
+    "ceo": "Zeb Evans"
+  },
+  {
+    "id": 85,
+    "name": "Klaviyo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.klaviyo.com/wp-content/themes/klaviyo/img/logo-dark.svg",
+    "description": "Klaviyo is a marketing automation platform for e-commerce businesses, focusing on email and SMS campaigns.",
+    "category": "Marketing Tech",
+    "website": "https://www.klaviyo.com",
+    "socials": {
+      "twitter": "https://twitter.com/klaviyo",
+      "linkedin": "https://www.linkedin.com/company/klaviyo/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Andrew Bialecki",
+      "Ed Hallen"
+    ],
+    "funding": "$775M",
+    "investors": [
+      "Summit Partners",
+      "Accel",
+      "Lone Pine Capital"
+    ],
+    "ceo": "Andrew Bialecki"
+  },
+  {
+    "id": 86,
+    "name": "Snyk",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://snyk.io/images/snyk_logo.svg",
+    "description": "Snyk provides developer-first security solutions for code, dependencies, containers, and infrastructure as code.",
+    "category": "Cybersecurity",
+    "website": "https://snyk.io",
+    "socials": {
+      "twitter": "https://twitter.com/snyksec",
+      "linkedin": "https://www.linkedin.com/company/snyk/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2015,
+    "founders": [
+      "Guy Podjarny",
+      "Danny Grander",
+      "Jacob Shreiber"
+    ],
+    "funding": "$1.4B",
+    "investors": [
+      "Accel",
+      "Tiger Global Management",
+      "BlackRock"
+    ],
+    "ceo": "Peter McKay"
+  },
+  {
+    "id": 87,
+    "name": "Gong",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.website-files.com/62c954507ae86118d0096973/62e0802778393b3b421a1f0f_Gong.svg",
+    "description": "Gong provides a revenue intelligence platform that captures and analyzes customer interactions to improve sales performance.",
+    "category": "Sales Tech",
+    "website": "https://www.gong.io",
+    "socials": {
+      "twitter": "https://twitter.com/Gong_io",
+      "linkedin": "https://www.linkedin.com/company/gong-io/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2015,
+    "founders": [
+      "Amit Bendov",
+      "Eilon Reshef"
+    ],
+    "funding": "$584M",
+    "investors": [
+      "Salesforce Ventures",
+      "Sequoia Capital",
+      "Coatue"
+    ],
+    "ceo": "Amit Bendov"
+  },
+  {
+    "id": 88,
+    "name": "Toast",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://pos.toasttab.com/hubfs/Toast_Logo_Black.svg",
+    "description": "Toast is a cloud-based point-of-sale (POS) system and restaurant management platform.",
+    "category": "Fintech",
+    "website": "https://pos.toasttab.com",
+    "socials": {
+      "twitter": "https://twitter.com/ToastTab",
+      "linkedin": "https://www.linkedin.com/company/toasttab/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2011,
+    "founders": [
+      "Steve Fredette",
+      "Jonathan Grimm",
+      "Aman Narang"
+    ],
+    "funding": "$900M",
+    "investors": [
+      "TPG",
+      "Tiger Global Management",
+      "Greenoaks Capital"
+    ],
+    "ceo": "Chris Comparato"
+  },
+  {
+    "id": 89,
+    "name": "Rubrik",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.rubrik.com/static/img/rubrik-logo-white.svg",
+    "description": "Rubrik offers a cloud data management platform that provides data backup, recovery, and security solutions.",
+    "category": "Cybersecurity",
+    "website": "https://www.rubrik.com",
+    "socials": {
+      "twitter": "https://twitter.com/rubrikinc",
+      "linkedin": "https://www.linkedin.com/company/rubrik-inc/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Bipul Sinha",
+      "Arvind Jain",
+      "Soham Mazumdar",
+      "Abhilash Kumar"
+    ],
+    "funding": "$553M",
+    "investors": [
+      "Lightspeed Venture Partners",
+      "Greylock Partners",
+      "IVP"
+    ],
+    "ceo": "Bipul Sinha"
+  },
+  {
+    "id": 90,
+    "name": "ServiceTitan",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.servicetitan.com/hubfs/servicetitan-logo.svg",
+    "description": "ServiceTitan provides an all-in-one software platform for home service businesses, including plumbing, HVAC, and electrical.",
+    "category": "SaaS",
+    "website": "https://www.servicetitan.com",
+    "socials": {
+      "twitter": "https://twitter.com/ServiceTitan",
+      "linkedin": "https://www.linkedin.com/company/servicetitan/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Ara Mahdessian",
+      "Vahe Kuzoyan"
+    ],
+    "funding": "$1.1B",
+    "investors": [
+      "Tiger Global Management",
+      "ICONIQ Capital",
+      "Index Ventures"
+    ],
+    "ceo": "Ara Mahdessian"
+  },
+  {
+    "id": 91,
+    "name": "Andela",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://andela.com/wp-content/themes/andela-2021/assets/images/logo.svg",
+    "description": "Andela is a global talent network that connects companies with remote technology talent.",
+    "category": "HR Tech",
+    "website": "https://andela.com",
+    "socials": {
+      "twitter": "https://twitter.com/Andela",
+      "linkedin": "https://www.linkedin.com/company/andela/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Jeremy Johnson",
+      "Iyinoluwa Aboyeji",
+      "Christina Sass",
+      "Nadayar Enegesi",
+      "Brice Nkengsa",
+      "Wambui Kinya"
+    ],
+    "funding": "$381M",
+    "investors": [
+      "SoftBank Vision Fund 2",
+      "Generation Investment Management",
+      "Chan Zuckerberg Initiative"
+    ],
+    "ceo": "Jeremy Johnson"
+  },
+  {
+    "id": 92,
+    "name": "Gusto",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://gusto.com/images/logo/gusto_logo_blue_color_text_default.svg",
+    "description": "Gusto offers a cloud-based payroll, benefits, and HR platform for small and medium-sized businesses.",
+    "category": "HR Tech",
+    "website": "https://gusto.com",
+    "socials": {
+      "twitter": "https://twitter.com/GustoHQ",
+      "linkedin": "https://www.linkedin.com/company/gusto/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2011,
+    "founders": [
+      "Josh Reeves",
+      "Edward Kim",
+      "Tomer London"
+    ],
+    "funding": "$731M",
+    "investors": [
+      "T. Rowe Price",
+      "Fidelity Management and Research Company",
+      "General Catalyst"
+    ],
+    "ceo": "Josh Reeves"
+  },
+  {
+    "id": 93,
+    "name": "Rippling",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.website-files.com/5df442657e3f28328905b191/6401614f86d8b0213d2f9d85_logo-black.svg",
+    "description": "Rippling is an all-in-one HR, IT, and finance platform for businesses to manage their employee data.",
+    "category": "HR Tech",
+    "website": "https://www.rippling.com",
+    "socials": {
+      "twitter": "https://twitter.com/Rippling",
+      "linkedin": "https://www.linkedin.com/company/rippling/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2016,
+    "founders": [
+      "Parker Conrad"
+    ],
+    "funding": "$1.2B",
+    "investors": [
+      "Kleiner Perkins",
+      "Sequoia Capital",
+      "Coatue"
+    ],
+    "ceo": "Parker Conrad"
+  },
+  {
+    "id": 94,
+    "name": "Notion",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.notion.so/images/notion-logo.svg",
+    "description": "Notion is an all-in-one workspace for notes, tasks, wikis, and databases, enabling teams to organize information and collaborate.",
+    "category": "Productivity",
+    "website": "https://www.notion.so",
+    "socials": {
+      "twitter": "https://twitter.com/NotionHQ",
+      "linkedin": "https://www.linkedin.com/company/notionhq/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2016,
+    "founders": [
+      "Ivan Zhao",
+      "Simon Last",
+      "Jessica Lam",
+      "Chris Prucha",
+      "Tobias Weinmann"
+    ],
+    "funding": "$277M",
+    "investors": [
+      "Index Ventures",
+      "Lightspeed Venture Partners",
+      "Sequoia Capital"
+    ],
+    "ceo": "Ivan Zhao"
+  },
+  {
+    "id": 95,
+    "name": "Figma",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.figma.com/static/logo.svg",
+    "description": "Figma is a collaborative interface design tool that allows teams to create, prototype, and gather feedback on designs in real-time.",
+    "category": "Design Software",
+    "website": "https://www.figma.com",
+    "socials": {
+      "twitter": "https://twitter.com/figma",
+      "linkedin": "https://www.linkedin.com/company/figma/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Dylan Field",
+      "Evan Wallace"
+    ],
+    "funding": "$333M",
+    "investors": [
+      "Kleiner Perkins",
+      "Andreessen Horowitz",
+      "Sequoia Capital"
+    ],
+    "ceo": "Dylan Field"
+  },
+  {
+    "id": 96,
+    "name": "Datadog",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.datadoghq.com/img/dd_logo_140x140.png",
+    "description": "Datadog is a monitoring and security platform for cloud applications, providing end-to-end visibility across infrastructure and services.",
+    "category": "Enterprise Software",
+    "website": "https://www.datadoghq.com",
+    "socials": {
+      "twitter": "https://twitter.com/datadoghq",
+      "linkedin": "https://www.linkedin.com/company/datadog/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2010,
+    "founders": [
+      "Olivier Pomel",
+      "Alexis Lê-Quôc"
+    ],
+    "funding": "$147M",
+    "investors": [
+      "OpenView",
+      "Index Ventures",
+      "RTP Ventures"
+    ],
+    "ceo": "Olivier Pomel"
+  },
+  {
+    "id": 97,
+    "name": "Cloudflare",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.cloudflare.com/img/logo-cloudflare-dark.svg",
+    "description": "Cloudflare is a global network that provides website security, performance optimization, and CDN services.",
+    "category": "Cybersecurity",
+    "website": "https://www.cloudflare.com",
+    "socials": {
+      "twitter": "https://twitter.com/Cloudflare",
+      "linkedin": "https://www.linkedin.com/company/cloudflare/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2009,
+    "founders": [
+      "Matthew Prince",
+      "Michelle Zatlyn",
+      "Lee Holloway"
+    ],
+    "funding": "$332M",
+    "investors": [
+      "Pelion Venture Partners",
+      "New Enterprise Associates",
+      "Venrock"
+    ],
+    "ceo": "Matthew Prince"
+  },
+  {
+    "id": 98,
+    "name": "Unity Technologies",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://unity.com/themes/contrib/unity_dam/images/favicons/apple-touch-icon.png",
+    "description": "Unity Technologies is a video game software development company best known for the Unity game engine.",
+    "category": "Gaming",
+    "website": "https://unity.com",
+    "socials": {
+      "twitter": "https://twitter.com/unitygames",
+      "linkedin": "https://www.linkedin.com/company/unity-technologies/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2004,
+    "founders": [
+      "David Helgason",
+      "Nicholas Francis",
+      "Joachim Ante"
+    ],
+    "funding": "$600M",
+    "investors": [
+      "DFJ Growth",
+      "Silver Lake",
+      "Sequoia Capital"
+    ],
+    "ceo": "Jim Whitehurst"
+  },
+  {
+    "id": 99,
+    "name": "Roblox",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.roblox.com/img/roblox_logo_dark.svg",
+    "description": "Roblox is an online platform and storefront where users can program games and play games created by other users.",
+    "category": "Gaming",
+    "website": "https://www.roblox.com",
+    "socials": {
+      "twitter": "https://twitter.com/Roblox",
+      "linkedin": "https://www.linkedin.com/company/roblox/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2004,
+    "founders": [
+      "David Baszucki",
+      "Erik Cassel"
+    ],
+    "funding": "$1.2B",
+    "investors": [
+      "Andreessen Horowitz",
+      "Tiger Global Management",
+      "Tencent Holdings"
+    ],
+    "ceo": "David Baszucki"
+  },
+  {
+    "id": 100,
+    "name": "Coupang",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.coupang.com/img/logo_coupang_white.png",
+    "description": "Coupang is one of the largest e-commerce companies in South Korea, known for its 'Rocket Delivery' service.",
+    "category": "E-commerce",
+    "website": "https://www.coupang.com",
+    "socials": {
+      "twitter": "https://twitter.com/coupang_us",
+      "linkedin": "https://www.linkedin.com/company/coupang/"
+    },
+    "country": "South Korea",
+    "region": "Asia",
+    "founded": 2010,
+    "founders": [
+      "Bom Kim"
+    ],
+    "funding": "$3.8B",
+    "investors": [
+      "SoftBank Vision Fund",
+      "BlackRock",
+      "Greenoaks Capital"
+    ],
+    "ceo": "Bom Kim"
+  },
+  {
+    "id": 101,
+    "name": "Grab",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.grab.com/sg/wp-content/themes/grab-base/assets/images/logo.svg",
+    "description": "Grab is Southeast Asia's leading superapp, offering ride-hailing, food delivery, and digital payment services.",
+    "category": "Transportation",
+    "website": "https://www.grab.com",
+    "socials": {
+      "twitter": "https://twitter.com/GrabSG",
+      "linkedin": "https://www.linkedin.com/company/grab/"
+    },
+    "country": "Singapore",
+    "region": "Asia",
+    "founded": 2012,
+    "founders": [
+      "Anthony Tan",
+      "Tan Hooi Ling"
+    ],
+    "funding": "$14.5B",
+    "investors": [
+      "SoftBank Vision Fund",
+      "Didi Chuxing",
+      "Toyota Motor Corporation"
+    ],
+    "ceo": "Anthony Tan"
+  },
+  {
+    "id": 102,
+    "name": "Swiggy",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.swiggy.com/assets/images/logo_color.svg",
+    "description": "Swiggy is a prominent online food ordering and delivery platform in India.",
+    "category": "Food & Beverage",
+    "website": "https://www.swiggy.com",
+    "socials": {
+      "twitter": "https://twitter.com/Swiggy",
+      "linkedin": "https://www.linkedin.com/company/swiggy-india/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2014,
+    "founders": [
+      "Sriharsha Majety",
+      "Nandan Reddy",
+      "Rahul Jaimini"
+    ],
+    "funding": "$5.3B",
+    "investors": [
+      "SoftBank Vision Fund 2",
+      "Prosus Ventures",
+      "DST Global"
+    ],
+    "ceo": "Sriharsha Majety"
+  },
+  {
+    "id": 103,
+    "name": "Byju's",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://byjus.com/wp-content/themes/byjus/assets/images/byjus-logo.svg",
+    "description": "Byju's is an Indian multinational educational technology company that provides online tutoring and learning programs.",
+    "category": "Edtech",
+    "website": "https://byjus.com",
+    "socials": {
+      "twitter": "https://twitter.com/BYJUS",
+      "linkedin": "https://www.linkedin.com/company/byjus/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2011,
+    "founders": [
+      "Byju Raveendran",
+      "Divya Gokulnath"
+    ],
+    "funding": "$5.5B",
+    "investors": [
+      "Silver Lake",
+      "Tencent",
+      "BlackRock"
+    ],
+    "ceo": "Byju Raveendran"
+  },
+  {
+    "id": 104,
+    "name": "Ola Cabs",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.olacabs.com/web-images/ola-logo.png",
+    "description": "Ola Cabs is an Indian multinational ride-sharing company, also offering food delivery and financial services.",
+    "category": "Transportation",
+    "website": "https://www.olacabs.com",
+    "socials": {
+      "twitter": "https://twitter.com/olacabs",
+      "linkedin": "https://www.linkedin.com/company/olacabs/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2010,
+    "founders": [
+      "Bhavish Aggarwal",
+      "Ankit Bhati"
+    ],
+    "funding": "$5B",
+    "investors": [
+      "SoftBank Vision Fund",
+      "Tencent",
+      "Steadview Capital"
+    ],
+    "ceo": "Bhavish Aggarwal"
+  },
+  {
+    "id": 105,
+    "name": "Meesho",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://supplier.meesho.com/asset/image/Meesho-logo.svg",
+    "description": "Meesho is an Indian social commerce platform that enables small businesses and individuals to start online stores.",
+    "category": "E-commerce",
+    "website": "https://meesho.com",
+    "socials": {
+      "twitter": "https://twitter.com/meeshoapp",
+      "linkedin": "https://www.linkedin.com/company/meesho/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2015,
+    "founders": [
+      "Vidit Aatrey",
+      "Sanjeev Barnwal"
+    ],
+    "funding": "$1.1B",
+    "investors": [
+      "SoftBank Vision Fund 2",
+      "Prosus Ventures",
+      "Sequoia Capital India"
+    ],
+    "ceo": "Vidit Aatrey"
+  },
+  {
+    "id": 106,
+    "name": "Zomato",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://b.zmtcdn.com/data/o2_assets/f44b2049d587c170428d002f23b202351664531818.png",
+    "description": "Zomato is an Indian multinational restaurant aggregator and food delivery company.",
+    "category": "Food & Beverage",
+    "website": "https://www.zomato.com",
+    "socials": {
+      "twitter": "https://twitter.com/zomato",
+      "linkedin": "https://www.linkedin.com/company/zomato/"
+    },
+    "country": "India",
+    "region": "Asia",
+    "founded": 2008,
+    "founders": [
+      "Deepinder Goyal",
+      "Pankaj Chaddah"
+    ],
+    "funding": "$2.5B",
+    "investors": [
+      "Ant Financial",
+      "Info Edge",
+      "Sequoia Capital India"
+    ],
+    "ceo": "Deepinder Goyal"
+  },
+  {
+    "id": 107,
+    "name": "Postman",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.www.postman.com/assets/logo-icon-128.png",
+    "description": "Postman is an API platform for building, using, and testing APIs.",
+    "category": "Developer Tools",
+    "website": "https://www.postman.com",
+    "socials": {
+      "twitter": "https://twitter.com/getpostman",
+      "linkedin": "https://www.linkedin.com/company/postdotlabs/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Abhinav Asthana",
+      "Ankit Sobti",
+      "Abhijit Kane"
+    ],
+    "funding": "$433M",
+    "investors": [
+      "Insight Partners",
+      "CRV",
+      "Nexus Venture Partners"
+    ],
+    "ceo": "Abhinav Asthana"
+  },
+  {
+    "id": 108,
+    "name": "Miro",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://miro.com/static/images/miro-logo.svg",
+    "description": "Miro is an online collaborative whiteboard platform for distributed teams.",
+    "category": "Productivity",
+    "website": "https://miro.com",
+    "socials": {
+      "twitter": "https://twitter.com/mirohq",
+      "linkedin": "https://www.linkedin.com/company/mirohq/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2011,
+    "founders": [
+      "Andrey Khusid",
+      "Oleg Shardin"
+    ],
+    "funding": "$476M",
+    "investors": [
+      "ICONIQ Capital",
+      "Accel",
+      "Salesforce Ventures"
+    ],
+    "ceo": "Andrey Khusid"
+  },
+  {
+    "id": 109,
+    "name": "Lattice",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://lattice.com/assets/logo.svg",
+    "description": "Lattice is a people management platform that helps companies run performance reviews, set goals, and improve employee engagement.",
+    "category": "HR Tech",
+    "website": "https://lattice.com",
+    "socials": {
+      "twitter": "https://twitter.com/LatticeHQ",
+      "linkedin": "https://www.linkedin.com/company/lattice-inc-/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2015,
+    "founders": [
+      "Jack Altman",
+      "Eric Koslow"
+    ],
+    "funding": "$330M",
+    "investors": [
+      "Andreessen Horowitz",
+      "Tiger Global Management",
+      "Thrive Capital"
+    ],
+    "ceo": "Jack Altman"
+  },
+  {
+    "id": 110,
+    "name": "Ramp",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://ramp.com/static/ramp-logo-dark.svg",
+    "description": "Ramp offers corporate cards and spend management software designed to help businesses save time and money.",
+    "category": "Fintech",
+    "website": "https://ramp.com",
+    "socials": {
+      "twitter": "https://twitter.com/RampFinancial",
+      "linkedin": "https://www.linkedin.com/company/ramp-financial/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2019,
+    "founders": [
+      "Eric Glyman",
+      "Karim Atiyeh",
+      "Gene Lee"
+    ],
+    "funding": "$1.4B",
+    "investors": [
+      "Founders Fund",
+      "Thrive Capital",
+      "Coatue"
+    ],
+    "ceo": "Eric Glyman"
+  },
+  {
+    "id": 111,
+    "name": "Flexport",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.flexport.com/static/img/logo/flexport-wordmark-dark.svg",
+    "description": "Flexport is a freight forwarder and logistics platform that uses technology to simplify global trade.",
+    "category": "Logistics",
+    "website": "https://www.flexport.com",
+    "socials": {
+      "twitter": "https://twitter.com/flexport",
+      "linkedin": "https://www.linkedin.com/company/flexport/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2013,
+    "founders": [
+      "Ryan Petersen"
+    ],
+    "funding": "$3.3B",
+    "investors": [
+      "Andreessen Horowitz",
+      "SoftBank Vision Fund",
+      "Founders Fund"
+    ],
+    "ceo": "Ryan Petersen"
+  },
+  {
+    "id": 112,
+    "name": "Gatik",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://gatik.ai/wp-content/themes/gatik/images/gatik-logo-black.svg",
+    "description": "Gatik is an autonomous technology company focused on middle-mile logistics for B2B applications.",
+    "category": "Autonomous Vehicles",
+    "website": "https://gatik.ai",
+    "socials": {
+      "twitter": "https://twitter.com/gatik_ai",
+      "linkedin": "https://www.linkedin.com/company/gatik-ai/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2017,
+    "founders": [
+      "Gautam Narang",
+      "Arjun Narang",
+      "Apeksha Prasad"
+    ],
+    "funding": "$115M",
+    "investors": [
+      "Koch Disruptive Technologies",
+      "Innovation Endeavors",
+      "T. Rowe Price"
+    ],
+    "ceo": "Gautam Narang"
+  },
+  {
+    "id": 113,
+    "name": "Arctic Wolf",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://arcticwolf.com/wp-content/themes/arcticwolf/dist/images/aw-logo-primary.svg",
+    "description": "Arctic Wolf provides security operations as a service, helping organizations detect and respond to cyber threats.",
+    "category": "Cybersecurity",
+    "website": "https://arcticwolf.com",
+    "socials": {
+      "twitter": "https://twitter.com/AWNetworks",
+      "linkedin": "https://www.linkedin.com/company/arctic-wolf/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Brian NeSmith",
+      "Kimberly Hayes",
+      "Gary Messiana",
+      "Ragnar Fjaervik"
+    ],
+    "funding": "$900M",
+    "investors": [
+      "Viking Global Investors",
+      "Owl Rock",
+      "Lightspeed Venture Partners"
+    ],
+    "ceo": "Nick Schneider"
+  },
+  {
+    "id": 114,
+    "name": "MUI",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://mui.com/static/logo.svg",
+    "description": "MUI provides a comprehensive suite of UI tools to help developers build and ship new features faster.",
+    "category": "Developer Tools",
+    "website": "https://mui.com",
+    "socials": {
+      "twitter": "https://twitter.com/MUI_Framework",
+      "linkedin": "https://www.linkedin.com/company/mui/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Olivier Tassinari",
+      "Dimitri Andre",
+      "Matt Brophy"
+    ],
+    "funding": "$32M",
+    "investors": [
+      "Felicis Ventures",
+      "Lightspeed Venture Partners"
+    ],
+    "ceo": "Olivier Tassinari"
+  },
+  {
+    "id": 115,
+    "name": "Zapier",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://cdn.zapier.com/zapier/img/z-logo.svg",
+    "description": "Zapier is an online automation tool that connects apps and services, automating workflows without coding.",
+    "category": "SaaS",
+    "website": "https://zapier.com",
+    "socials": {
+      "twitter": "https://twitter.com/zapier",
+      "linkedin": "https://www.linkedin.com/company/zapier/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2011,
+    "founders": [
+      "Bryan Helmig",
+      "Wade Foster",
+      "Mike Knoop"
+    ],
+    "funding": "$1.3M",
+    "investors": [
+      "Y Combinator",
+      "DFJ Growth"
+    ],
+    "ceo": "Wade Foster"
+  },
+  {
+    "id": 116,
+    "name": "Cato Networks",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.catonetworks.com/wp-content/uploads/2021/08/logo.svg",
+    "description": "Cato Networks provides a Secure Access Service Edge (SASE) platform that converges networking and security into a cloud-native service.",
+    "category": "Cybersecurity",
+    "website": "https://www.catonetworks.com",
+    "socials": {
+      "twitter": "https://twitter.com/CatoNetworks",
+      "linkedin": "https://www.linkedin.com/company/cato-networks/"
+    },
+    "country": "Israel",
+    "region": "Asia",
+    "founded": 2015,
+    "founders": [
+      "Shlomo Kramer",
+      "Gur Shatz"
+    ],
+    "funding": "$600M",
+    "investors": [
+      "Lightspeed Venture Partners",
+      "Greylock Partners",
+      "Eight Roads Ventures"
+    ],
+    "ceo": "Shlomo Kramer"
+  },
+  {
+    "id": 117,
+    "name": "Gopuff",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.gopuff.com/img/gopuff-logo.svg",
+    "description": "Gopuff is a consumer goods and food delivery company that operates micro-fulfillment centers for on-demand delivery.",
+    "category": "E-commerce",
+    "website": "https://www.gopuff.com",
+    "socials": {
+      "twitter": "https://twitter.com/gopuff",
+      "linkedin": "https://www.linkedin.com/company/gopuff/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2013,
+    "founders": [
+      "Rafael Ilishayev",
+      "Yakir Gola"
+    ],
+    "funding": "$3.6B",
+    "investors": [
+      "SoftBank Vision Fund",
+      "Accolade Partners",
+      "Blackstone Growth"
+    ],
+    "ceo": "Rafael Ilishayev"
+  },
+  {
+    "id": 118,
+    "name": "Instacart",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.instacart.com/assets/express/logos/instacart-logo-purple.svg",
+    "description": "Instacart is a grocery delivery and pick-up service in the U.S. and Canada.",
+    "category": "E-commerce",
+    "website": "https://www.instacart.com",
+    "socials": {
+      "twitter": "https://twitter.com/Instacart",
+      "linkedin": "https://www.linkedin.com/company/instacart/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Apoorva Mehta"
+    ],
+    "funding": "$2.7B",
+    "investors": [
+      "Andreessen Horowitz",
+      "Sequoia Capital",
+      "Khosla Ventures"
+    ],
+    "ceo": "Fidji Simo"
+  },
+  {
+    "id": 119,
+    "name": "Coursera",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.coursera.org/static/images/Coursera_Logo_Black.svg",
+    "description": "Coursera is an online learning platform offering courses, specializations, and degrees from universities and companies.",
+    "category": "Edtech",
+    "website": "https://www.coursera.org",
+    "socials": {
+      "twitter": "https://twitter.com/coursera",
+      "linkedin": "https://www.linkedin.com/company/coursera/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2012,
+    "founders": [
+      "Andrew Ng",
+      "Daphne Koller"
+    ],
+    "funding": "$644M",
+    "investors": [
+      "Kleiner Perkins",
+      "New Enterprise Associates",
+      "GSV Ventures"
+    ],
+    "ceo": "Jeff Maggioncalda"
+  },
+  {
+    "id": 120,
+    "name": "Duolingo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://d35aaqx5ub95lt.cloudfront.net/images/duolingo-logo-share.png",
+    "description": "Duolingo is a popular language-learning platform and app, offering free, bite-sized lessons.",
+    "category": "Edtech",
+    "website": "https://www.duolingo.com",
+    "socials": {
+      "twitter": "https://twitter.com/duolingo",
+      "linkedin": "https://www.linkedin.com/company/duolingo/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2011,
+    "founders": [
+      "Luis von Ahn",
+      "Severin Hacker"
+    ],
+    "funding": "$183M",
+    "investors": [
+      "Google Capital",
+      "Kleiner Perkins",
+      "Union Square Ventures"
+    ],
+    "ceo": "Luis von Ahn"
+  },
+  {
+    "id": 121,
+    "name": "Cruise",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.getcruise.com/assets/images/Cruise-RGB-Black.svg",
+    "description": "Cruise, a subsidiary of General Motors, is an autonomous vehicle company developing self-driving cars.",
+    "category": "Autonomous Vehicles",
+    "website": "https://www.getcruise.com",
+    "socials": {
+      "twitter": "https://twitter.com/Cruise",
+      "linkedin": "https://www.linkedin.com/company/cruiseautomation/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2013,
+    "founders": [
+      "Kyle Vogt",
+      "Dan Kan"
+    ],
+    "funding": "$10.7B",
+    "investors": [
+      "SoftBank Vision Fund",
+      "General Motors",
+      "Honda"
+    ],
+    "ceo": "Kyle Vogt"
+  },
+  {
+    "id": 122,
+    "name": "Waymo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://waymo.com/v2/img/waymo_logo_dark.svg",
+    "description": "Waymo, a subsidiary of Alphabet, is an autonomous driving technology development company.",
+    "category": "Autonomous Vehicles",
+    "website": "https://waymo.com",
+    "socials": {
+      "twitter": "https://twitter.com/Waymo",
+      "linkedin": "https://www.linkedin.com/company/waymo/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2009,
+    "founders": [
+      "Sebastian Thrun",
+      "Chris Urmson"
+    ],
+    "funding": "$5.5B",
+    "investors": [
+      "Alphabet Inc.",
+      "Silver Lake",
+      "Andreessen Horowitz"
+    ],
+    "ceo": "Tekedra Mawakana"
+  },
+  {
+    "id": 123,
+    "name": "Rivian",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.rivian.com/2pt132k0gq6j/47fF3f2rW3yvS2GfV91zG4/b2d03221975e5b30b4278453531cfd03/logo_light_with_text.svg",
+    "description": "Rivian is an American electric vehicle automaker and automotive technology company.",
+    "category": "Automotive",
+    "website": "https://rivian.com",
+    "socials": {
+      "twitter": "https://twitter.com/Rivian",
+      "linkedin": "https://www.linkedin.com/company/rivian/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2009,
+    "founders": [
+      "RJ Scaringe"
+    ],
+    "funding": "$10.7B",
+    "investors": [
+      "Amazon",
+      "Ford Motor Company",
+      "T. Rowe Price"
+    ],
+    "ceo": "RJ Scaringe"
+  },
+  {
+    "id": 124,
+    "name": "Impossible Foods",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://impossiblefoods.com/wp-content/themes/if/assets/images/logo.svg",
+    "description": "Impossible Foods is a company that develops plant-based substitutes for meat products.",
+    "category": "Food & Beverage",
+    "website": "https://impossiblefoods.com",
+    "socials": {
+      "twitter": "https://twitter.com/ImpossibleFoods",
+      "linkedin": "https://www.linkedin.com/company/impossible-foods-inc-/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2011,
+    "founders": [
+      "Patrick O. Brown"
+    ],
+    "funding": "$2B",
+    "investors": [
+      "Temasek",
+      "Bill Gates",
+      "Google Ventures"
+    ],
+    "ceo": "Peter McGuinness"
+  },
+  {
+    "id": 125,
+    "name": "Beyond Meat",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.beyondmeat.com/assets/images/logo-dark.svg",
+    "description": "Beyond Meat is a producer of plant-based meat substitutes designed to look, cook, and taste like animal meat.",
+    "category": "Food & Beverage",
+    "website": "https://www.beyondmeat.com",
+    "socials": {
+      "twitter": "https://twitter.com/BeyondMeat",
+      "linkedin": "https://www.linkedin.com/company/beyond-meat/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2009,
+    "founders": [
+      "Ethan Brown"
+    ],
+    "funding": "$197M",
+    "investors": [
+      "Kleiner Perkins",
+      "Bill Gates",
+      "Tyson Foods"
+    ],
+    "ceo": "Ethan Brown"
+  },
+  {
+    "id": 126,
+    "name": "Allbirds",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://cdn.allbirds.com/image/upload/v1642131924/assets/allbirds-logo-dark.svg",
+    "description": "Allbirds is a footwear and apparel company known for using sustainable materials like merino wool and eucalyptus tree fibers.",
+    "category": "Retail",
+    "website": "https://www.allbirds.com",
+    "socials": {
+      "twitter": "https://twitter.com/allbirds",
+      "linkedin": "https://www.linkedin.com/company/allbirds/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Tim Brown",
+      "Joey Zwillinger"
+    ],
+    "funding": "$200M",
+    "investors": [
+      "Fidelity Management and Research Company",
+      "T. Rowe Price",
+      "Tiger Global Management"
+    ],
+    "ceo": "Tim Brown & Joey Zwillinger (Co-CEOs)"
+  },
+  {
+    "id": 127,
+    "name": "Warby Parker",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.warbyparker.com/img/warby_parker_logo_desktop.svg",
+    "description": "Warby Parker is an online retailer of prescription glasses and sunglasses, known for its direct-to-consumer model.",
+    "category": "Retail",
+    "website": "https://www.warbyparker.com",
+    "socials": {
+      "twitter": "https://twitter.com/WarbyParker",
+      "linkedin": "https://www.linkedin.com/company/warby-parker/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2010,
+    "founders": [
+      "Neil Blumenthal",
+      "David Gilboa",
+      "Andy Hunt",
+      "Jeffrey Raider"
+    ],
+    "funding": "$290M",
+    "investors": [
+      "Tiger Global Management",
+      "T. Rowe Price",
+      "General Catalyst"
+    ],
+    "ceo": "Neil Blumenthal & Dave Gilboa (Co-CEOs)"
+  },
+  {
+    "id": 128,
+    "name": "Casper",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://casper.com/assets/images/casper-logo-dark.svg",
+    "description": "Casper is an e-commerce company that designs and sells sleep products, primarily mattresses.",
+    "category": "Retail",
+    "website": "https://casper.com",
+    "socials": {
+      "twitter": "https://twitter.com/Casper",
+      "linkedin": "https://www.linkedin.com/company/casper-sleep/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Philip Krim",
+      "Jeff Chapin",
+      "Luke Sherwin",
+      "Neil Parikh",
+      "Gabriel Flateman"
+    ],
+    "funding": "$340M",
+    "investors": [
+      "Target Corporation",
+      "New Enterprise Associates",
+      "Lerer Hippeau"
+    ],
+    "ceo": "Philip Krim"
+  },
+  {
+    "id": 129,
+    "name": "Sweetgreen",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.sweetgreen.com/images/sweetgreen-logo-dark.svg",
+    "description": "Sweetgreen is a fast-casual restaurant chain that serves healthy, seasonal salads and grain bowls.",
+    "category": "Food & Beverage",
+    "website": "https://www.sweetgreen.com",
+    "socials": {
+      "twitter": "https://twitter.com/sweetgreen",
+      "linkedin": "https://www.linkedin.com/company/sweetgreen/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2007,
+    "founders": [
+      "Nicolas Jammet",
+      "Nathaniel Ru",
+      "Jonathan Neman"
+    ],
+    "funding": "$640M",
+    "investors": [
+      "Fidelity Management and Research Company",
+      "T. Rowe Price",
+      "Beyond Meat"
+    ],
+    "ceo": "Jonathan Neman"
+  },
+  {
+    "id": 130,
+    "name": "Glossier",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.glossier.com/assets/logo.svg",
+    "description": "Glossier is a direct-to-consumer beauty company known for its minimalist approach to makeup and skincare.",
+    "category": "Retail",
+    "website": "https://www.glossier.com",
+    "socials": {
+      "twitter": "https://twitter.com/glossier",
+      "linkedin": "https://www.linkedin.com/company/glossier-inc-/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2014,
+    "founders": [
+      "Emily Weiss"
+    ],
+    "funding": "$260M",
+    "investors": [
+      "Sequoia Capital",
+      "Tiger Global Management",
+      "Forerunner Ventures"
+    ],
+    "ceo": "Kyle Leahy"
+  },
+  {
+    "id": 131,
+    "name": "Cameo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.website-files.com/609d941d90616b3f945391c4/609d941d90616b399453922f_logo.svg",
+    "description": "Cameo allows users to book personalized video messages from celebrities and public figures.",
+    "category": "Entertainment",
+    "website": "https://www.cameo.com",
+    "socials": {
+      "twitter": "https://twitter.com/BookCameo",
+      "linkedin": "https://www.linkedin.com/company/cameo-inc/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2017,
+    "founders": [
+      "Steven Galanis",
+      "Martin Blencowe",
+      "Devon Townsend"
+    ],
+    "funding": "$175M",
+    "investors": [
+      "Kleiner Perkins",
+      "Lightspeed Venture Partners",
+      "Spark Capital"
+    ],
+    "ceo": "Steven Galanis"
+  },
+  {
+    "id": 132,
+    "name": "Cameo (Canada)",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://assets.website-files.com/609d941d90616b3f945391c4/609d941d90616b399453922f_logo.svg",
+    "description": "A Canadian-based startup similar to the US Cameo, allowing users to book personalized video messages from celebrities.",
+    "category": "Entertainment",
+    "website": "https://www.cameo.com",
+    "socials": {
+      "twitter": "https://twitter.com/BookCameo",
+      "linkedin": "https://www.linkedin.com/company/cameo-inc/"
+    },
+    "country": "Canada",
+    "region": "North America",
+    "founded": 2017,
+    "founders": [
+      "Steven Galanis",
+      "Martin Blencowe",
+      "Devon Townsend"
+    ],
+    "funding": "$175M",
+    "investors": [
+      "Kleiner Perkins",
+      "Lightspeed Venture Partners",
+      "Spark Capital"
+    ],
+    "ceo": "Steven Galanis"
+  },
+  {
+    "id": 133,
+    "name": "Lightspeed Commerce",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.lightspeedhq.com/wp-content/themes/lightspeed/assets/images/logo.svg",
+    "description": "Lightspeed Commerce provides cloud-based point-of-sale and e-commerce solutions for retailers and restaurants.",
+    "category": "SaaS",
+    "website": "https://www.lightspeedhq.com",
+    "socials": {
+      "twitter": "https://twitter.com/LightspeedHQ",
+      "linkedin": "https://www.linkedin.com/company/lightspeedhq/"
+    },
+    "country": "Canada",
+    "region": "North America",
+    "founded": 2005,
+    "founders": [
+      "Dax Dasilva"
+    ],
+    "funding": "$295M",
+    "investors": [
+      "Caisse de dépôt et placement du Québec",
+      "Investissements PSP",
+      "Institutional Venture Partners"
+    ],
+    "ceo": "Dax Dasilva"
+  },
+  {
+    "id": 134,
+    "name": "NuScale Power",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.nuscalepower.com/images/nuscale-power-logo.svg",
+    "description": "NuScale Power is developing small modular reactors (SMRs) for nuclear power generation, offering flexible and scalable energy solutions.",
+    "category": "Clean Energy",
+    "website": "https://www.nuscalepower.com",
+    "socials": {
+      "twitter": "https://twitter.com/NuScale_Power",
+      "linkedin": "https://www.linkedin.com/company/nuscale-power/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2007,
+    "founders": [
+      "Jose N. Reyes"
+    ],
+    "funding": "$400M",
+    "investors": [
+      "Fluor Corporation",
+      "SNC-Lavalin"
+    ],
+    "ceo": "John Hopkins"
+  },
+  {
+    "id": 135,
+    "name": "QuantumScape",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.quantumscape.com/images/logo_color.svg",
+    "description": "QuantumScape is a company working on solid-state lithium-metal batteries for electric vehicles, aiming for higher energy density and faster charging.",
+    "category": "Clean Energy",
+    "website": "https://www.quantumscape.com",
+    "socials": {
+      "twitter": "https://twitter.com/QuantumScapeCo",
+      "linkedin": "https://www.linkedin.com/company/quantumscape/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2010,
+    "founders": [
+      "Jagdeep Singh",
+      "Fritz Prinz",
+      "Tim Holme"
+    ],
+    "funding": "$1.5B",
+    "investors": [
+      "Volkswagen Group",
+      "Khosla Ventures",
+      "Bill Gates"
+    ],
+    "ceo": "Jagdeep Singh"
+  },
+  {
+    "id": 136,
+    "name": "Stem",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.stem.com/wp-content/themes/stem/assets/img/logo.svg",
+    "description": "Stem is a global leader in AI-driven clean energy storage systems, offering smart energy solutions for businesses.",
+    "category": "Clean Energy",
+    "website": "https://www.stem.com",
+    "socials": {
+      "twitter": "https://twitter.com/StemInc",
+      "linkedin": "https://www.linkedin.com/company/steminc/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2009,
+    "founders": [
+      "Brian Warwicker",
+      "Jon Wellinghoff",
+      "Karen Butterfield",
+      "Tim Schultz"
+    ],
+    "funding": "$100M",
+    "investors": [
+      "Actis",
+      "Activate Capital",
+      "Clean Energy Ventures"
+    ],
+    "ceo": "John Carrington"
+  },
+  {
+    "id": 137,
+    "name": "Form Energy",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://formenergy.com/wp-content/themes/formenergy/assets/images/logo-dark.svg",
+    "description": "Form Energy develops a new class of cost-effective, multi-day energy storage systems for the grid based on iron-air battery technology.",
+    "category": "Clean Energy",
+    "website": "https://formenergy.com",
+    "socials": {
+      "twitter": "https://twitter.com/formenergyinc",
+      "linkedin": "https://www.linkedin.com/company/form-energy/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2017,
+    "founders": [
+      "Mateo Jaramillo",
+      "Marco Ferrara",
+      "Yet-Ming Chiang",
+      "William Woodford",
+      "Phil Hannam"
+    ],
+    "funding": "$800M",
+    "investors": [
+      "Breakthrough Energy Ventures",
+      "ArcTern Ventures",
+      "T. Rowe Price"
+    ],
+    "ceo": "Mateo Jaramillo"
+  },
+  {
+    "id": 138,
+    "name": "Lilium",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://lilium.com/wp-content/themes/lilium/assets/images/logo-desktop.svg",
+    "description": "Lilium is a German aerospace company developing an electric vertical take-off and landing (eVTOL) jet for air mobility.",
+    "category": "Aerospace",
+    "website": "https://lilium.com",
+    "socials": {
+      "twitter": "https://twitter.com/LiliumAviation",
+      "linkedin": "https://www.linkedin.com/company/lilium-gmbh/"
+    },
+    "country": "Germany",
+    "region": "Europe",
+    "founded": 2015,
+    "founders": [
+      "Daniel Wiegand",
+      "Sebastian Born",
+      "Patrick Nathen",
+      "Matthias Meiner"
+    ],
+    "funding": "$800M",
+    "investors": [
+      "Tencent Holdings",
+      "Atomico",
+      "LGT"
+    ],
+    "ceo": "Klaus Roewe"
+  },
+  {
+    "id": 139,
+    "name": "Volocopter",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.volocopter.com/wp-content/themes/volocopter/assets/img/logo.svg",
+    "description": "Volocopter is a German urban air mobility company developing electric air taxis for passenger transport.",
+    "category": "Aerospace",
+    "website": "https://www.volocopter.com",
+    "socials": {
+      "twitter": "https://twitter.com/volocopter",
+      "linkedin": "https://www.linkedin.com/company/volocopter-gmbh/"
+    },
+    "country": "Germany",
+    "region": "Europe",
+    "founded": 2011,
+    "founders": [
+      "Stephan Wolf",
+      "Alex Zosel"
+    ],
+    "funding": "$600M",
+    "investors": [
+      "BlackRock",
+      "Tencent Holdings",
+      "Mercedes-Benz"
+    ],
+    "ceo": "Dirk Hoke"
+  },
+  {
+    "id": 140,
+    "name": "Northvolt",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://northvolt.com/static/icons/northvolt_logo_dark.svg",
+    "description": "Northvolt is a Swedish battery developer and manufacturer, aiming to establish large-scale production of sustainable lithium-ion batteries.",
+    "category": "Clean Energy",
+    "website": "https://northvolt.com",
+    "socials": {
+      "twitter": "https://twitter.com/Northvolt",
+      "linkedin": "https://www.linkedin.com/company/northvolt/"
+    },
+    "country": "Sweden",
+    "region": "Europe",
+    "founded": 2016,
+    "founders": [
+      "Peter Carlsson",
+      "Paolo Cerruti"
+    ],
+    "funding": "$9B",
+    "investors": [
+      "Volkswagen Group",
+      "Goldman Sachs",
+      "Baillie Gifford"
+    ],
+    "ceo": "Peter Carlsson"
+  },
+  {
+    "id": 141,
+    "name": "Verkor",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.verkor.com/wp-content/themes/verkor-theme/assets/images/logo-footer.svg",
+    "description": "Verkor is a French industrial company developing high-performance, low-carbon battery cells for electric vehicles and stationary storage.",
+    "category": "Clean Energy",
+    "website": "https://www.verkor.com",
+    "socials": {
+      "twitter": "https://twitter.com/Verkor_eu",
+      "linkedin": "https://www.linkedin.com/company/verkor/"
+    },
+    "country": "France",
+    "region": "Europe",
+    "founded": 2020,
+    "founders": [
+      "Benoît Lemaignan",
+      "Christophe Mille",
+      "Julien G Guerra",
+      "Olivier Dufour"
+    ],
+    "funding": "$800M",
+    "investors": [
+      "EIT InnoEnergy",
+      "Schneider Electric",
+      "Capgemini"
+    ],
+    "ceo": "Benoît Lemaignan"
+  },
+  {
+    "id": 142,
+    "name": "Mistral AI",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://mistral.ai/static/images/mistral-logo-light.svg",
+    "description": "Mistral AI is a new French startup focused on developing open-source large language models and generative AI technologies.",
+    "category": "Artificial Intelligence",
+    "website": "https://mistral.ai",
+    "socials": {
+      "twitter": "https://twitter.com/MistralAI",
+      "linkedin": "https://www.linkedin.com/company/mistral-ai/"
+    },
+    "country": "France",
+    "region": "Europe",
+    "founded": 2023,
+    "founders": [
+      "Arthur Mensch",
+      "Guillaume Lample",
+      "Timothée Lacroix"
+    ],
+    "funding": "$500M",
+    "investors": [
+      "Andreessen Horowitz",
+      "Lightspeed Venture Partners",
+      "BNP Paribas"
+    ],
+    "ceo": "Arthur Mensch"
+  },
+  {
+    "id": 143,
+    "name": "Hugging Face",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://huggingface.co/front/assets/huggingface_logo.svg",
+    "description": "Hugging Face is an AI company that builds tools for machine learning, specializing in natural language processing and open-source transformers.",
+    "category": "Artificial Intelligence",
+    "website": "https://huggingface.co",
+    "socials": {
+      "twitter": "https://twitter.com/huggingface",
+      "linkedin": "https://www.linkedin.com/company/huggingface/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2016,
+    "founders": [
+      "Clément Delangue",
+      "Julien Chaumond",
+      "Thomas Wolf"
+    ],
+    "funding": "$395M",
+    "investors": [
+      "Lux Capital",
+      "Sequoia Capital",
+      "Coatue"
+    ],
+    "ceo": "Clément Delangue"
+  },
+  {
+    "id": 144,
+    "name": "ElevenLabs",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://elevenlabs.io/img/logo.svg",
+    "description": "ElevenLabs is an AI voice technology research company, specializing in high-quality speech synthesis and voice cloning.",
+    "category": "Artificial Intelligence",
+    "website": "https://elevenlabs.io",
+    "socials": {
+      "twitter": "https://twitter.com/elevenlabsio",
+      "linkedin": "https://www.linkedin.com/company/elevenlabs/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2022,
+    "founders": [
+      "Mateusz Staniszewski",
+      "Piotr Dabkowski"
+    ],
+    "funding": "$29M",
+    "investors": [
+      "Andreessen Horowitz",
+      "Creators Collective",
+      "SV Angel"
+    ],
+    "ceo": "Mateusz Staniszewski"
+  },
+  {
+    "id": 145,
+    "name": "Perplexity AI",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.perplexity.ai/assets/logo-light.svg",
+    "description": "Perplexity AI is an answer engine that provides direct, cited answers to user queries using large language models.",
+    "category": "Artificial Intelligence",
+    "website": "https://www.perplexity.ai",
+    "socials": {
+      "twitter": "https://twitter.com/perplexity_ai",
+      "linkedin": "https://www.linkedin.com/company/perplexity-ai/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2022,
+    "founders": [
+      "Aravind Srinivas",
+      "Denis Yarats",
+      "Johnny Ho",
+      "Andy Konwinski"
+    ],
+    "funding": "$100M",
+    "investors": [
+      "Jeff Bezos",
+      "Nvidia",
+      "IVP"
+    ],
+    "ceo": "Aravind Srinivas"
+  },
+  {
+    "id": 146,
+    "name": "Figure AI",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.figure.ai/static/logo-white.svg",
+    "description": "Figure AI is developing a general-purpose humanoid robot designed to perform dangerous or undesirable tasks.",
+    "category": "Robotics",
+    "website": "https://www.figure.ai",
+    "socials": {
+      "twitter": "https://twitter.com/Figure_AI",
+      "linkedin": "https://www.linkedin.com/company/figure-ai/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2022,
+    "founders": [
+      "Brett Adcock"
+    ],
+    "funding": "$700M",
+    "investors": [
+      "OpenAI Startup Fund",
+      "Microsoft",
+      "Nvidia"
+    ],
+    "ceo": "Brett Adcock"
+  },
+  {
+    "id": 147,
+    "name": "Astera Labs",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://www.asteralabs.com/wp-content/themes/asteralabs/assets/images/logo_color.svg",
+    "description": "Astera Labs is a semiconductor company providing purpose-built connectivity solutions for cloud and AI infrastructure.",
+    "category": "Semiconductor",
+    "website": "https://www.asteralabs.com",
+    "socials": {
+      "twitter": "https://twitter.com/AsteraLabs",
+      "linkedin": "https://www.linkedin.com/company/astera-labs/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2017,
+    "founders": [
+      "Jitendra Mohan",
+      "Sanjay Gajendra",
+      "Casey Morrison"
+    ],
+    "funding": "$85M",
+    "investors": [
+      "Fidelity Management and Research Company",
+      "Intel Capital",
+      "Wing Venture Capital"
+    ],
+    "ceo": "Jitendra Mohan"
+  },
+  {
+    "id": 148,
+    "name": "Mistral AI",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://mistral.ai/static/images/mistral-logo-light.svg",
+    "description": "Mistral AI is a new French startup focused on developing open-source large language models and generative AI technologies.",
+    "category": "Artificial Intelligence",
+    "website": "https://mistral.ai",
+    "socials": {
+      "twitter": "https://twitter.com/MistralAI",
+      "linkedin": "https://www.linkedin.com/company/mistral-ai/"
+    },
+    "country": "France",
+    "region": "Europe",
+    "founded": 2023,
+    "founders": [
+      "Arthur Mensch",
+      "Guillaume Lample",
+      "Timothée Lacroix"
+    ],
+    "funding": "$500M",
+    "investors": [
+      "Andreessen Horowitz",
+      "Lightspeed Venture Partners",
+      "BNP Paribas"
+    ],
+    "ceo": "Arthur Mensch"
+  },
+  {
+    "id": 149,
+    "name": "Monzo",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://monzo.com/static/images/monzo_logo.svg",
+    "description": "Monzo is a UK-based challenger bank offering a mobile-first current account with smart budgeting features.",
+    "category": "Fintech",
+    "website": "https://monzo.com",
+    "socials": {
+      "twitter": "https://twitter.com/monzo",
+      "linkedin": "https://www.linkedin.com/company/monzo/"
+    },
+    "country": "United Kingdom",
+    "region": "Europe",
+    "founded": 2015,
+    "founders": [
+      "Tom Blomfield",
+      "Jonas Huckestein",
+      "Jason Bates",
+      "Paul Rippon",
+      "Gary Dolman"
+    ],
+    "funding": "$1.4B",
+    "investors": [
+      "Y Combinator",
+      "Stripe",
+      "Octopus Ventures"
+    ],
+    "ceo": "TS Anil"
+  },
+  {
+    "id": 150,
+    "name": "Wise (formerly TransferWise)",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://wise.com/public-resources/assets/logos/wise_logo.svg",
+    "description": "Wise is a global technology company specializing in online money transfers and multi-currency accounts.",
+    "category": "Fintech",
+    "website": "https://wise.com",
+    "socials": {
+      "twitter": "https://twitter.com/Wise",
+      "linkedin": "https://www.linkedin.com/company/wise-com/"
+    },
+    "country": "United Kingdom",
+    "region": "Europe",
+    "founded": 2011,
+    "founders": [
+      "Kristo Käärmann",
+      "Taavet Hinrikus"
+    ],
+    "funding": "$1.3B",
+    "investors": [
+      "Valar Ventures",
+      "Andreessen Horowitz",
+      "Maveron"
+    ],
+    "ceo": "Kristo Käärmann"
+  },
+  {
+    "id": 151,
+    "name": "Abnormal Security",
+    "logo": "assets/logos/placeholder.svg",
+    "logoUrl": "https://abnormalsecurity.com/wp-content/themes/abnormal-security/assets/images/logo.svg",
+    "description": "Abnormal Security provides an AI-native cloud email security platform that detects and blocks advanced email attacks.",
+    "category": "Cybersecurity",
+    "website": "https://abnormalsecurity.com",
+    "socials": {
+      "twitter": "https://twitter.com/AbnormalSec",
+      "linkedin": "https://www.linkedin.com/company/abnormal-security/"
+    },
+    "country": "USA",
+    "region": "North America",
+    "founded": 2018,
+    "founders": [
+      "Evan Reiser",
+      "Sanjay Jeyakumar"
+    ],
+    "funding": "$280M",
+    "investors": [
+      "Insight Partners",
+      "Greylock Partners",
+      "Menlo Ventures"
+    ],
+    "ceo": "Evan Reiser"
   }
 ]
