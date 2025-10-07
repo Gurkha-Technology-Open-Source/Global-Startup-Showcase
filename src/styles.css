@@ -1,7 +1,59 @@
-/* Global Startup Showcase - Custom CSS */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Dark Mode */
+.dark body {
+    @apply bg-gray-900 text-gray-200;
+}
+
+.dark .startup-card {
+    @apply bg-gray-800;
+}
+
+.dark .startup-name {
+    @apply text-white;
+}
+
+.dark .startup-location {
+    @apply text-gray-400;
+}
+
+.dark .startup-category {
+    @apply bg-blue-900 text-blue-300;
+}
+
+.dark .startup-description {
+    @apply text-gray-300;
+}
+
+.dark .startup-info {
+    @apply text-gray-400;
+}
+
+.dark header {
+    @apply bg-gray-800 shadow-lg;
+}
+
+.dark #searchInput, .dark #categoryFilter, .dark #countryFilter, .dark #regionFilter {
+    @apply bg-gray-700 border-gray-600 text-white;
+}
+
+.dark .bg-white {
+    @apply bg-gray-800;
+}
+
+.dark .text-gray-800 {
+    @apply text-gray-200;
+}
+
+.dark .text-gray-600 {
+    @apply text-gray-400;
+}
+
 
 .startup-card {
-    @apply bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105;
+    @apply bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl;
 }
 
 .startup-logo {

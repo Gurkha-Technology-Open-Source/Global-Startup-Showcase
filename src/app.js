@@ -12,9 +12,47 @@ const regionFilter = document.getElementById('regionFilter');
 const resultsCount = document.getElementById('resultsCount');
 const noResults = document.getElementById('noResults');
 
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark');
+}
+
+// Toggle dark mode on button click
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    // Save preference to localStorage
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Show the button when the user scrolls down
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.remove('hidden');
+    } else {
+        scrollToTopBtn.classList.add('hidden');
+    }
+});
+
+// Scroll to the top when the button is clicked
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+const loadingSpinner = document.getElementById('loadingSpinner');
+
 // Initialize the application
 async function init() {
     try {
+        loadingSpinner.classList.remove('hidden');
         await loadStartups();
         populateFilters();
         displayStartups(allStartups);
@@ -23,6 +61,8 @@ async function init() {
         console.error('Error initializing app:', error);
         resultsCount.textContent = 'Error loading startups. Please refresh the page.';
         resultsCount.classList.add('text-red-600');
+    } finally {
+        loadingSpinner.classList.add('hidden');
     }
 }
 
