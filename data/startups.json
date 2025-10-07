@@ -11,7 +11,11 @@
       "linkedin": "https://www.linkedin.com/company/perplexityai"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2022,
+    "founders": ["Aravind Srinivas", "Denis Yarats", "Johnny Ho", "Andy Konwinski"],
+    "funding": "$1.5B+",
+    "investors": ["Jeff Bezos", "Nvidia", "New Enterprise Associates (NEA)", "IVP", "SoftBank Vision Fund", "Databricks", "Tobias Lütke", "Nat Friedman"]
   },
   {
     "id": 2,
@@ -25,7 +29,11 @@
       "linkedin": "https://www.linkedin.com/company/langchain"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2023,
+    "founders": ["Harrison Chase", "Ankush Gola"],
+    "funding": "$135M",
+    "investors": ["Benchmark", "Sequoia Capital", "IVP", "Amplify Partners", "Conviction", "Lux Capital"]
   },
   {
     "id": 3,
@@ -39,7 +47,11 @@
       "linkedin": "https://www.linkedin.com/company/runpod"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2022,
+    "founders": ["Zhen Lu", "Pardeep Singh"],
+    "funding": "$38.5M",
+    "investors": ["Intel Capital", "Dell Technologies Capital", "Julien Chaummond", "Nat Friedman", "Adam Lewis"]
   },
   {
     "id": 4,
@@ -53,7 +65,11 @@
       "linkedin": "https://www.linkedin.com/company/scribehow"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2019,
+    "founders": ["Aaron Podolny", "Jennifer Smith"],
+    "funding": "$53M",
+    "investors": ["Redpoint Ventures", "Tiger Global Management", "AME Cloud Ventures", "Amplify Partners", "New York Life Ventures"]
   },
   {
     "id": 5,
@@ -67,7 +83,11 @@
       "linkedin": "https://www.linkedin.com/company/replicate"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": null,
+    "founders": [],
+    "funding": null,
+    "investors": []
   },
   {
     "id": 6,
@@ -81,7 +101,11 @@
       "linkedin": "https://www.linkedin.com/company/flutterflow"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2020,
+    "founders": ["Alex Greaves", "Abel Mengistu"],
+    "funding": "$28M",
+    "investors": ["Google Ventures (GV)", "Gradient Ventures", "Xoogler Ventures", "Y Combinator", "Gaingels", "CRV", "10X Capital", "Leonis Investment", "SB Opportunity Fund"]
   },
   {
     "id": 7,
@@ -95,7 +119,11 @@
       "linkedin": "https://www.linkedin.com/company/clickup-app"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2017,
+    "founders": ["Zeb Evans", "Alex Yurkowski"],
+    "funding": "$535M",
+    "investors": ["Andreessen Horowitz", "Tiger Global Management", "Craft Ventures", "Georgian", "Lightspeed Venture Partners", "Meritech Capital Partners", "468 Capital", "HubSpot Ventures"]
   },
   {
     "id": 8,
@@ -109,7 +137,11 @@
       "linkedin": "https://www.linkedin.com/company/airwallex"
     },
     "country": "Australia",
-    "region": "Oceania"
+    "region": "Oceania",
+    "founded": 2015,
+    "founders": ["Jack Zhang", "Lucy Liu", "Max Li", "Xijing Dai", "Ki-Lok Wong"],
+    "funding": "$1.2B",
+    "investors": ["Square Peg", "DST Global", "Lone Pine Capital", "Blackbird", "Airtree", "Salesforce Ventures", "Visa Ventures", "Tencent", "HongShan (formerly Sequoia Capital China)", "Hillhouse Capital", "Horizons Ventures", "Gobi Partners"]
   },
   {
     "id": 9,
@@ -123,7 +155,12 @@
       "linkedin": "https://www.linkedin.com/company/pipe-trading"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2019,
+    "founders": [],
+    "funding": "$316M",
+    "investors": ["Craft Ventures", "Greenspring Associates", "Anthemis Group", "Fin Capital", "Next47", "Raptor Group", "Victory Park Capital"],
+    "ceo": "Luke Voiles"
   },
   {
     "id": 10,
@@ -137,6 +174,10 @@
       "linkedin": "https://www.linkedin.com/company/gopuff"
     },
     "country": "USA",
-    "region": "North America"
+    "region": "North America",
+    "founded": 2013,
+    "founders": ["Rafael Ilishayev", "Yakir Gola"],
+    "funding": "$5.14B",
+    "investors": ["Guggenheim Partners", "Blackstones' Horizon platform", "Guggenheim Investments", "Hedosophia", "MSD Partners", "Adage Capital", "Fidelity Management and Research Company", "Softbank Vision Fund 1", "Atreides Management", "Eldridge Capital", "D1 Capital Partners", "Luxor Capital", "Accel", "SoftBank"]
   }
 ]

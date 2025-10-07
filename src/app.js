@@ -124,6 +124,38 @@ function createStartupCard(startup) {
     const descP = document.createElement('p');
     descP.className = 'startup-description';
     descP.textContent = startup.description;
+
+    // Founded
+    if (startup.founded) {
+        const foundedDiv = document.createElement('div');
+        foundedDiv.className = 'startup-info';
+        foundedDiv.innerHTML = `<strong>Founded:</strong> ${startup.founded}`;
+        contentDiv.appendChild(foundedDiv);
+    }
+
+    // Founders
+    if (startup.founders && startup.founders.length > 0) {
+        const foundersDiv = document.createElement('div');
+        foundersDiv.className = 'startup-info';
+        foundersDiv.innerHTML = `<strong>Founders:</strong> ${startup.founders.join(', ')}`;
+        contentDiv.appendChild(foundersDiv);
+    }
+
+    // Funding
+    if (startup.funding) {
+        const fundingDiv = document.createElement('div');
+        fundingDiv.className = 'startup-info';
+        fundingDiv.innerHTML = `<strong>Funding:</strong> ${startup.funding}`;
+        contentDiv.appendChild(fundingDiv);
+    }
+
+    // Investors
+    if (startup.investors && startup.investors.length > 0) {
+        const investorsDiv = document.createElement('div');
+        investorsDiv.className = 'startup-info';
+        investorsDiv.innerHTML = `<strong>Investors:</strong> ${startup.investors.join(', ')}`;
+        contentDiv.appendChild(investorsDiv);
+    }
     
     // Links section
     const linksDiv = document.createElement('div');
@@ -168,10 +200,6 @@ function createStartupCard(startup) {
     }
     
     // Assemble the card
-    contentDiv.appendChild(nameH3);
-    contentDiv.appendChild(locationDiv);
-    contentDiv.appendChild(categorySpan);
-    contentDiv.appendChild(descP);
     contentDiv.appendChild(linksDiv);
     
     card.appendChild(logoDiv);
