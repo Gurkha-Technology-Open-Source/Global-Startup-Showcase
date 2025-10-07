@@ -1,220 +1,142 @@
 [
   {
     "id": 1,
-    "name": "Foodmandu",
-    "logo": "assets/logos/foodmandu.svg",
-    "description": "Nepal's first online food ordering and delivery service connecting customers with restaurants.",
-    "category": "Food & Beverage",
-    "website": "https://foodmandu.com",
-    "socials": {
-      "facebook": "https://facebook.com/foodmandu",
-      "twitter": "https://twitter.com/foodmandu",
-      "instagram": "https://instagram.com/foodmandu"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 2,
-    "name": "eSewa",
-    "logo": "assets/logos/esewa.svg",
-    "description": "Leading digital payment solution in Nepal, offering online payment, fund transfer, and utility bill payments.",
-    "category": "Fintech",
-    "website": "https://esewa.com.np",
-    "socials": {
-      "facebook": "https://facebook.com/esewa",
-      "twitter": "https://twitter.com/esewa",
-      "linkedin": "https://linkedin.com/company/esewa"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 3,
-    "name": "Pathao",
-    "logo": "assets/logos/pathao.svg",
-    "description": "On-demand ride-sharing and delivery service platform operating across Nepal.",
-    "category": "Transportation",
-    "website": "https://pathao.com",
-    "socials": {
-      "facebook": "https://facebook.com/pathao",
-      "instagram": "https://instagram.com/pathao",
-      "twitter": "https://twitter.com/pathao"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 4,
-    "name": "Sastodeal",
-    "logo": "assets/logos/sastodeal.svg",
-    "description": "Nepal's largest online marketplace offering a wide range of products at competitive prices.",
-    "category": "E-commerce",
-    "website": "https://sastodeal.com",
-    "socials": {
-      "facebook": "https://facebook.com/sastodeal",
-      "instagram": "https://instagram.com/sastodeal",
-      "linkedin": "https://linkedin.com/company/sastodeal"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 5,
-    "name": "Khalti",
-    "logo": "assets/logos/khalti.svg",
-    "description": "Digital wallet and payment gateway enabling seamless online transactions and bill payments.",
-    "category": "Fintech",
-    "website": "https://khalti.com",
-    "socials": {
-      "facebook": "https://facebook.com/khalti",
-      "twitter": "https://twitter.com/khalti",
-      "instagram": "https://instagram.com/khalti"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 6,
-    "name": "Tootle",
-    "logo": "assets/logos/tootle.svg",
-    "description": "Ride-sharing service connecting riders with bike and scooter drivers across Nepal.",
-    "category": "Transportation",
-    "website": "https://tootle.com.np",
-    "socials": {
-      "facebook": "https://facebook.com/tootle",
-      "instagram": "https://instagram.com/tootle",
-      "twitter": "https://twitter.com/tootle"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 7,
-    "name": "Daraz Nepal",
-    "logo": "assets/logos/daraz.svg",
-    "description": "Leading e-commerce platform in Nepal offering electronics, fashion, home goods, and more.",
-    "category": "E-commerce",
-    "website": "https://daraz.com.np",
-    "socials": {
-      "facebook": "https://facebook.com/daraz.com.np",
-      "instagram": "https://instagram.com/daraznepal",
-      "twitter": "https://twitter.com/DarazNepal"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 8,
-    "name": "Bhoj Deals",
-    "logo": "assets/logos/bhojdeals.svg",
-    "description": "Food delivery and restaurant discovery platform helping customers find the best dining options.",
-    "category": "Food & Beverage",
-    "website": "https://bhojdeals.com",
-    "socials": {
-      "facebook": "https://facebook.com/bhojdeals",
-      "instagram": "https://instagram.com/bhojdeals"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 9,
-    "name": "VIANET",
-    "logo": "assets/logos/vianet.svg",
-    "description": "Leading internet service provider delivering high-speed broadband and digital TV services.",
-    "category": "Technology",
-    "website": "https://vianet.com.np",
-    "socials": {
-      "facebook": "https://facebook.com/vianet",
-      "twitter": "https://twitter.com/vianet",
-      "linkedin": "https://linkedin.com/company/vianet"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 10,
-    "name": "Gyapu",
-    "logo": "assets/logos/gyapu.svg",
-    "description": "Digital marketplace connecting local vendors with customers for groceries and daily essentials.",
-    "category": "E-commerce",
-    "website": "https://gyapu.com",
-    "socials": {
-      "facebook": "https://facebook.com/gyapu",
-      "instagram": "https://instagram.com/gyapu"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 11,
-    "name": "Mero Share",
-    "logo": "assets/logos/meroshare.svg",
-    "description": "Online platform for applying and managing share applications in Nepal's stock market.",
-    "category": "Fintech",
-    "website": "https://meroshare.com.np",
-    "socials": {
-      "facebook": "https://facebook.com/meroshare"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 12,
-    "name": "Hamro Patro",
-    "logo": "assets/logos/hamropatro.svg",
-    "description": "Popular Nepali calendar app providing festivals, news, and cultural information.",
-    "category": "Technology",
-    "website": "https://hamropatro.com",
-    "socials": {
-      "facebook": "https://facebook.com/hamropatro",
-      "twitter": "https://twitter.com/hamropatro",
-      "instagram": "https://instagram.com/hamropatro"
-    },
-    "country": "Nepal",
-    "region": "Asia"
-  },
-  {
-    "id": 13,
-    "name": "Stripe",
+    "name": "Perplexity AI",
     "logo": "assets/logos/placeholder.svg",
-    "description": "A technology company that builds economic infrastructure for the internet.",
-    "category": "Fintech",
-    "website": "https://stripe.com",
+    "description": "An AI-powered conversational search engine.",
+    "category": "Artificial Intelligence",
+    "website": "https://www.perplexity.ai/",
     "socials": {
-      "twitter": "https://twitter.com/stripe",
-      "linkedin": "https://www.linkedin.com/company/stripe"
+      "twitter": "https://twitter.com/perplexity_ai",
+      "linkedin": "https://www.linkedin.com/company/perplexityai"
     },
     "country": "USA",
     "region": "North America"
   },
   {
-    "id": 14,
-    "name": "Klarna",
+    "id": 2,
+    "name": "LangChain",
     "logo": "assets/logos/placeholder.svg",
-    "description": "A Swedish fintech company that provides online financial services.",
-    "category": "Fintech",
-    "website": "https://www.klarna.com/",
+    "description": "A framework for developing applications powered by language models.",
+    "category": "Artificial Intelligence",
+    "website": "https://www.langchain.com/",
     "socials": {
-      "twitter": "https://twitter.com/klarna",
-      "linkedin": "https://www.linkedin.com/company/klarna"
+      "twitter": "https://twitter.com/langchainai",
+      "linkedin": "https://www.linkedin.com/company/langchain"
     },
-    "country": "Sweden",
-    "region": "Europe"
+    "country": "USA",
+    "region": "North America"
   },
   {
-    "id": 15,
-    "name": "Canva",
+    "id": 3,
+    "name": "RunPod",
     "logo": "assets/logos/placeholder.svg",
-    "description": "A graphic design platform, used to create social media graphics, presentations, posters, documents and other visual content.",
-    "category": "Design",
-    "website": "https://www.canva.com/",
+    "description": "A cloud platform for AI and machine learning that provides GPU instances, serverless GPUs, and AI endpoints.",
+    "category": "Cloud Computing",
+    "website": "https://www.runpod.io/",
     "socials": {
-      "twitter": "https://twitter.com/canva",
-      "instagram": "https://www.instagram.com/canva/"
+      "twitter": "https://twitter.com/runpod_io",
+      "linkedin": "https://www.linkedin.com/company/runpod"
+    },
+    "country": "USA",
+    "region": "North America"
+  },
+  {
+    "id": 4,
+    "name": "Scribe",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "An AI-powered tool that automatically creates step-by-step guides for any process.",
+    "category": "Productivity",
+    "website": "https://scribehow.com/",
+    "socials": {
+      "twitter": "https://twitter.com/scribehow",
+      "linkedin": "https://www.linkedin.com/company/scribehow"
+    },
+    "country": "USA",
+    "region": "North America"
+  },
+  {
+    "id": 5,
+    "name": "Replicate",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A platform for running and sharing open-source machine learning models.",
+    "category": "Artificial Intelligence",
+    "website": "https://replicate.com/",
+    "socials": {
+      "twitter": "https://twitter.com/replicate",
+      "linkedin": "https://www.linkedin.com/company/replicate"
+    },
+    "country": "USA",
+    "region": "North America"
+  },
+  {
+    "id": 6,
+    "name": "FlutterFlow",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A low-code platform for building native mobile and web applications.",
+    "category": "Developer Tools",
+    "website": "https://flutterflow.io/",
+    "socials": {
+      "twitter": "https://twitter.com/flutterflow",
+      "linkedin": "https://www.linkedin.com/company/flutterflow"
+    },
+    "country": "USA",
+    "region": "North America"
+  },
+  {
+    "id": 7,
+    "name": "ClickUp",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A cloud-based collaboration and project management tool.",
+    "category": "Productivity",
+    "website": "https://clickup.com/",
+    "socials": {
+      "twitter": "https://twitter.com/clickup",
+      "linkedin": "https://www.linkedin.com/company/clickup-app"
+    },
+    "country": "USA",
+    "region": "North America"
+  },
+  {
+    "id": 8,
+    "name": "Airwallex",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A global fintech platform for businesses, providing international payments, currency exchange, and other financial services.",
+    "category": "Fintech",
+    "website": "https://www.airwallex.com/",
+    "socials": {
+      "twitter": "https://twitter.com/airwallex",
+      "linkedin": "https://www.linkedin.com/company/airwallex"
     },
     "country": "Australia",
     "region": "Oceania"
+  },
+  {
+    "id": 9,
+    "name": "Pipe",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "A trading platform for companies with recurring revenue streams.",
+    "category": "Fintech",
+    "website": "https://pipe.com/",
+    "socials": {
+      "twitter": "https://twitter.com/pipe",
+      "linkedin": "https://www.linkedin.com/company/pipe-trading"
+    },
+    "country": "USA",
+    "region": "North America"
+  },
+  {
+    "id": 10,
+    "name": "Gopuff",
+    "logo": "assets/logos/placeholder.svg",
+    "description": "An instant commerce platform that delivers a variety of items, including food, drinks, and home essentials.",
+    "category": "E-commerce",
+    "website": "https://gopuff.com/",
+    "socials": {
+      "twitter": "https://twitter.com/gopuff",
+      "linkedin": "https://www.linkedin.com/company/gopuff"
+    },
+    "country": "USA",
+    "region": "North America"
   }
 ]

@@ -128,18 +128,25 @@ function createStartupCard(startup) {
     // Links section
     const linksDiv = document.createElement('div');
     linksDiv.className = 'startup-links';
-    
+
     // Website link
     if (startup.website) {
         const websiteLink = document.createElement('a');
         websiteLink.href = startup.website;
-        websiteLink.className = 'startup-website';
+        websiteLink.className = 'social-link';
         websiteLink.target = '_blank';
         websiteLink.rel = 'noopener noreferrer';
-        websiteLink.textContent = 'Visit Website';
+        websiteLink.title = 'Website';
+
+        const websiteIcon = document.createElement('img');
+        websiteIcon.src = 'assets/socials/website.svg';
+        websiteIcon.alt = 'Website';
+        websiteIcon.className = 'social-icon';
+        websiteLink.appendChild(websiteIcon);
+
         linksDiv.appendChild(websiteLink);
     }
-    
+
     // Social links
     if (startup.socials) {
         Object.entries(startup.socials).forEach(([platform, url]) => {
@@ -149,10 +156,13 @@ function createStartupCard(startup) {
             socialLink.target = '_blank';
             socialLink.rel = 'noopener noreferrer';
             socialLink.title = platform;
-            
-            // Add platform icon (using first letter as placeholder)
-            socialLink.textContent = platform.charAt(0).toUpperCase();
-            
+
+            const socialIcon = document.createElement('img');
+            socialIcon.src = `assets/socials/${platform}.svg`;
+            socialIcon.alt = platform;
+            socialIcon.className = 'social-icon';
+            socialLink.appendChild(socialIcon);
+
             linksDiv.appendChild(socialLink);
         });
     }
