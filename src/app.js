@@ -87,7 +87,7 @@ function displayStartups(startups) {
 function createStartupCard(startup) {
     const card = document.createElement('div');
     card.className = 'startup-card';
-    card.id = `startup-${startup.id}`;
+    card.title = `${startup.name} - ${startup.category}`;
     
     // Create logo section
     const logoDiv = document.createElement('div');
@@ -204,6 +204,17 @@ function createStartupCard(startup) {
     
     card.appendChild(logoDiv);
     card.appendChild(contentDiv);
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        'name': startup.name,
+        'description': startup.description,
+        'url': startup.website,
+        'logo': startup.logoUrl
+    });
+    card.appendChild(script);
     
     return card;
 }
