@@ -164,6 +164,9 @@ function createStartupCard(startup) {
     contentDiv.appendChild(nameH3);
     contentDiv.appendChild(locationDiv);
     contentDiv.appendChild(categorySpan);
+    const descP = document.createElement('p');
+    descP.className = 'startup-description';
+    descP.textContent = startup.description;
     contentDiv.appendChild(descP);
 
     // Founded
