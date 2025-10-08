@@ -47,12 +47,12 @@ scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-const loadingSpinner = document.getElementById('loadingSpinner');
+const preloader = document.getElementById('preloader');
 
 // Initialize the application
 async function init() {
     try {
-        loadingSpinner.classList.remove('hidden');
+        preloader.classList.remove('hidden');
         await loadStartups();
         populateFilters();
         displayStartups(allStartups);
@@ -62,7 +62,7 @@ async function init() {
         resultsCount.textContent = 'Error loading startups. Please refresh the page.';
         resultsCount.classList.add('text-red-600');
     } finally {
-        loadingSpinner.classList.add('hidden');
+        preloader.classList.add('hidden');
     }
 }
 
@@ -164,9 +164,6 @@ function createStartupCard(startup) {
     contentDiv.appendChild(nameH3);
     contentDiv.appendChild(locationDiv);
     contentDiv.appendChild(categorySpan);
-    const descP = document.createElement('p');
-    descP.className = 'startup-description';
-    descP.textContent = startup.description;
     const descP = document.createElement('p');
     descP.className = 'startup-description';
     descP.textContent = startup.description;

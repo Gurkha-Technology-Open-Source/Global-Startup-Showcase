@@ -33,7 +33,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1d4ed8',
+            }
+          }
+        }
+      }
+    </script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/styles.css">
@@ -43,6 +54,11 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
 </head>
 <body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-white z-50 flex justify-center items-center">
+        <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+    </div>
+
     <!-- Header -->
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-6">
@@ -122,12 +138,7 @@
         </div>
     </section>
 
-        <!-- Loading Spinner -->
-        <div id="loadingSpinner" class="hidden fixed top-0 left-0 w-full h-full bg-white bg-opacity-75 z-50">
-            <div class="flex justify-center items-center h-full">
-                <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
-            </div>
-        </div>
+
 
         <!-- Startups Grid -->
         <section class="container mx-auto px-4 pb-12">

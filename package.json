@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^4.1.14"
+  },
+  "name": "global-startup-showcase",
+  "version": "1.0.0",
+  "description": "[![Hacktoberfest 2025](https://img.shields.io/badge/Hacktoberfest-2025-blue.svg)](https://hacktoberfest.digitalocean.com/)",
+  "main": "tailwind.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjankc/Global-Startup-Showcase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arjankc/Global-Startup-Showcase/issues"
+  },
+  "homepage": "https://github.com/arjankc/Global-Startup-Showcase#readme"
+}
