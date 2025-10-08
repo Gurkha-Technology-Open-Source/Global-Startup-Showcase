@@ -11,6 +11,7 @@ const countryFilter = document.getElementById('countryFilter');
 const regionFilter = document.getElementById('regionFilter');
 const resultsCount = document.getElementById('resultsCount');
 const noResults = document.getElementById('noResults');
+const resetFiltersBtn = document.getElementById('resetFilters');
 
 const darkModeToggle = document.getElementById('darkModeToggle');
 
@@ -56,7 +57,6 @@ function updateDarkModeButton() {
     }
 }
 
-const preloader = document.getElementById('preloader');
 
 // Initialize the application
 async function init() {
@@ -92,7 +92,6 @@ function hidePreloader() {
 
 // Show error message
 function showError(message) {
-    const resultsCount = document.getElementById('resultsCount');
     resultsCount.textContent = message;
     resultsCount.classList.add('text-red-600', 'font-semibold');
     resultsCount.setAttribute('role', 'alert');
@@ -158,12 +157,15 @@ function displayStartups(startups) {
         startupsGrid.classList.add('hidden');
         resultsCount.textContent = 'No startups found matching your criteria.';
         resultsCount.classList.remove('text-red-600', 'font-semibold');
+        resultsCount.removeAttribute('role');
         announceToScreenReader('No startups found matching your search criteria');
         return;
     }
 
     noResults.classList.add('hidden');
     startupsGrid.classList.remove('hidden');
+    resultsCount.classList.remove('text-red-600', 'font-semibold');
+    resultsCount.removeAttribute('role');
 
     startups.forEach(startup => {
         const card = createStartupCard(startup);
@@ -181,6 +183,9 @@ function createStartupCard(startup) {
     card.setAttribute('role', 'article');
     card.setAttribute('aria-labelledby', `startup-name-${startup.id}`);
     card.setAttribute('tabindex', '0');
+    card.dataset.category = startup.category;
+    card.dataset.country = startup.country;
+    card.dataset.region = startup.region;
 
     // Create logo section
     const logoDiv = document.createElement('div');
@@ -188,6 +193,10 @@ function createStartupCard(startup) {
     const logoImg = document.createElement('img');
     logoImg.src = startup.logo;
     logoImg.alt = `${startup.name} company logo`;
+    logoImg.loading = 'lazy';
+    logoImg.decoding = 'async';
+    logoImg.referrerPolicy = 'no-referrer';
+    logoImg.sizes = '(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 100vw';
     logoImg.onerror = function() {
         this.src = 'assets/logos/placeholder.svg';
         this.alt = 'Company logo placeholder';
@@ -217,13 +226,16 @@ function createStartupCard(startup) {
 
     // Description
     const descP = document.createElement('p');
+    const descriptionId = `startup-description-${startup.id}`;
     descP.className = 'startup-description';
+    descP.id = descriptionId;
     descP.textContent = startup.description;
 
     contentDiv.appendChild(nameH3);
     contentDiv.appendChild(locationDiv);
     contentDiv.appendChild(categorySpan);
     contentDiv.appendChild(descP);
+    card.setAttribute('aria-describedby', descriptionId);
 
     // Founded
     if (startup.founded) {
@@ -260,6 +272,8 @@ function createStartupCard(startup) {
     // Links section
     const linksDiv = document.createElement('div');
     linksDiv.className = 'startup-links';
+    linksDiv.setAttribute('role', 'list');
+    linksDiv.setAttribute('aria-label', `${startup.name} online presence`);
 
     // Website link
     if (startup.website) {
@@ -269,11 +283,14 @@ function createStartupCard(startup) {
         websiteLink.target = '_blank';
         websiteLink.rel = 'noopener noreferrer';
         websiteLink.setAttribute('aria-label', `Visit ${startup.name} website (opens in new tab)`);
+        websiteLink.setAttribute('role', 'listitem');
 
         const websiteIcon = document.createElement('img');
         websiteIcon.src = 'assets/socials/website.svg';
         websiteIcon.alt = '';
         websiteIcon.className = 'social-icon';
+        websiteIcon.loading = 'lazy';
+        websiteIcon.decoding = 'async';
         websiteIcon.setAttribute('aria-hidden', 'true');
         websiteLink.appendChild(websiteIcon);
 
@@ -289,11 +306,14 @@ function createStartupCard(startup) {
             socialLink.target = '_blank';
             socialLink.rel = 'noopener noreferrer';
             socialLink.setAttribute('aria-label', `Visit ${startup.name} on ${platform} (opens in new tab)`);
+            socialLink.setAttribute('role', 'listitem');
 
             const socialIcon = document.createElement('img');
             socialIcon.src = `assets/socials/${platform}.svg`;
             socialIcon.alt = '';
             socialIcon.className = 'social-icon';
+            socialIcon.loading = 'lazy';
+            socialIcon.decoding = 'async';
             socialIcon.setAttribute('aria-hidden', 'true');
             socialLink.appendChild(socialIcon);
 
@@ -316,6 +336,7 @@ function createStartupCard(startup) {
         'url': startup.website,
         'logo': startup.logo
     });
+    script.setAttribute('aria-hidden', 'true');
     card.appendChild(script);
     
     return card;
@@ -327,40 +348,83 @@ function filterStartups() {
     const selectedCategory = categoryFilter.value;
     const selectedCountry = countryFilter.value;
     const selectedRegion = regionFilter.value;
+
+    const normalizedCategory = selectedCategory.toLowerCase();
+    const normalizedCountry = selectedCountry.toLowerCase();
+    const normalizedRegion = selectedRegion.toLowerCase();
     
     filteredStartups = allStartups.filter(startup => {
         // Check search term
-        const matchesSearch = searchTerm === '' || 
+        const founders = Array.isArray(startup.founders) ? startup.founders.join(' ').toLowerCase() : '';
+        const investors = Array.isArray(startup.investors) ? startup.investors.join(' ').toLowerCase() : '';
+        const matchesSearch = searchTerm === '' ||
             startup.name.toLowerCase().includes(searchTerm) ||
             startup.description.toLowerCase().includes(searchTerm) ||
-            startup.category.toLowerCase().includes(searchTerm);
+            startup.category.toLowerCase().includes(searchTerm) ||
+            startup.country.toLowerCase().includes(searchTerm) ||
+            startup.region.toLowerCase().includes(searchTerm) ||
+            founders.includes(searchTerm) ||
+            investors.includes(searchTerm);
         
         // Check category
         const matchesCategory = selectedCategory === 'all' || 
-            startup.category === selectedCategory;
+            startup.category.toLowerCase() === normalizedCategory;
 
         // Check country
         const matchesCountry = selectedCountry === 'all' ||
-            startup.country === selectedCountry;
+            startup.country.toLowerCase() === normalizedCountry;
 
         // Check region
         const matchesRegion = selectedRegion === 'all' ||
-            startup.region === selectedRegion;
+            startup.region.toLowerCase() === normalizedRegion;
         
         return matchesSearch && matchesCategory && matchesCountry && matchesRegion;
     });
-    
+
+    filteredStartups.sort((a, b) => a.name.localeCompare(b.name));
+
     displayStartups(filteredStartups);
+}
+
+function resetFilters() {
+    searchInput.value = '';
+    categoryFilter.value = 'all';
+    countryFilter.value = 'all';
+    regionFilter.value = 'all';
+
+    filterStartups();
+    searchInput.focus({ preventScroll: true });
+    announceToScreenReader('All filters cleared. Showing every startup.');
 }
 
 // Update results count
 function updateResultsCount(count) {
     const total = allStartups.length;
-    if (count === total) {
-        resultsCount.textContent = `Showing all ${total} startup${total !== 1 ? 's' : ''}`;
-    } else {
-        resultsCount.textContent = `Showing ${count} of ${total} startup${total !== 1 ? 's' : ''}`;
+    const searchTerm = searchInput.value.trim();
+    const activeFilters = [];
+
+    if (searchTerm) {
+        activeFilters.push(`Search: "${searchTerm}"`);
     }
+    if (categoryFilter.value !== 'all') {
+        activeFilters.push(`Category: ${categoryFilter.value}`);
+    }
+    if (countryFilter.value !== 'all') {
+        activeFilters.push(`Country: ${countryFilter.value}`);
+    }
+    if (regionFilter.value !== 'all') {
+        activeFilters.push(`Region: ${regionFilter.value}`);
+    }
+
+    const baseText = count === total
+        ? `Showing all ${total} startup${total !== 1 ? 's' : ''}`
+        : `Showing ${count} of ${total} startup${total !== 1 ? 's' : ''}`;
+
+    const filtersText = activeFilters.length > 0
+        ? ` (Filters active: ${activeFilters.join(', ')})`
+        : '';
+
+    resultsCount.textContent = `${baseText}${filtersText}`;
 }
 
 // Setup event listeners
@@ -376,6 +440,10 @@ function setupEventListeners() {
     categoryFilter.addEventListener('change', filterStartups);
     countryFilter.addEventListener('change', filterStartups);
     regionFilter.addEventListener('change', filterStartups);
+
+    if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', resetFilters);
+    }
 
     // Keyboard navigation for cards
     startupsGrid.addEventListener('keydown', handleCardKeydown);

@@ -6,8 +6,10 @@ A responsive web application showcasing innovative startups from around the worl
 
 ## Features
 
-- 🔍 **Search Functionality** - Search startups by name, description, or category
+- 🔍 **Search Functionality** - Search startups by name, description, founders, investors, category, country, or region
 - 🏷️ **Category Filter** - Filter startups by industry (Fintech, E-commerce, Transportation, etc.)
+- 🔁 **Quick Filter Reset** - See active filters at a glance and reset them with one click
+- ♿ **Accessible Experience** - Skip links, focus outlines, ARIA live regions, reduced motion support, and keyboard navigation
 - 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
 - ⚡ **Fast & Lightweight** - Static site with no build process required
 - 🎨 **Clean UI** - Modern design using Tailwind CSS
