@@ -133,11 +133,10 @@ function createStartupCard(startup) {
     const logoDiv = document.createElement('div');
     logoDiv.className = 'startup-logo';
     const logoImg = document.createElement('img');
-    logoImg.crossOrigin = 'anonymous';
-    logoImg.src = startup.logoUrl;
+    logoImg.src = startup.logo;
     logoImg.alt = `${startup.name} - ${startup.description}`;
     logoImg.onerror = function() {
-        this.src = startup.logo;
+        this.src = 'assets/logos/placeholder.svg';
         this.alt = 'Placeholder logo';
     };
     logoDiv.appendChild(logoImg);
@@ -161,12 +160,14 @@ function createStartupCard(startup) {
     categorySpan.className = 'startup-category';
     categorySpan.textContent = startup.category;
     
-    contentDiv.appendChild(nameH3);
-    contentDiv.appendChild(locationDiv);
-    contentDiv.appendChild(categorySpan);
+    // Description
     const descP = document.createElement('p');
     descP.className = 'startup-description';
     descP.textContent = startup.description;
+
+    contentDiv.appendChild(nameH3);
+    contentDiv.appendChild(locationDiv);
+    contentDiv.appendChild(categorySpan);
     contentDiv.appendChild(descP);
 
     // Founded
@@ -256,7 +257,7 @@ function createStartupCard(startup) {
         'name': startup.name,
         'description': startup.description,
         'url': startup.website,
-        'logo': startup.logoUrl
+        'logo': startup.logo
     });
     card.appendChild(script);
     
