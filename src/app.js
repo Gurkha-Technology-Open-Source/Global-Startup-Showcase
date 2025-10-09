@@ -70,6 +70,7 @@ export async function init() {
         showPreloader();
         await loadStartups();
         populateFilters();
+        addConsolidatedStructuredData(allStartups);
         displayStartups(allStartups);
         setupEventListeners();
         hidePreloader();
@@ -176,6 +177,38 @@ function displayStartups(startups) {
     resultsCount.removeAttribute('role');
 
     loadMoreStartups(startups);
+}
+
+// Add consolidated structured data to page head
+function addConsolidatedStructuredData(startups) {
+    // Remove any existing structured data script
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+        existingScript.remove();
+    }
+    
+    // Create consolidated structured data with ItemList
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'itemListElement': startups.map((startup, index) => ({
+            '@type': 'ListItem',
+            'position': index + 1,
+            'item': {
+                '@type': 'Organization',
+                'name': startup.name,
+                'description': startup.description,
+                'url': startup.website,
+                'logo': startup.logo
+            }
+        }))
+    };
+    
+    // Add script to document head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
 }
 
 // Create a startup card element
@@ -328,18 +361,6 @@ function createStartupCard(startup) {
     
     card.appendChild(logoDiv);
     card.appendChild(contentDiv);
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        'name': startup.name,
-        'description': startup.description,
-        'url': startup.website,
-        'logo': startup.logo
-    });
-    script.setAttribute('aria-hidden', 'true');
-    card.appendChild(script);
     
     return card;
 }
