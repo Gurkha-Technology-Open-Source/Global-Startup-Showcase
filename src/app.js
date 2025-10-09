@@ -65,7 +65,7 @@ function updateDarkModeButton() {
 
 
 // Initialize the application
-export export async function init() {
+export async function init() {
     try {
         showPreloader();
         await loadStartups();

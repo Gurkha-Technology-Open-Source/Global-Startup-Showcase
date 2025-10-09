@@ -45,13 +45,15 @@
 
 *   **Completed:**
     *   Use a linter to enforce a consistent code style.
-*   **To Do:**
+
+**Performance Optimization:**
+
+*   **Completed:**
+    *   Minify CSS and JavaScript files.
+    *   Optimize images.
 
 **Potential Enhancements:**
 
-*   **Performance Optimization:**
-    *   Minify CSS and JavaScript files.
-    *   Optimize images.
 *   **Accessibility Improvements:**
     *   Add a "skip to filters" link.
     *   Add more ARIA attributes to improve accessibility.

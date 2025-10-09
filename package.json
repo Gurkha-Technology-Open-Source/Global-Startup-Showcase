@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.14",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.14",
+    "terser": "^5.44.0"
   },
   "name": "global-startup-showcase",
   "version": "1.0.0",
@@ -11,7 +12,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "build-css": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "build:css": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
+    "build:js": "npx terser src/app.js -o dist/app.js -c -m",
+    "build": "npm run build:css && npm run build:js",
     "lint": "npx eslint src/app.js --fix"
   },
   "repository": {
