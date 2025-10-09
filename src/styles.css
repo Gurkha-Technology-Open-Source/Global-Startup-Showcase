@@ -1,12 +1,18 @@
 html {
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     background-color: #f9fafb;
+}
+
+body {
     color-scheme: light;
 }
 
 .dark {
     background-image: url('https://www.transparenttextures.com/patterns/dark-cubes.png');
     background-color: #111827;
+}
+
+.dark body {
     color-scheme: dark;
 }
 

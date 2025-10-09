@@ -2,7 +2,7 @@
 
 **Objective:** Improve the project visually with visual enhancements and eye candy.
 
-**Status:** In Progress
+**Status:** Completed
 
 **Completed Steps:**
 
@@ -20,11 +20,12 @@
     *   Moved styles from `index.html` to `src/styles.css`.
     *   Replaced hardcoded styles with Tailwind CSS classes where possible.
     *   Refactored the dark mode implementation to be more efficient and easier to maintain.
+    *   Finalized CSS Refactoring by adding the `body` selector before the `.dark body` selector in `src/styles.css`.
+*   **Review and Test:**
+    *   Reviewed all the changes made to ensure consistency and correctness.
+    *   Thoroughly tested the website in both light and dark modes to identify and fix any visual glitches or bugs.
+    *   Tested the website on different screen sizes to ensure responsiveness.
 
 **Next Steps:**
 
-1.  **Finalize CSS Refactoring:** The last action was to add the `body` selector before the `.dark body` selector in `src/styles.css`. This needs to be completed.
-2.  **Review and Test:**
-    *   Review all the changes made to ensure consistency and correctness.
-    *   Thoroughly test the website in both light and dark modes to identify and fix any visual glitches or bugs.
-    *   Test the website on different screen sizes to ensure responsiveness.
+1.  **Commit Changes:** Commit the changes with a descriptive message.
