@@ -386,18 +386,18 @@ function filterStartups() {
 
     // Sort the filtered startups
     switch (selectedSort) {
-        case 'name-asc':
-            filteredStartups.sort((a, b) => a.name.localeCompare(b.name));
-            break;
-        case 'name-desc':
-            filteredStartups.sort((a, b) => b.name.localeCompare(a.name));
-            break;
-        case 'founded-asc':
-            filteredStartups.sort((a, b) => a.founded - b.founded);
-            break;
-        case 'founded-desc':
-            filteredStartups.sort((a, b) => b.founded - a.founded);
-            break;
+    case 'name-asc':
+        filteredStartups.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+    case 'name-desc':
+        filteredStartups.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+    case 'founded-asc':
+        filteredStartups.sort((a, b) => a.founded - b.founded);
+        break;
+    case 'founded-desc':
+        filteredStartups.sort((a, b) => b.founded - a.founded);
+        break;
     }
 
     displayStartups(filteredStartups);
@@ -525,24 +525,24 @@ function handleCardKeydown(event) {
     if (currentIndex === -1) return;
 
     switch (event.key) {
-        case 'ArrowRight':
-            event.preventDefault();
-            const nextIndex = (currentIndex + 1) % cards.length;
-            cards[nextIndex].focus();
-            break;
-        case 'ArrowLeft':
-            event.preventDefault();
-            const prevIndex = currentIndex === 0 ? cards.length - 1 : currentIndex - 1;
-            cards[prevIndex].focus();
-            break;
-        case 'Home':
-            event.preventDefault();
-            cards[0].focus();
-            break;
-        case 'End':
-            event.preventDefault();
-            cards[cards.length - 1].focus();
-            break;
+    case 'ArrowRight':
+        event.preventDefault();
+        const nextIndex = (currentIndex + 1) % cards.length;
+        cards[nextIndex].focus();
+        break;
+    case 'ArrowLeft':
+        event.preventDefault();
+        const prevIndex = currentIndex === 0 ? cards.length - 1 : currentIndex - 1;
+        cards[prevIndex].focus();
+        break;
+    case 'Home':
+        event.preventDefault();
+        cards[0].focus();
+        break;
+    case 'End':
+        event.preventDefault();
+        cards[cards.length - 1].focus();
+        break;
     }
 }
 
