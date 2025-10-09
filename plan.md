@@ -41,6 +41,12 @@
     *   Add a "load more" button.
     *   Improve the visual design of the startup cards.
 
+**Code Quality and Maintainability:**
+
+*   **Completed:**
+    *   Use a linter to enforce a consistent code style.
+*   **To Do:**
+
 **Potential Enhancements:**
 
 *   **Performance Optimization:**
@@ -49,6 +55,3 @@
 *   **Accessibility Improvements:**
     *   Add a "skip to filters" link.
     *   Add more ARIA attributes to improve accessibility.
-*   **Code Quality and Maintainability:**
-    *   Use a linter to enforce a consistent code style.
-    *   Add unit tests.
