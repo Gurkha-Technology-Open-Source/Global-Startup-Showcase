@@ -43,6 +43,7 @@ The GitHub Actions workflow `.github/workflows/main.yml` runs automatically:
 - Updates `logo` field with local path
 - Preserves all other fields
 - Writes formatted JSON (2-space indent)
+- **Logo automatically displays on cards** via JavaScript `startup.logo` property
 
 ### 4. Commit Changes
 - Git commits downloaded logos
@@ -131,6 +132,17 @@ The GitHub Actions workflow `.github/workflows/main.yml` runs automatically:
 ```
 
 **Note:** The `logoUrl` field is preserved for reference and potential re-downloads.
+
+**Logo Display:** The JavaScript automatically reads the `logo` field and displays the image in the startup card:
+
+```javascript
+// From src/app.js - createStartupCard()
+logoImg.src = startup.logo;  // Uses the updated path
+logoImg.alt = `${startup.name} company logo`;
+logoImg.onerror = function() {
+  this.src = 'assets/logos/placeholder.svg'; // Fallback
+};
+```
 
 ## Configuration
 

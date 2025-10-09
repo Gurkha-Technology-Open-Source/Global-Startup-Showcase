@@ -153,7 +153,8 @@ async function main() {
       startup.logo = relativePath;
       downloadCount++;
 
-      console.log(`✅ ${startupName}: Saved as ${fileName}\n`);
+      console.log(`✅ ${startupName}: Saved as ${fileName}`);
+      console.log(`   → Logo field updated: ${relativePath}\n`);
     } catch (err) {
       console.error(`❌ ${startupName}: Failed - ${err.message}`);
       errorCount++;

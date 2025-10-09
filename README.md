@@ -162,6 +162,14 @@ To add your startup to the showcase:
 
 **Note:** If you provide a `logoUrl`, our automated system will download and optimize the logo. Otherwise, please ensure your logo file is under 100KB and in SVG or PNG format.
 
+**How it works:** The logo download system automatically:
+1. Downloads the image from `logoUrl`
+2. Saves it to `assets/logos/` with a sanitized filename
+3. Updates the `logo` field in the JSON with the local path
+4. JavaScript reads the `logo` field and displays it on the card
+
+See [Logo Flow Documentation](docs/logo-flow.md) for complete details.
+
 ## Technologies Used
 
 - **Frontend:** Vanilla JavaScript (ES6+), HTML5, CSS3
