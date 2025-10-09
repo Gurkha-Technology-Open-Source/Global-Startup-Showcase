@@ -398,6 +398,10 @@ function filterStartups() {
     case 'founded-desc':
         filteredStartups.sort((a, b) => b.founded - a.founded);
         break;
+    default:
+        // If sort value is unexpected, do not sort and log a warning
+        console.warn(`Unexpected sort value: "${selectedSort}". No sorting applied.`);
+        break;
     }
 
     displayStartups(filteredStartups);
