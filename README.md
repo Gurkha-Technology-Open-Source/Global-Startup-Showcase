@@ -70,6 +70,8 @@ npx serve
 
 5. Open your browser and navigate to `http://localhost:8000`
 
+**Note:** When deploying to GitHub Pages, the build process runs automatically via GitHub Actions. You don't need to commit the `dist/` folder - it's built on every push.
+
 ## Adding a Startup
 
 To add your startup to the showcase:

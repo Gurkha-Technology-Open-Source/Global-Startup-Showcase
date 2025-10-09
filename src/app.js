@@ -5,6 +5,9 @@ let filteredStartups = [];
 let currentPage = 1;
 const startupsPerPage = 12;
 
+// Performance optimization: Use requestAnimationFrame for smooth rendering
+const RAF_DELAY = 16; // ~60fps
+
 // DOM Elements
 const startupsGrid = document.getElementById('startupsGrid');
 const searchInput = document.getElementById('searchInput');
@@ -70,7 +73,6 @@ async function init() {
         showPreloader();
         await loadStartups();
         populateFilters();
-        addConsolidatedStructuredData(allStartups);
         displayStartups(allStartups);
         setupEventListeners();
         hidePreloader();
