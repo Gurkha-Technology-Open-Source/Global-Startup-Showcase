@@ -119,7 +119,6 @@ body {
 
 .startup-category {
     display: inline-block;
-    background-image: linear-gradient(to right, #dbeafe, #bfdbfe);
     color: #1e40af;
     font-size: 0.75rem;
     font-weight: 600;
