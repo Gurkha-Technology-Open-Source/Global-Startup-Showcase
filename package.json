@@ -11,7 +11,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build-css": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css"
+    "build-css": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "lint": "npx eslint src/app.js --fix"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Gurkha-Technology-Open-Source/Global-Startup-Showcase/issues"
   },
