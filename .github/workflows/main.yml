@@ -1,0 +1,51 @@
+name: Download Logos
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  download-logos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Download logos
+        run: |
+          const fs = require('fs');
+          const https = require('https');
+          const startups = JSON.parse(fs.readFileSync('./data/startups.json', 'utf-8'));
+
+          for (const startup of startups) {
+            if (startup.logoUrl) {
+              const extension = startup.logoUrl.split('.').pop();
+              const fileName = `${startup.name.toLowerCase().replace(/ /g, '-')}.${extension}`;
+              const filePath = `./assets/logos/${fileName}`;
+
+              https.get(startup.logoUrl, (response) => {
+                const fileStream = fs.createWriteStream(filePath);
+                response.pipe(fileStream);
+                fileStream.on('finish', () => {
+                  console.log(`Downloaded ${fileName}`);
+                  startup.logo = `assets/logos/${fileName}`;
+                });
+              }).on('error', (err) => {
+                console.error(`Error downloading ${startup.logoUrl}: ${err.message}`);
+              });
+            }
+          }
+
+          fs.writeFileSync('./data/startups.json', JSON.stringify(startups, null, 2));
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: Update logos"

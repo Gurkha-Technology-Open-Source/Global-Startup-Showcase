@@ -11,19 +11,107 @@ const countryFilter = document.getElementById('countryFilter');
 const regionFilter = document.getElementById('regionFilter');
 const resultsCount = document.getElementById('resultsCount');
 const noResults = document.getElementById('noResults');
+const resetFiltersBtn = document.getElementById('resetFilters');
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Check for saved dark mode preference or system preference
+const savedTheme = localStorage.getItem('darkMode');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'enabled' || (!savedTheme && systemPrefersDark)) {
+    document.body.classList.add('dark');
+    updateDarkModeButton();
+}
+
+// Toggle dark mode on button click
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    updateDarkModeButton();
+
+    // Save preference to localStorage
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+    }
+
+    announceToScreenReader(`Dark mode ${document.body.classList.contains('dark') ? 'enabled' : 'disabled'}`);
+});
+
+// Update dark mode button appearance
+function updateDarkModeButton() {
+    const isDark = document.body.classList.contains('dark');
+    const icon = darkModeToggle.querySelector('i');
+
+    if (isDark) {
+        darkModeToggle.setAttribute('aria-pressed', 'true');
+        if (icon) {
+            icon.className = 'fas fa-sun mr-2';
+        }
+    } else {
+        darkModeToggle.setAttribute('aria-pressed', 'false');
+        if (icon) {
+            icon.className = 'fas fa-moon mr-2';
+        }
+    }
+}
+
 
 // Initialize the application
 async function init() {
     try {
+        showPreloader();
         await loadStartups();
         populateFilters();
+        addConsolidatedStructuredData(allStartups);
         displayStartups(allStartups);
         setupEventListeners();
+        hidePreloader();
+        announceToScreenReader('Startup showcase loaded successfully');
     } catch (error) {
         console.error('Error initializing app:', error);
-        resultsCount.textContent = 'Error loading startups. Please refresh the page.';
-        resultsCount.classList.add('text-red-600');
+        hidePreloader();
+        showError('Failed to load startups. Please check your internet connection and try refreshing the page.');
+        announceToScreenReader('Error loading startups. Please try refreshing the page.');
     }
+}
+
+// Show preloader
+function showPreloader() {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.remove('hidden');
+    preloader.setAttribute('aria-hidden', 'false');
+}
+
+// Hide preloader
+function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('hidden');
+    preloader.setAttribute('aria-hidden', 'true');
+}
+
+// Show error message
+function showError(message) {
+    resultsCount.textContent = message;
+    resultsCount.classList.add('text-red-600', 'font-semibold');
+    resultsCount.setAttribute('role', 'alert');
+}
+
+// Announce to screen readers
+function announceToScreenReader(message) {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+
+    document.body.appendChild(announcement);
+
+    // Remove after announcement
+    setTimeout(() => {
+        document.body.removeChild(announcement);
+    }, 1000);
 }
 
 // Load startups from JSON file
@@ -64,70 +152,161 @@ function populateDropdown(selectElement, items) {
 // Display startups in the grid
 function displayStartups(startups) {
     startupsGrid.innerHTML = '';
-    
+
     if (startups.length === 0) {
         noResults.classList.remove('hidden');
         startupsGrid.classList.add('hidden');
-        resultsCount.textContent = 'No results found';
+        resultsCount.textContent = 'No startups found matching your criteria.';
+        resultsCount.classList.remove('text-red-600', 'font-semibold');
+        resultsCount.removeAttribute('role');
+        announceToScreenReader('No startups found matching your search criteria');
         return;
     }
-    
+
     noResults.classList.add('hidden');
     startupsGrid.classList.remove('hidden');
-    
+    resultsCount.classList.remove('text-red-600', 'font-semibold');
+    resultsCount.removeAttribute('role');
+
     startups.forEach(startup => {
         const card = createStartupCard(startup);
         startupsGrid.appendChild(card);
     });
-    
+
     updateResultsCount(startups.length);
+    announceToScreenReader(`Showing ${startups.length} startup${startups.length !== 1 ? 's' : ''}`);
+}
+
+// Add consolidated structured data to page head
+function addConsolidatedStructuredData(startups) {
+    // Remove any existing structured data script
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+        existingScript.remove();
+    }
+    
+    // Create consolidated structured data with ItemList
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'itemListElement': startups.map((startup, index) => ({
+            '@type': 'ListItem',
+            'position': index + 1,
+            'item': {
+                '@type': 'Organization',
+                'name': startup.name,
+                'description': startup.description,
+                'url': startup.website,
+                'logo': startup.logo
+            }
+        }))
+    };
+    
+    // Add script to document head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
 }
 
 // Create a startup card element
 function createStartupCard(startup) {
     const card = document.createElement('div');
     card.className = 'startup-card';
-    card.id = `startup-${startup.id}`;
-    
+    card.setAttribute('role', 'article');
+    card.setAttribute('aria-labelledby', `startup-name-${startup.id}`);
+    card.setAttribute('tabindex', '0');
+    card.dataset.category = startup.category;
+    card.dataset.country = startup.country;
+    card.dataset.region = startup.region;
+
     // Create logo section
     const logoDiv = document.createElement('div');
     logoDiv.className = 'startup-logo';
     const logoImg = document.createElement('img');
     logoImg.src = startup.logo;
-    logoImg.alt = `${startup.name} - ${startup.description}`;
+    logoImg.alt = `${startup.name} company logo`;
+    logoImg.loading = 'lazy';
+    logoImg.decoding = 'async';
+    logoImg.referrerPolicy = 'no-referrer';
+    logoImg.sizes = '(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 100vw';
     logoImg.onerror = function() {
         this.src = 'assets/logos/placeholder.svg';
-        this.alt = 'Placeholder logo';
+        this.alt = 'Company logo placeholder';
     };
     logoDiv.appendChild(logoImg);
-    
+
     // Create content section
     const contentDiv = document.createElement('div');
     contentDiv.className = 'startup-content';
-    
+
     // Name
     const nameH3 = document.createElement('h3');
     nameH3.className = 'startup-name';
+    nameH3.id = `startup-name-${startup.id}`;
     nameH3.textContent = startup.name;
 
     // Location
     const locationDiv = document.createElement('div');
     locationDiv.className = 'startup-location';
     locationDiv.textContent = `${startup.country} - ${startup.region}`;
-    
+
     // Category badge
     const categorySpan = document.createElement('span');
     categorySpan.className = 'startup-category';
     categorySpan.textContent = startup.category;
-    
+    categorySpan.setAttribute('aria-label', `Category: ${startup.category}`);
+
     // Description
     const descP = document.createElement('p');
+    const descriptionId = `startup-description-${startup.id}`;
     descP.className = 'startup-description';
+    descP.id = descriptionId;
     descP.textContent = startup.description;
+
+    contentDiv.appendChild(nameH3);
+    contentDiv.appendChild(locationDiv);
+    contentDiv.appendChild(categorySpan);
+    contentDiv.appendChild(descP);
+    card.setAttribute('aria-describedby', descriptionId);
+
+    // Founded
+    if (startup.founded) {
+        const foundedDiv = document.createElement('div');
+        foundedDiv.className = 'startup-info';
+        foundedDiv.innerHTML = `<strong>Founded:</strong> ${startup.founded}`;
+        contentDiv.appendChild(foundedDiv);
+    }
+
+    // Founders
+    if (startup.founders && startup.founders.length > 0) {
+        const foundersDiv = document.createElement('div');
+        foundersDiv.className = 'startup-info';
+        foundersDiv.innerHTML = `<strong>Founders:</strong> ${startup.founders.join(', ')}`;
+        contentDiv.appendChild(foundersDiv);
+    }
+
+    // Funding
+    if (startup.funding) {
+        const fundingDiv = document.createElement('div');
+        fundingDiv.className = 'startup-info';
+        fundingDiv.innerHTML = `<strong>Funding:</strong> ${startup.funding}`;
+        contentDiv.appendChild(fundingDiv);
+    }
+
+    // Investors
+    if (startup.investors && startup.investors.length > 0) {
+        const investorsDiv = document.createElement('div');
+        investorsDiv.className = 'startup-info';
+        investorsDiv.innerHTML = `<strong>Investors:</strong> ${startup.investors.join(', ')}`;
+        contentDiv.appendChild(investorsDiv);
+    }
     
     // Links section
     const linksDiv = document.createElement('div');
     linksDiv.className = 'startup-links';
+    linksDiv.setAttribute('role', 'list');
+    linksDiv.setAttribute('aria-label', `${startup.name} online presence`);
 
     // Website link
     if (startup.website) {
@@ -136,12 +315,16 @@ function createStartupCard(startup) {
         websiteLink.className = 'social-link';
         websiteLink.target = '_blank';
         websiteLink.rel = 'noopener noreferrer';
-        websiteLink.title = 'Website';
+        websiteLink.setAttribute('aria-label', `Visit ${startup.name} website (opens in new tab)`);
+        websiteLink.setAttribute('role', 'listitem');
 
         const websiteIcon = document.createElement('img');
         websiteIcon.src = 'assets/socials/website.svg';
-        websiteIcon.alt = 'Website';
+        websiteIcon.alt = '';
         websiteIcon.className = 'social-icon';
+        websiteIcon.loading = 'lazy';
+        websiteIcon.decoding = 'async';
+        websiteIcon.setAttribute('aria-hidden', 'true');
         websiteLink.appendChild(websiteIcon);
 
         linksDiv.appendChild(websiteLink);
@@ -155,12 +338,16 @@ function createStartupCard(startup) {
             socialLink.className = 'social-link';
             socialLink.target = '_blank';
             socialLink.rel = 'noopener noreferrer';
-            socialLink.title = platform;
+            socialLink.setAttribute('aria-label', `Visit ${startup.name} on ${platform} (opens in new tab)`);
+            socialLink.setAttribute('role', 'listitem');
 
             const socialIcon = document.createElement('img');
             socialIcon.src = `assets/socials/${platform}.svg`;
-            socialIcon.alt = platform;
+            socialIcon.alt = '';
             socialIcon.className = 'social-icon';
+            socialIcon.loading = 'lazy';
+            socialIcon.decoding = 'async';
+            socialIcon.setAttribute('aria-hidden', 'true');
             socialLink.appendChild(socialIcon);
 
             linksDiv.appendChild(socialLink);
@@ -168,10 +355,6 @@ function createStartupCard(startup) {
     }
     
     // Assemble the card
-    contentDiv.appendChild(nameH3);
-    contentDiv.appendChild(locationDiv);
-    contentDiv.appendChild(categorySpan);
-    contentDiv.appendChild(descP);
     contentDiv.appendChild(linksDiv);
     
     card.appendChild(logoDiv);
@@ -186,40 +369,83 @@ function filterStartups() {
     const selectedCategory = categoryFilter.value;
     const selectedCountry = countryFilter.value;
     const selectedRegion = regionFilter.value;
+
+    const normalizedCategory = selectedCategory.toLowerCase();
+    const normalizedCountry = selectedCountry.toLowerCase();
+    const normalizedRegion = selectedRegion.toLowerCase();
     
     filteredStartups = allStartups.filter(startup => {
         // Check search term
-        const matchesSearch = searchTerm === '' || 
+        const founders = Array.isArray(startup.founders) ? startup.founders.join(' ').toLowerCase() : '';
+        const investors = Array.isArray(startup.investors) ? startup.investors.join(' ').toLowerCase() : '';
+        const matchesSearch = searchTerm === '' ||
             startup.name.toLowerCase().includes(searchTerm) ||
             startup.description.toLowerCase().includes(searchTerm) ||
-            startup.category.toLowerCase().includes(searchTerm);
+            startup.category.toLowerCase().includes(searchTerm) ||
+            startup.country.toLowerCase().includes(searchTerm) ||
+            startup.region.toLowerCase().includes(searchTerm) ||
+            founders.includes(searchTerm) ||
+            investors.includes(searchTerm);
         
         // Check category
         const matchesCategory = selectedCategory === 'all' || 
-            startup.category === selectedCategory;
+            startup.category.toLowerCase() === normalizedCategory;
 
         // Check country
         const matchesCountry = selectedCountry === 'all' ||
-            startup.country === selectedCountry;
+            startup.country.toLowerCase() === normalizedCountry;
 
         // Check region
         const matchesRegion = selectedRegion === 'all' ||
-            startup.region === selectedRegion;
+            startup.region.toLowerCase() === normalizedRegion;
         
         return matchesSearch && matchesCategory && matchesCountry && matchesRegion;
     });
-    
+
+    filteredStartups.sort((a, b) => a.name.localeCompare(b.name));
+
     displayStartups(filteredStartups);
+}
+
+function resetFilters() {
+    searchInput.value = '';
+    categoryFilter.value = 'all';
+    countryFilter.value = 'all';
+    regionFilter.value = 'all';
+
+    filterStartups();
+    searchInput.focus({ preventScroll: true });
+    announceToScreenReader('All filters cleared. Showing every startup.');
 }
 
 // Update results count
 function updateResultsCount(count) {
     const total = allStartups.length;
-    if (count === total) {
-        resultsCount.textContent = `Showing all ${total} startup${total !== 1 ? 's' : ''}`;
-    } else {
-        resultsCount.textContent = `Showing ${count} of ${total} startup${total !== 1 ? 's' : ''}`;
+    const searchTerm = searchInput.value.trim();
+    const activeFilters = [];
+
+    if (searchTerm) {
+        activeFilters.push(`Search: "${searchTerm}"`);
     }
+    if (categoryFilter.value !== 'all') {
+        activeFilters.push(`Category: ${categoryFilter.value}`);
+    }
+    if (countryFilter.value !== 'all') {
+        activeFilters.push(`Country: ${countryFilter.value}`);
+    }
+    if (regionFilter.value !== 'all') {
+        activeFilters.push(`Region: ${regionFilter.value}`);
+    }
+
+    const baseText = count === total
+        ? `Showing all ${total} startup${total !== 1 ? 's' : ''}`
+        : `Showing ${count} of ${total} startup${total !== 1 ? 's' : ''}`;
+
+    const filtersText = activeFilters.length > 0
+        ? ` (Filters active: ${activeFilters.join(', ')})`
+        : '';
+
+    resultsCount.textContent = `${baseText}${filtersText}`;
 }
 
 // Setup event listeners
@@ -230,11 +456,62 @@ function setupEventListeners() {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(filterStartups, 300);
     });
-    
+
     // Filters
     categoryFilter.addEventListener('change', filterStartups);
     countryFilter.addEventListener('change', filterStartups);
     regionFilter.addEventListener('change', filterStartups);
+
+    if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', resetFilters);
+    }
+
+    // Keyboard navigation for cards
+    startupsGrid.addEventListener('keydown', handleCardKeydown);
+
+    // Scroll to top button
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+        } else {
+            scrollToTopBtn.classList.add('hidden');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollToTopBtn.blur(); // Remove focus after click
+    });
+}
+
+// Handle keyboard navigation for cards
+function handleCardKeydown(event) {
+    const cards = Array.from(startupsGrid.querySelectorAll('.startup-card'));
+    const currentIndex = cards.indexOf(event.target.closest('.startup-card'));
+
+    if (currentIndex === -1) return;
+
+    switch (event.key) {
+        case 'ArrowRight':
+            event.preventDefault();
+            const nextIndex = (currentIndex + 1) % cards.length;
+            cards[nextIndex].focus();
+            break;
+        case 'ArrowLeft':
+            event.preventDefault();
+            const prevIndex = currentIndex === 0 ? cards.length - 1 : currentIndex - 1;
+            cards[prevIndex].focus();
+            break;
+        case 'Home':
+            event.preventDefault();
+            cards[0].focus();
+            break;
+        case 'End':
+            event.preventDefault();
+            cards[cards.length - 1].focus();
+            break;
+    }
 }
 
 // Initialize the app when DOM is ready
