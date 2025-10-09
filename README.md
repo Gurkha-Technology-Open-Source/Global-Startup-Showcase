@@ -119,6 +119,7 @@ For local development:
 | `npm run build:css` | Compiles Tailwind CSS to dist/styles.css |
 | `npm run build:js` | Minifies JavaScript to dist/app.js |
 | `npm run lint` | Runs ESLint on source files |
+| `npm run download-logos` | Downloads startup logos from URLs in data/startups.json |
 
 ## Adding a Startup
 
@@ -130,7 +131,8 @@ To add your startup to the showcase:
 {
   "id": 101,
   "name": "Your Startup Name",
-  "logo": "assets/logos/your-logo.svg",
+  "logo": "assets/logos/placeholder.svg",
+  "logoUrl": "https://yourwebsite.com/logo.png",
   "description": "Brief description of your startup",
   "category": "Your Category",
   "website": "https://yourwebsite.com",
@@ -154,8 +156,11 @@ To add your startup to the showcase:
   "ceo": "CEO Name"
 }
 ```
-3. Add your logo (SVG or PNG) to `assets/logos/`
-4. Create a pull request
+3. **Option A:** Add `logoUrl` field with your logo URL - GitHub Actions will automatically download it
+4. **Option B:** Manually add your logo (SVG or PNG) to `assets/logos/` and update the `logo` field
+5. Create a pull request
+
+**Note:** If you provide a `logoUrl`, our automated system will download and optimize the logo. Otherwise, please ensure your logo file is under 100KB and in SVG or PNG format.
 
 ## Technologies Used
 

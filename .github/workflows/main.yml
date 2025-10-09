@@ -2,68 +2,54 @@ name: Download Logos
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight
-  workflow_dispatch: # Allows manual triggering
+    - cron: '0 2 * * 0' # Runs every Sunday at 2 AM UTC
+  workflow_dispatch: # Allows manual triggering from Actions tab
+
+permissions:
+  contents: write # Needed to commit changes
 
 jobs:
   download-logos:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          node-version: '18'
+          fetch-depth: 0 # Fetch all history for proper commits
 
-      - name: Download logos
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Create scripts directory if it doesn't exist
+        run: mkdir -p scripts
+
+      - name: Make download script executable
+        run: chmod +x download-logos.js
+
+      - name: Download logos from URLs
+        run: node download-logos.js
+
+      - name: Check for changes
+        id: git-check
         run: |
-          const fs = require('fs');
-          const https = require('https');
-          const startups = JSON.parse(fs.readFileSync('./data/startups.json', 'utf-8'));
+          git diff --exit-code data/startups.json assets/logos/ || echo "changed=true" >> $GITHUB_OUTPUT
 
-          async function downloadLogos() {
-            const downloadPromises = startups.map((startup) => {
-              if (startup.logoUrl) {
-                return new Promise((resolve, reject) => {
-                  const extension = startup.logoUrl.split('.').pop();
-                  const fileName = `${startup.name.toLowerCase().replace(/ /g, '-')}.${extension}`;
-                  const filePath = `./assets/logos/${fileName}`;
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/startups.json assets/logos/
+          git commit -m "chore: download startup logos from URLs
 
-                  https.get(startup.logoUrl, (response) => {
-                    const fileStream = fs.createWriteStream(filePath);
-                    response.pipe(fileStream);
-                    fileStream.on('finish', () => {
-                      console.log(`Downloaded ${fileName}`);
-                      startup.logo = `assets/logos/${fileName}`;
-                      resolve();
-                    });
-                    fileStream.on('error', (err) => {
-                      console.error(`Error writing file ${fileName}: ${err.message}`);
-                      reject(err);
-                    });
-                  }).on('error', (err) => {
-                    console.error(`Error downloading ${startup.logoUrl}: ${err.message}`);
-                    reject(err);
-                  });
-                });
-              } else {
-                return Promise.resolve();
-              }
-            });
+          - Downloaded logos from logoUrl fields
+          - Updated startups.json with local paths
+          - Automated by GitHub Actions"
+          git push
 
-            await Promise.all(downloadPromises);
-            fs.writeFileSync('./data/startups.json', JSON.stringify(startups, null, 2));
-          }
-
-          downloadLogos().catch((err) => {
-            console.error('Error downloading logos:', err);
-            process.exit(1);
-          });
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "chore: Update logos"
+      - name: No changes detected
+        if: steps.git-check.outputs.changed != 'true'
+        run: echo "✅ No new logos to download"
