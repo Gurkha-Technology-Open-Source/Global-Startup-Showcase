@@ -2,6 +2,8 @@
 
 let allStartups = [];
 let filteredStartups = [];
+let currentPage = 1;
+const startupsPerPage = 12;
 
 // DOM Elements
 const startupsGrid = document.getElementById('startupsGrid');
@@ -9,9 +11,13 @@ const searchInput = document.getElementById('searchInput');
 const categoryFilter = document.getElementById('categoryFilter');
 const countryFilter = document.getElementById('countryFilter');
 const regionFilter = document.getElementById('regionFilter');
+const sortFilter = document.getElementById('sortFilter');
 const resultsCount = document.getElementById('resultsCount');
 const noResults = document.getElementById('noResults');
 const resetFiltersBtn = document.getElementById('resetFilters');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const loadMoreContainer = document.getElementById('loadMoreContainer');
+const loadedCount = document.getElementById('loadedCount');
 
 const darkModeToggle = document.getElementById('darkModeToggle');
 
@@ -151,10 +157,12 @@ function populateDropdown(selectElement, items) {
 // Display startups in the grid
 function displayStartups(startups) {
     startupsGrid.innerHTML = '';
+    currentPage = 1;
 
     if (startups.length === 0) {
         noResults.classList.remove('hidden');
         startupsGrid.classList.add('hidden');
+        loadMoreContainer.classList.add('hidden');
         resultsCount.textContent = 'No startups found matching your criteria.';
         resultsCount.classList.remove('text-red-600', 'font-semibold');
         resultsCount.removeAttribute('role');
@@ -167,13 +175,7 @@ function displayStartups(startups) {
     resultsCount.classList.remove('text-red-600', 'font-semibold');
     resultsCount.removeAttribute('role');
 
-    startups.forEach(startup => {
-        const card = createStartupCard(startup);
-        startupsGrid.appendChild(card);
-    });
-
-    updateResultsCount(startups.length);
-    announceToScreenReader(`Showing ${startups.length} startup${startups.length !== 1 ? 's' : ''}`);
+    loadMoreStartups(startups);
 }
 
 // Create a startup card element
@@ -348,6 +350,7 @@ function filterStartups() {
     const selectedCategory = categoryFilter.value;
     const selectedCountry = countryFilter.value;
     const selectedRegion = regionFilter.value;
+    const selectedSort = sortFilter.value;
 
     const normalizedCategory = selectedCategory.toLowerCase();
     const normalizedCountry = selectedCountry.toLowerCase();
@@ -381,9 +384,46 @@ function filterStartups() {
         return matchesSearch && matchesCategory && matchesCountry && matchesRegion;
     });
 
-    filteredStartups.sort((a, b) => a.name.localeCompare(b.name));
+    // Sort the filtered startups
+    switch (selectedSort) {
+        case 'name-asc':
+            filteredStartups.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+        case 'name-desc':
+            filteredStartups.sort((a, b) => b.name.localeCompare(a.name));
+            break;
+        case 'founded-asc':
+            filteredStartups.sort((a, b) => a.founded - b.founded);
+            break;
+        case 'founded-desc':
+            filteredStartups.sort((a, b) => b.founded - a.founded);
+            break;
+    }
 
     displayStartups(filteredStartups);
+    updateResultsCount(filteredStartups.length);
+}
+
+// Load more startups
+function loadMoreStartups(startups) {
+    const startIndex = (currentPage - 1) * startupsPerPage;
+    const endIndex = startIndex + startupsPerPage;
+    const startupsToShow = startups.slice(startIndex, endIndex);
+
+    startupsToShow.forEach(startup => {
+        const card = createStartupCard(startup);
+        startupsGrid.appendChild(card);
+    });
+
+    currentPage++;
+
+    if (endIndex >= startups.length) {
+        loadMoreContainer.classList.add('hidden');
+    } else {
+        loadMoreContainer.classList.remove('hidden');
+    }
+
+    updateLoadedCount();
 }
 
 function resetFilters() {
@@ -391,10 +431,18 @@ function resetFilters() {
     categoryFilter.value = 'all';
     countryFilter.value = 'all';
     regionFilter.value = 'all';
+    sortFilter.value = 'name-asc';
 
     filterStartups();
     searchInput.focus({ preventScroll: true });
     announceToScreenReader('All filters cleared. Showing every startup.');
+}
+
+// Update loaded count
+function updateLoadedCount() {
+    const loaded = startupsGrid.children.length;
+    const total = filteredStartups.length;
+    loadedCount.textContent = `Showing ${loaded} of ${total} startups`;
 }
 
 // Update results count
@@ -440,9 +488,14 @@ function setupEventListeners() {
     categoryFilter.addEventListener('change', filterStartups);
     countryFilter.addEventListener('change', filterStartups);
     regionFilter.addEventListener('change', filterStartups);
+    sortFilter.addEventListener('change', filterStartups);
 
     if (resetFiltersBtn) {
         resetFiltersBtn.addEventListener('click', resetFilters);
+    }
+
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => loadMoreStartups(filteredStartups));
     }
 
     // Keyboard navigation for cards
