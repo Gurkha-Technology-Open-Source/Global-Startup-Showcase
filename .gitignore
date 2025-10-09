@@ -19,14 +19,13 @@ tmp/
 temp/
 *.tmp
 
-# Build artifacts (if any in future)
+# Build artifacts (built by GitHub Actions)
 dist/
 build/
 
-# Dependencies (if npm/node is added later)
+# Dependencies
 node_modules/
-package-lock.json
-yarn.lock
+# Note: package-lock.json is committed for reproducible builds in CI/CD
 
 # Logs
 *.log

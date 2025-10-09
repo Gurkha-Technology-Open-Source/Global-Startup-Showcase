@@ -1,0 +1,20 @@
+{
+  "name": "Global Startup Showcase",
+  "short_name": "Startup Showcase",
+  "description": "A curated showcase of innovative startups from around the world",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/logos/placeholder.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": []
+}

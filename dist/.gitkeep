@@ -1,0 +1,2 @@
+# This file ensures the dist folder is tracked by git
+# The dist folder contains built files needed for GitHub Pages deployment

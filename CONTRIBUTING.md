@@ -59,28 +59,140 @@ If you're new to open source, we recommend starting with one of our `good first 
 ### Prerequisites
 
 *   [Git](https://git-scm.com/)
-*   A local web server (Python, Node.js with npx, or any other HTTP server)
+*   [Node.js](https://nodejs.org/) v20 or higher
+*   [npm](https://www.npmjs.com/) v10 or higher (comes with Node.js)
+*   A local web server (Python, Node.js, or any HTTP server)
+*   A code editor (VS Code, Sublime Text, etc.)
 
 ### Installation
 
-1.  Fork the repository.
-2.  Clone your fork: `git clone https://github.com/YOUR-USERNAME/global-startup-showcase.git`
-3.  Navigate to the project directory: `cd global-startup-showcase`
-4.  Start a local web server:
+1.  **Fork the repository** on GitHub
+2.  **Clone your fork:**
+    ```bash
+    git clone https://github.com/YOUR-USERNAME/Global-Startup-Showcase.git
+    cd Global-Startup-Showcase
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Build the project:**
+    ```bash
+    npm run build
+    ```
+5.  **Start a local development server:**
     ```bash
     # Using Python
     python3 -m http.server 8000
     
-    # Or using Node.js (no installation required)
+    # Or using Node.js
     npx serve
+    
+    # Or using PHP
+    php -S localhost:8000
     ```
-5.  Open your browser and navigate to `http://localhost:8000`
+6.  **Open your browser and navigate to `http://localhost:8000`**
+
+### Development Workflow
+
+1.  **Create a new branch** for your feature/fix:
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+2.  **Make your changes** in the `src/` directory or other source files
+3.  **Build the project** to see your changes:
+    ```bash
+    npm run build        # Build CSS and JS
+    npm run build:css    # Build only CSS
+    npm run build:js     # Build only JS
+    npm run lint         # Check code quality
+    ```
+4.  **Test your changes** thoroughly in the browser
+5.  **Commit your changes:**
+    ```bash
+    git add .
+    git commit -m "feat: add amazing new feature"
+    ```
+    Follow [Conventional Commits](https://www.conventionalcommits.org/) format
+6.  **Push to your fork:**
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+7.  **Create a Pull Request** from your fork to the main repository
+
+**Important Notes:**
+- Do NOT commit files in the `dist/` folder (they're auto-generated)
+- Do NOT commit `node_modules/` folder
+- DO commit your changes to `src/` files
+- Run `npm run lint` before committing to ensure code quality
+- GitHub Actions will automatically build and deploy your changes
 
 ## Pull Request Process
 
-1.  Update the `README.md` with details of changes to the interface, this includes new file locations and any new features.
-2.  Increase the version numbers in any examples and the `README.md` to the new version that this Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-3.  You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
+1.  **Ensure your code follows the project standards:**
+    - Run `npm run lint` and fix any errors
+    - Test in multiple browsers if possible
+    - Ensure accessibility features still work
+    - Check that dark mode works correctly
+
+2.  **Update documentation if needed:**
+    - Update `README.md` if you've changed functionality
+    - Update `docs/documentation.md` for technical changes
+    - Add comments to complex code
+
+3.  **Write a clear PR description:**
+    - Describe what changes you made
+    - Explain why you made them
+    - Link to any related issues
+    - Add screenshots for UI changes
+
+4.  **Title format:**
+    ```
+    feat: add startup filtering by funding amount
+    fix: resolve dark mode toggle bug
+    docs: update installation instructions
+    style: improve card hover animations
+    ```
+
+5.  **Wait for review:**
+    - A maintainer will review your PR
+    - Address any requested changes
+    - Be patient and respectful
+
+6.  **After approval:**
+    - Your PR will be merged
+    - GitHub Actions will automatically deploy changes
+    - Your contribution will be credited!
+
+### Commit Message Format
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+```
+<type>: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+**Types:**
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, no logic change)
+- `refactor`: Code refactoring
+- `test`: Adding tests
+- `chore`: Build process or tooling changes
+
+**Examples:**
+```
+feat: add search by founder name
+fix: correct dark mode button aria-label
+docs: update contribution guidelines
+style: improve mobile responsiveness
+refactor: simplify filter logic
+```
 
 ## License
 

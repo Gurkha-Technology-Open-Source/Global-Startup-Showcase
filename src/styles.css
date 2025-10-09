@@ -1,19 +1,22 @@
-html {
+@import "tailwindcss";
+
+@variant dark (.dark &);
+
+@layer base {
+  html {
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     background-color: #f9fafb;
-}
+  }
 
-body {
+  body {
     color-scheme: light;
-}
+  }
 
-.dark {
+  .dark {
     background-image: url('https://www.transparenttextures.com/patterns/dark-cubes.png');
     background-color: #111827;
-}
-
-.dark body {
     color-scheme: dark;
+  }
 }
 
 .skip-link {
@@ -201,4 +204,26 @@ body {
     .social-link:hover {
         transform: none;
     }
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.skeleton {
+    animation: shimmer 1.2s ease-in-out infinite;
+    background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+    background-size: 800px 104px;
+    border-radius: 0.5rem;
+}
+
+.dark .skeleton {
+    background: linear-gradient(to right, #374151 8%, #4b5563 18%, #374151 33%);
+    background-size: 800px 104px;
 }
