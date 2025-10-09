@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
-html {
+@variant dark (.dark &);
+
+@layer base {
+  html {
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     background-color: #f9fafb;
-}
+  }
 
-body {
+  body {
     color-scheme: light;
-}
+  }
 
-.dark {
+  .dark {
     background-image: url('https://www.transparenttextures.com/patterns/dark-cubes.png');
     background-color: #111827;
-}
-
-.dark body {
     color-scheme: dark;
+  }
 }
 
 .skip-link {
