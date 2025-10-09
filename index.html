@@ -36,6 +36,7 @@
 <body class="bg-gray-50 dark:bg-gray-900">
     <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link dark:bg-white dark:text-gray-900">Skip to main content</a>
+    <a href="#search-filters" class="skip-link dark:bg-white dark:text-gray-900" style="top: 40px;">Skip to filters</a>
 
     <!-- Preloader -->
     <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-white z-50 flex justify-center items-center dark:bg-gray-900" role="status" aria-live="polite" aria-label="Loading startups">
@@ -50,7 +51,7 @@
                 🌐 Global Startup Showcase
             </h1>
             <div class="flex justify-center mt-4">
-                <button id="darkModeToggle" class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="Toggle between light and dark mode">
+                <button id="darkModeToggle" class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="Toggle between light and dark mode" aria-pressed="false">
                     <i class="fas fa-moon mr-2" aria-hidden="true"></i>
                     Toggle Dark Mode
                 </button>
@@ -60,7 +61,7 @@
 
     <main id="main-content" role="main">
     <!-- Search and Filter Section -->
-    <section class="container mx-auto px-4 py-8" aria-labelledby="search-filters-heading" data-aos="fade-up">
+    <section id="search-filters" class="container mx-auto px-4 py-8" aria-labelledby="search-filters-heading" data-aos="fade-up">
         <div class="bg-white rounded-lg shadow-md p-6 dark:bg-gray-800">
             <h2 id="search-filters-heading" class="sr-only">Search and Filter Startups</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -75,6 +76,7 @@
                         placeholder="Search by name or description..."
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="search-help"
+                        aria-label="Search for startups"
                     >
                     <span id="search-help" class="sr-only">Search through startup names and descriptions</span>
                 </div>
@@ -88,6 +90,7 @@
                         id="categoryFilter"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="category-help"
+                        aria-label="Filter by category"
                     >
                         <option value="all">All Categories</option>
                     </select>
@@ -103,6 +106,7 @@
                         id="countryFilter"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="country-help"
+                        aria-label="Filter by country"
                     >
                         <option value="all">All Countries</option>
                     </select>
@@ -118,6 +122,7 @@
                         id="regionFilter"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="region-help"
+                        aria-label="Filter by region"
                     >
                         <option value="all">All Regions</option>
                     </select>
@@ -133,6 +138,7 @@
                         id="sortFilter"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="sort-help"
+                        aria-label="Sort by"
                     >
                         <option value="name-asc">Name (A-Z)</option>
                         <option value="name-desc">Name (Z-A)</option>
@@ -157,6 +163,7 @@
                     id="resetFilters"
                     type="button"
                     class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+                    aria-label="Reset all filters"
                 >
                     <i class="fas fa-rotate-left" aria-hidden="true"></i>
                     Reset filters
@@ -176,7 +183,7 @@
 
             <!-- Load More Button -->
             <div id="loadMoreContainer" class="text-center mt-8">
-                <button id="loadMoreBtn" class="px-6 py-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700">
+                <button id="loadMoreBtn" class="px-6 py-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700" aria-controls="startupsGrid">
                     Load More
                 </button>
             </div>
