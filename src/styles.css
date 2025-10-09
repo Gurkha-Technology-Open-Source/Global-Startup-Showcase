@@ -1,10 +1,13 @@
-body {
-    font-family: 'Inter', sans-serif;
-    color: #1f2937;
+html {
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     background-color: #f9fafb;
-    line-height: 1.5;
-    min-height: 100vh;
-    color-scheme: light dark;
+    color-scheme: light;
+}
+
+.dark {
+    background-image: url('https://www.transparenttextures.com/patterns/dark-cubes.png');
+    background-color: #111827;
+    color-scheme: dark;
 }
 
 .skip-link {
@@ -40,69 +43,7 @@ body {
 }
 
 /* Dark Mode */
-body.dark {
-    background-color: #111827;
-    color: #f3f4f6;
-    color-scheme: dark;
-}
 
-body.dark .startup-card {
-    background-color: #1f2937;
-    border: 1px solid #374151;
-}
-
-body.dark .startup-name {
-    color: #ffffff;
-}
-
-body.dark .startup-location {
-    color: #9ca3af;
-}
-
-body.dark .startup-category {
-    background-color: #1e3a8a;
-    color: #dbeafe;
-}
-
-body.dark .startup-description {
-    color: #e5e7eb;
-}
-
-body.dark .startup-info {
-    color: #9ca3af;
-}
-
-body.dark header {
-    background-color: #1f2937;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-body.dark #searchInput, body.dark #categoryFilter, body.dark #countryFilter, body.dark #regionFilter {
-    background-color: #374151;
-    border-color: #4b5563;
-    color: #ffffff;
-}
-
-body.dark .bg-white {
-    background-color: #1f2937;
-}
-
-body.dark .text-gray-800 {
-    color: #f3f4f6;
-}
-
-body.dark .text-gray-600, body.dark .text-gray-700 {
-    color: #d1d5db;
-}
-
-body.dark .text-gray-500 {
-    color: #9ca3af;
-}
-
-body.dark .skip-link {
-    background-color: #f9fafb;
-    color: #111827;
-}
 
 
 .startup-card {

@@ -38,25 +38,27 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900">
     <!-- Skip link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link dark:bg-white dark:text-gray-900">Skip to main content</a>
 
     <!-- Preloader -->
-    <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-white z-50 flex justify-center items-center" role="status" aria-live="polite" aria-label="Loading startups">
+    <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-white z-50 flex justify-center items-center dark:bg-gray-900" role="status" aria-live="polite" aria-label="Loading startups">
         <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500" aria-hidden="true"></div>
         <span class="sr-only">Loading...</span>
     </div>
 
     <!-- Header -->
-    <header class="bg-white shadow-md" role="banner">
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 shadow-md dark:bg-gray-800" role="banner">
         <div class="container mx-auto px-4 py-6">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-white text-center">
                 🌐 Global Startup Showcase
             </h1>
             <div class="flex justify-center mt-4">
-                <button id="darkModeToggle" class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="Toggle between light and dark mode">
+                <button id="darkModeToggle" class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="Toggle between light and dark mode">
                     <i class="fas fa-moon mr-2" aria-hidden="true"></i>
                     Toggle Dark Mode
                 </button>
@@ -66,8 +68,8 @@
 
     <main id="main-content" role="main">
     <!-- Search and Filter Section -->
-    <section class="container mx-auto px-4 py-8" aria-labelledby="search-filters-heading">
-        <div class="bg-white rounded-lg shadow-md p-6">
+    <section class="container mx-auto px-4 py-8" aria-labelledby="search-filters-heading" data-aos="fade-up">
+        <div class="bg-white rounded-lg shadow-md p-6 dark:bg-gray-800">
             <h2 id="search-filters-heading" class="sr-only">Search and Filter Startups</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- Search Box -->
@@ -79,7 +81,7 @@
                         type="search"
                         id="searchInput"
                         placeholder="Search by name or description..."
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="search-help"
                     >
                     <span id="search-help" class="sr-only">Search through startup names and descriptions</span>
@@ -92,7 +94,7 @@
                     </label>
                     <select
                         id="categoryFilter"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="category-help"
                     >
                         <option value="all">All Categories</option>
@@ -107,7 +109,7 @@
                     </label>
                     <select
                         id="countryFilter"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="country-help"
                     >
                         <option value="all">All Countries</option>
@@ -122,7 +124,7 @@
                     </label>
                     <select
                         id="regionFilter"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         aria-describedby="region-help"
                     >
                         <option value="all">All Regions</option>
@@ -132,19 +134,19 @@
             </div>
 
             <!-- Results Count -->
-            <div class="mt-4 text-sm text-gray-600" aria-live="polite" aria-atomic="true">
+            <div class="mt-4 text-sm text-gray-600 dark:text-gray-400" aria-live="polite" aria-atomic="true">
                 <span id="resultsCount">Loading startups...</span>
             </div>
 
             <!-- Filter actions -->
             <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between" role="group" aria-label="Filter actions">
-                <p class="text-sm text-gray-600">
-                    <span class="font-medium text-gray-800">Tip:</span> Combine search and filters to narrow down startups quickly.
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                    <span class="font-medium text-gray-800 dark:text-gray-200">Tip:</span> Combine search and filters to narrow down startups quickly.
                 </p>
                 <button
                     id="resetFilters"
                     type="button"
-                    class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                 >
                     <i class="fas fa-rotate-left" aria-hidden="true"></i>
                     Reset filters
@@ -156,7 +158,7 @@
 
 
         <!-- Startups Grid -->
-        <section class="container mx-auto px-4 pb-12" aria-labelledby="startups-heading">
+        <section class="container mx-auto px-4 pb-12" aria-labelledby="startups-heading" data-aos="fade-up" data-aos-delay="200">
             <h2 id="startups-heading" class="sr-only">Startup Showcase</h2>
             <div id="startupsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" role="grid" aria-label="Startup cards grid">
                 <!-- Startup cards will be dynamically inserted here -->
@@ -164,14 +166,14 @@
 
             <!-- No Results Message -->
             <div id="noResults" class="hidden text-center py-12" role="status" aria-live="polite">
-                <p class="text-gray-500 text-lg">No startups found matching your criteria.</p>
+                <p class="text-gray-500 dark:text-gray-400 text-lg">No startups found matching your criteria.</p>
             </div>
         </section>
     </main>
 
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6 mt-12" role="contentinfo">
+    <footer class="bg-gray-800 text-white py-6 mt-12 dark:bg-gray-900" role="contentinfo">
         <div class="container mx-auto px-4 text-center">
             <p class="text-sm">
                 &copy; 2024 Global Startup Showcase.
@@ -197,11 +199,15 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="hidden fixed bottom-8 right-8 bg-blue-500 text-white rounded-full w-12 h-12 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 hover:bg-blue-600 transition-colors" aria-label="Scroll to top of page">
+    <button id="scrollToTopBtn" class="hidden fixed bottom-8 right-8 bg-indigo-500 text-white rounded-full w-12 h-12 shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 hover:bg-indigo-600 transition-colors dark:bg-indigo-600 dark:hover:bg-indigo-700" aria-label="Scroll to top of page">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- JavaScript -->
     <script src="src/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

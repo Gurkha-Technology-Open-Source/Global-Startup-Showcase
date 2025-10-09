@@ -20,28 +20,28 @@ const savedTheme = localStorage.getItem('darkMode');
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if (savedTheme === 'enabled' || (!savedTheme && systemPrefersDark)) {
-    document.body.classList.add('dark');
+    document.documentElement.classList.add('dark');
     updateDarkModeButton();
 }
 
 // Toggle dark mode on button click
 darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
+    document.documentElement.classList.toggle('dark');
     updateDarkModeButton();
 
     // Save preference to localStorage
-    if (document.body.classList.contains('dark')) {
+    if (document.documentElement.classList.contains('dark')) {
         localStorage.setItem('darkMode', 'enabled');
     } else {
         localStorage.setItem('darkMode', 'disabled');
     }
 
-    announceToScreenReader(`Dark mode ${document.body.classList.contains('dark') ? 'enabled' : 'disabled'}`);
+    announceToScreenReader(`Dark mode ${document.documentElement.classList.contains('dark') ? 'enabled' : 'disabled'}`);
 });
 
 // Update dark mode button appearance
 function updateDarkModeButton() {
-    const isDark = document.body.classList.contains('dark');
+    const isDark = document.documentElement.classList.contains('dark');
     const icon = darkModeToggle.querySelector('i');
 
     if (isDark) {
@@ -179,7 +179,7 @@ function displayStartups(startups) {
 // Create a startup card element
 function createStartupCard(startup) {
     const card = document.createElement('div');
-    card.className = 'startup-card';
+    card.className = 'bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out dark:bg-gray-800';
     card.setAttribute('role', 'article');
     card.setAttribute('aria-labelledby', `startup-name-${startup.id}`);
     card.setAttribute('tabindex', '0');
@@ -189,7 +189,7 @@ function createStartupCard(startup) {
 
     // Create logo section
     const logoDiv = document.createElement('div');
-    logoDiv.className = 'startup-logo';
+    logoDiv.className = 'startup-logo dark:bg-gray-700';
     const logoImg = document.createElement('img');
     logoImg.src = startup.logo;
     logoImg.alt = `${startup.name} company logo`;
@@ -209,25 +209,25 @@ function createStartupCard(startup) {
 
     // Name
     const nameH3 = document.createElement('h3');
-    nameH3.className = 'startup-name';
+    nameH3.className = 'startup-name dark:text-white';
     nameH3.id = `startup-name-${startup.id}`;
     nameH3.textContent = startup.name;
 
     // Location
     const locationDiv = document.createElement('div');
-    locationDiv.className = 'startup-location';
+    locationDiv.className = 'startup-location dark:text-gray-400';
     locationDiv.textContent = `${startup.country} - ${startup.region}`;
 
     // Category badge
     const categorySpan = document.createElement('span');
-    categorySpan.className = 'startup-category';
+    categorySpan.className = 'startup-category dark:bg-blue-900 dark:text-blue-200';
     categorySpan.textContent = startup.category;
     categorySpan.setAttribute('aria-label', `Category: ${startup.category}`);
 
     // Description
     const descP = document.createElement('p');
     const descriptionId = `startup-description-${startup.id}`;
-    descP.className = 'startup-description';
+    descP.className = 'startup-description dark:text-gray-300';
     descP.id = descriptionId;
     descP.textContent = startup.description;
 
@@ -240,7 +240,7 @@ function createStartupCard(startup) {
     // Founded
     if (startup.founded) {
         const foundedDiv = document.createElement('div');
-        foundedDiv.className = 'startup-info';
+        foundedDiv.className = 'startup-info dark:text-gray-400';
         foundedDiv.innerHTML = `<strong>Founded:</strong> ${startup.founded}`;
         contentDiv.appendChild(foundedDiv);
     }
@@ -248,7 +248,7 @@ function createStartupCard(startup) {
     // Founders
     if (startup.founders && startup.founders.length > 0) {
         const foundersDiv = document.createElement('div');
-        foundersDiv.className = 'startup-info';
+        foundersDiv.className = 'startup-info dark:text-gray-400';
         foundersDiv.innerHTML = `<strong>Founders:</strong> ${startup.founders.join(', ')}`;
         contentDiv.appendChild(foundersDiv);
     }
@@ -256,7 +256,7 @@ function createStartupCard(startup) {
     // Funding
     if (startup.funding) {
         const fundingDiv = document.createElement('div');
-        fundingDiv.className = 'startup-info';
+        fundingDiv.className = 'startup-info dark:text-gray-400';
         fundingDiv.innerHTML = `<strong>Funding:</strong> ${startup.funding}`;
         contentDiv.appendChild(fundingDiv);
     }
@@ -264,14 +264,14 @@ function createStartupCard(startup) {
     // Investors
     if (startup.investors && startup.investors.length > 0) {
         const investorsDiv = document.createElement('div');
-        investorsDiv.className = 'startup-info';
+        investorsDiv.className = 'startup-info dark:text-gray-400';
         investorsDiv.innerHTML = `<strong>Investors:</strong> ${startup.investors.join(', ')}`;
         contentDiv.appendChild(investorsDiv);
     }
     
     // Links section
     const linksDiv = document.createElement('div');
-    linksDiv.className = 'startup-links';
+    linksDiv.className = 'startup-links dark:border-gray-700';
     linksDiv.setAttribute('role', 'list');
     linksDiv.setAttribute('aria-label', `${startup.name} online presence`);
 
@@ -279,7 +279,7 @@ function createStartupCard(startup) {
     if (startup.website) {
         const websiteLink = document.createElement('a');
         websiteLink.href = startup.website;
-        websiteLink.className = 'social-link';
+        websiteLink.className = 'social-link dark:border-gray-600 dark:hover:bg-gray-700';
         websiteLink.target = '_blank';
         websiteLink.rel = 'noopener noreferrer';
         websiteLink.setAttribute('aria-label', `Visit ${startup.name} website (opens in new tab)`);
@@ -302,7 +302,7 @@ function createStartupCard(startup) {
         Object.entries(startup.socials).forEach(([platform, url]) => {
             const socialLink = document.createElement('a');
             socialLink.href = url;
-            socialLink.className = 'social-link';
+            socialLink.className = 'social-link dark:border-gray-600 dark:hover:bg-gray-700';
             socialLink.target = '_blank';
             socialLink.rel = 'noopener noreferrer';
             socialLink.setAttribute('aria-label', `Visit ${startup.name} on ${platform} (opens in new tab)`);
