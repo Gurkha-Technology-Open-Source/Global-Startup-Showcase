@@ -19,8 +19,8 @@ tmp/
 temp/
 *.tmp
 
-# Build artifacts (if any in future)
-# dist/ - Commented out because GitHub Pages needs the built files
+# Build artifacts (built by GitHub Actions)
+dist/
 build/
 
 # Dependencies (if npm/node is added later)
