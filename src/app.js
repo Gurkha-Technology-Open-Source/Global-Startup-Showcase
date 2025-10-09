@@ -6,7 +6,6 @@ let currentPage = 1;
 const startupsPerPage = 12;
 
 // Performance optimization: Use requestAnimationFrame for smooth rendering
-const RAF_DELAY = 16; // ~60fps
 
 // DOM Elements
 const startupsGrid = document.getElementById('startupsGrid');
