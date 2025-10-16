@@ -287,6 +287,16 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 For more detailed information about the project, please see our [documentation](docs/documentation.md).
 
+### Open Source Libraries
+
+This project uses several excellent open source libraries to enhance functionality:
+
+- **[Fuse.js](docs/fusejs-integration.md)** - Intelligent fuzzy search
+- **[Chart.js](docs/chartjs-integration.md)** - Interactive data visualization  
+- **[AOS](docs/aos-integration.md)** - Smooth scroll animations
+
+For a complete list of all open source libraries used, see [Open Source Libraries](docs/open-source-libraries.md).
+
 ## Changelog
 
 For a list of all the recent changes, please see our [changelog](CHANGELOG.md).
