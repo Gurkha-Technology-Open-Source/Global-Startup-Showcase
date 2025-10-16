@@ -9,6 +9,7 @@ A responsive web application showcasing innovative startups from around the worl
 - 🔍 **Search Functionality** - Search startups by name, description, founders, investors, category, country, or region
 - 🏷️ **Multi-Filter System** - Filter by category, country, and region simultaneously
 - 📊 **Sort Options** - Sort startups by name or founded date
+- 📈 **Data Visualization** - Interactive charts powered by Chart.js showing startup distribution by category, country, region, and founding year trends
 - ➕ **Load More Pagination** - Load more startups with the click of a button (12 per page)
 - 🌙 **Dark Mode** - Switch between light and dark mode with localStorage persistence
 - 🔁 **Quick Filter Reset** - See active filters at a glance and reset them with one click
@@ -170,10 +171,45 @@ To add your startup to the showcase:
 
 See [Logo Flow Documentation](docs/logo-flow.md) for complete details.
 
+## Data Visualization with Chart.js
+
+This project uses [Chart.js](https://www.chartjs.org/), a popular open-source JavaScript charting library, to provide interactive data visualizations of the startup ecosystem. Chart.js is MIT licensed and offers flexible, responsive charts that work seamlessly with our application.
+
+### Available Charts
+
+The Statistics Dashboard displays four interactive charts:
+
+1. **Startups by Category** - Bar chart showing the distribution of startups across different industry categories
+2. **Startups by Country** - Doughnut chart displaying the top 10 countries with the most startups
+3. **Startups by Region** - Pie chart showing the geographic distribution of startups across global regions
+4. **Founding Year Trends** - Line chart illustrating startup founding trends over time
+
+### Features
+
+- **Responsive Design** - Charts automatically resize based on screen size
+- **Dark Mode Support** - Chart colors and themes adapt to the current theme (light/dark mode)
+- **Collapsible Section** - Users can show/hide the charts section with a toggle button
+- **Accessibility** - All charts include proper ARIA labels and roles for screen readers
+- **Interactive Tooltips** - Hover over chart elements to see detailed information
+
+### Why Chart.js?
+
+We chose Chart.js for several reasons:
+
+- **Open Source** - Fully open source under the MIT license
+- **Lightweight** - Small bundle size with excellent performance
+- **Well-Maintained** - Active development with regular updates and security patches
+- **Extensive Documentation** - Comprehensive guides and examples
+- **Customizable** - Highly flexible with extensive configuration options
+- **Accessibility** - Built-in support for accessible chart rendering
+
+Learn more about Chart.js at [chartjs.org](https://www.chartjs.org/).
+
 ## Technologies Used
 
 - **Frontend:** Vanilla JavaScript (ES6+), HTML5, CSS3
 - **Styling:** Tailwind CSS v4
+- **Data Visualization:** Chart.js v4.4.1 (open source charting library)
 - **Build Tools:** Terser (JS minification), Tailwind CLI (CSS compilation)
 - **CI/CD:** GitHub Actions
 - **Deployment:** GitHub Pages
