@@ -12,6 +12,7 @@ This document provides a comprehensive technical overview of the Global Startup 
 - [Getting Started](#getting-started)
 - [JavaScript Architecture](#javascript-architecture)
 - [Styling and Theming](#styling-and-theming)
+- [Data Visualization](#data-visualization)
 - [Build Process](#build-process)
 - [Deployment](#deployment)
 - [Accessibility](#accessibility)
@@ -52,6 +53,16 @@ The Global Startup Showcase is a responsive, static web application that showcas
     - Respects system preferences
     - Persists choice in localStorage
     - Smooth transitions with Tailwind CSS
+    
+*   **Data Visualization**: 
+    - Interactive charts powered by Chart.js
+    - Category distribution (bar chart)
+    - Country distribution (doughnut chart - top 10)
+    - Region distribution (pie chart)
+    - Founding year trends (line chart)
+    - Dark mode support for all charts
+    - Collapsible dashboard with toggle button
+    - See [Chart.js Integration Documentation](chartjs-integration.md) for details
     
 *   **Responsive Design**: 
     - Mobile-first approach
@@ -218,11 +229,12 @@ Global-Startup-Showcase/
 
 ### External Libraries
 
-| Library | Purpose |
-|---------|---------|
-| Font Awesome | Social media icons |
-| AOS (Animate On Scroll) | Scroll animations |
-| Google Fonts (Inter) | Typography |
+| Library | Version | Purpose |
+|---------|---------|---------|
+| Font Awesome | 6.0.0-beta3 | Social media icons |
+| AOS (Animate On Scroll) | 2.3.1 | Scroll animations |
+| Google Fonts (Inter) | - | Typography |
+| Chart.js | 4.4.1 | Data visualization and interactive charts |
 
 ## Getting Started
 
@@ -527,6 +539,93 @@ xl:  1280px (large desktop)
   }
 }
 ```
+
+## Data Visualization
+
+### Chart.js Integration
+
+The application uses **Chart.js v4.4.1**, a popular open-source JavaScript charting library (MIT licensed), to provide interactive data visualizations.
+
+**CDN Integration (`index.html`):**
+```html
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+```
+
+### Available Charts
+
+1. **Category Distribution** (Bar Chart)
+   - Shows number of startups per industry category
+   - Sorted alphabetically
+   - Blue color scheme
+
+2. **Country Distribution** (Doughnut Chart)
+   - Displays top 10 countries by startup count
+   - Color-coded with distinct colors
+   - Shows percentages in tooltips
+
+3. **Region Distribution** (Pie Chart)
+   - Geographic distribution across continents
+   - Percentage breakdowns
+   - Right-aligned legend
+
+4. **Founding Year Trends** (Line Chart)
+   - Startup founding trends over time
+   - Smooth curve with area fill
+   - Chronologically sorted
+
+### Implementation Details
+
+**Chart Initialization:**
+```javascript
+function initializeCharts() {
+  if (typeof Chart === 'undefined') {
+    console.warn('Chart.js not loaded. Charts will not be displayed.');
+    return;
+  }
+
+  const isDark = document.documentElement.classList.contains('dark');
+  const textColor = isDark ? '#e5e7eb' : '#374151';
+  const gridColor = isDark ? '#4b5563' : '#e5e7eb';
+
+  createCategoryChart(textColor, gridColor);
+  createCountryChart(textColor, gridColor);
+  createRegionChart(textColor, gridColor);
+  createYearChart(textColor, gridColor);
+  setupToggleCharts();
+}
+```
+
+**Dark Mode Support:**
+- Charts automatically update colors when theme changes
+- `updateChartsTheme()` function updates all chart instances
+- Text and grid colors adapt to current theme
+
+**Features:**
+- Responsive design (adapts to container size)
+- Collapsible section with toggle button
+- ARIA labels for accessibility
+- Interactive tooltips on hover
+- Chart destruction before recreation to prevent memory leaks
+
+**Data Processing:**
+```javascript
+// Example: Category aggregation
+const categoryData = {};
+allStartups.forEach(startup => {
+  categoryData[startup.category] = (categoryData[startup.category] || 0) + 1;
+});
+```
+
+### Why Chart.js?
+
+- **Open Source**: MIT licensed, free to use
+- **Lightweight**: ~200KB bundle size
+- **Accessible**: Built-in ARIA support
+- **Well-Documented**: Extensive documentation and examples
+- **Active Community**: 60,000+ GitHub stars
+- **Framework Agnostic**: Works with vanilla JavaScript
+
+For detailed Chart.js documentation, see [Chart.js Integration Guide](chartjs-integration.md).
 
 ## Build Process
 
