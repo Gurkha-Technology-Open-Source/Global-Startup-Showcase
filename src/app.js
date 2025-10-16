@@ -4,6 +4,7 @@ let allStartups = [];
 let filteredStartups = [];
 let currentPage = 1;
 const startupsPerPage = 12;
+let fuse; // Fuse.js instance for fuzzy search
 
 // Performance optimization: Use requestAnimationFrame for smooth rendering
 
@@ -44,6 +45,9 @@ darkModeToggle.addEventListener('click', () => {
     localStorage.setItem('darkMode', 'disabled');
   }
 
+  // Update chart themes
+  updateChartsTheme();
+
   announceToScreenReader(`Dark mode ${document.documentElement.classList.contains('dark') ? 'enabled' : 'disabled'}`);
 });
 
@@ -71,9 +75,11 @@ async function init() {
   try {
     showPreloader();
     await loadStartups();
+    initializeFuse();
     populateFilters();
     displayStartups(allStartups);
     setupEventListeners();
+    initializeCharts();
     hidePreloader();
     announceToScreenReader('Startup showcase loaded successfully');
   } catch (error) {
@@ -134,6 +140,27 @@ async function loadStartups() {
     console.error('Error loading startups:', error);
     throw error;
   }
+}
+
+// Initialize Fuse.js for fuzzy search
+function initializeFuse() {
+  const fuseOptions = {
+    keys: [
+      { name: 'name', weight: 2 },
+      { name: 'description', weight: 1.5 },
+      { name: 'category', weight: 1.2 },
+      { name: 'country', weight: 1 },
+      { name: 'region', weight: 1 },
+      { name: 'founders', weight: 0.8 },
+      { name: 'investors', weight: 0.8 }
+    ],
+    threshold: 0.4,
+    ignoreLocation: true,
+    useExtendedSearch: false,
+    includeScore: true
+  };
+  
+  fuse = new Fuse(allStartups, fuseOptions);
 }
 
 // Populate filter dropdowns
@@ -368,7 +395,7 @@ function createStartupCard(startup) {
 
 // Filter startups based on search and category
 function filterStartups() {
-  const searchTerm = searchInput.value.toLowerCase().trim();
+  const searchTerm = searchInput.value.trim();
   const selectedCategory = categoryFilter.value;
   const selectedCountry = countryFilter.value;
   const selectedRegion = regionFilter.value;
@@ -377,20 +404,20 @@ function filterStartups() {
   const normalizedCategory = selectedCategory.toLowerCase();
   const normalizedCountry = selectedCountry.toLowerCase();
   const normalizedRegion = selectedRegion.toLowerCase();
-    
-  filteredStartups = allStartups.filter(startup => {
-    // Check search term
-    const founders = Array.isArray(startup.founders) ? startup.founders.join(' ').toLowerCase() : '';
-    const investors = Array.isArray(startup.investors) ? startup.investors.join(' ').toLowerCase() : '';
-    const matchesSearch = searchTerm === '' ||
-            startup.name.toLowerCase().includes(searchTerm) ||
-            startup.description.toLowerCase().includes(searchTerm) ||
-            startup.category.toLowerCase().includes(searchTerm) ||
-            startup.country.toLowerCase().includes(searchTerm) ||
-            startup.region.toLowerCase().includes(searchTerm) ||
-            founders.includes(searchTerm) ||
-            investors.includes(searchTerm);
-        
+  
+  // Start with all startups or fuzzy search results
+  let results;
+  if (searchTerm === '') {
+    // No search term, use all startups
+    results = allStartups;
+  } else {
+    // Use Fuse.js for fuzzy search
+    const fuseResults = fuse.search(searchTerm);
+    results = fuseResults.map(result => result.item);
+  }
+  
+  // Apply filters to the search results
+  filteredStartups = results.filter(startup => {
     // Check category
     const matchesCategory = selectedCategory === 'all' || 
             startup.category.toLowerCase() === normalizedCategory;
@@ -403,7 +430,7 @@ function filterStartups() {
     const matchesRegion = selectedRegion === 'all' ||
             startup.region.toLowerCase() === normalizedRegion;
         
-    return matchesSearch && matchesCategory && matchesCountry && matchesRegion;
+    return matchesCategory && matchesCountry && matchesRegion;
   });
 
   // Sort the filtered startups
@@ -570,6 +597,370 @@ function handleCardKeydown(event) {
     cards[cards.length - 1].focus();
     break;
   }
+}
+
+// Chart.js Integration - Data Visualization
+let charts = {
+  category: null,
+  country: null,
+  region: null,
+  year: null
+};
+
+// Initialize all charts
+function initializeCharts() {
+  if (typeof Chart === 'undefined') {
+    console.warn('Chart.js not loaded. Charts will not be displayed.');
+    return;
+  }
+
+  // Get the current theme
+  const isDark = document.documentElement.classList.contains('dark');
+  const textColor = isDark ? '#e5e7eb' : '#374151';
+  const gridColor = isDark ? '#4b5563' : '#e5e7eb';
+
+  createCategoryChart(textColor, gridColor);
+  createCountryChart(textColor, gridColor);
+  createRegionChart(textColor, gridColor);
+  createYearChart(textColor, gridColor);
+
+  // Setup toggle charts button
+  setupToggleCharts();
+}
+
+// Create Category Distribution Chart (Bar Chart)
+function createCategoryChart(textColor, gridColor) {
+  const ctx = document.getElementById('categoryChart');
+  if (!ctx) return;
+
+  const categoryData = {};
+  allStartups.forEach(startup => {
+    categoryData[startup.category] = (categoryData[startup.category] || 0) + 1;
+  });
+
+  const labels = Object.keys(categoryData).sort();
+  const data = labels.map(label => categoryData[label]);
+
+  if (charts.category) {
+    charts.category.destroy();
+  }
+
+  charts.category = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Number of Startups',
+        data: data,
+        backgroundColor: 'rgba(59, 130, 246, 0.7)',
+        borderColor: 'rgba(59, 130, 246, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return `${context.parsed.y} startup${context.parsed.y !== 1 ? 's' : ''}`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 1,
+            color: textColor
+          },
+          grid: {
+            color: gridColor
+          }
+        },
+        x: {
+          ticks: {
+            color: textColor
+          },
+          grid: {
+            color: gridColor
+          }
+        }
+      }
+    }
+  });
+}
+
+// Create Country Distribution Chart (Doughnut Chart)
+function createCountryChart(textColor, gridColor) {
+  const ctx = document.getElementById('countryChart');
+  if (!ctx) return;
+
+  const countryData = {};
+  allStartups.forEach(startup => {
+    countryData[startup.country] = (countryData[startup.country] || 0) + 1;
+  });
+
+  const labels = Object.keys(countryData).sort((a, b) => countryData[b] - countryData[a]).slice(0, 10);
+  const data = labels.map(label => countryData[label]);
+
+  const colors = [
+    'rgba(59, 130, 246, 0.8)',
+    'rgba(16, 185, 129, 0.8)',
+    'rgba(251, 146, 60, 0.8)',
+    'rgba(139, 92, 246, 0.8)',
+    'rgba(236, 72, 153, 0.8)',
+    'rgba(245, 158, 11, 0.8)',
+    'rgba(14, 165, 233, 0.8)',
+    'rgba(34, 197, 94, 0.8)',
+    'rgba(168, 85, 247, 0.8)',
+    'rgba(239, 68, 68, 0.8)'
+  ];
+
+  if (charts.country) {
+    charts.country.destroy();
+  }
+
+  charts.country = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: colors,
+        borderColor: colors.map(c => c.replace('0.8', '1')),
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: {
+            color: textColor,
+            padding: 10,
+            font: {
+              size: 11
+            }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.parsed || 0;
+              const total = context.dataset.data.reduce((a, b) => a + b, 0);
+              const percentage = ((value / total) * 100).toFixed(1);
+              return `${label}: ${value} (${percentage}%)`;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+// Create Region Distribution Chart (Pie Chart)
+function createRegionChart(textColor, gridColor) {
+  const ctx = document.getElementById('regionChart');
+  if (!ctx) return;
+
+  const regionData = {};
+  allStartups.forEach(startup => {
+    regionData[startup.region] = (regionData[startup.region] || 0) + 1;
+  });
+
+  const labels = Object.keys(regionData).sort((a, b) => regionData[b] - regionData[a]);
+  const data = labels.map(label => regionData[label]);
+
+  const colors = [
+    'rgba(59, 130, 246, 0.8)',
+    'rgba(16, 185, 129, 0.8)',
+    'rgba(251, 146, 60, 0.8)',
+    'rgba(139, 92, 246, 0.8)',
+    'rgba(236, 72, 153, 0.8)',
+    'rgba(245, 158, 11, 0.8)'
+  ];
+
+  if (charts.region) {
+    charts.region.destroy();
+  }
+
+  charts.region = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: colors,
+        borderColor: colors.map(c => c.replace('0.8', '1')),
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: {
+            color: textColor,
+            padding: 10,
+            font: {
+              size: 12
+            }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.parsed || 0;
+              const total = context.dataset.data.reduce((a, b) => a + b, 0);
+              const percentage = ((value / total) * 100).toFixed(1);
+              return `${label}: ${value} (${percentage}%)`;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+// Create Founding Year Trend Chart (Line Chart)
+function createYearChart(textColor, gridColor) {
+  const ctx = document.getElementById('yearChart');
+  if (!ctx) return;
+
+  const yearData = {};
+  allStartups.forEach(startup => {
+    if (startup.founded) {
+      yearData[startup.founded] = (yearData[startup.founded] || 0) + 1;
+    }
+  });
+
+  const labels = Object.keys(yearData).sort((a, b) => a - b);
+  const data = labels.map(label => yearData[label]);
+
+  if (charts.year) {
+    charts.year.destroy();
+  }
+
+  charts.year = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Startups Founded',
+        data: data,
+        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+        borderColor: 'rgba(59, 130, 246, 1)',
+        borderWidth: 2,
+        fill: true,
+        tension: 0.4,
+        pointRadius: 4,
+        pointBackgroundColor: 'rgba(59, 130, 246, 1)'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return `${context.parsed.y} startup${context.parsed.y !== 1 ? 's' : ''} founded`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 1,
+            color: textColor
+          },
+          grid: {
+            color: gridColor
+          }
+        },
+        x: {
+          ticks: {
+            color: textColor
+          },
+          grid: {
+            color: gridColor
+          }
+        }
+      }
+    }
+  });
+}
+
+// Setup toggle charts functionality
+function setupToggleCharts() {
+  const toggleBtn = document.getElementById('toggleCharts');
+  const chartsContainer = document.getElementById('chartsContainer');
+  
+  if (!toggleBtn || !chartsContainer) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isHidden = chartsContainer.classList.toggle('hidden');
+    toggleBtn.setAttribute('aria-expanded', !isHidden);
+    
+    const icon = toggleBtn.querySelector('i');
+    const text = toggleBtn.querySelector('span');
+    
+    if (isHidden) {
+      icon.className = 'fas fa-chevron-down';
+      text.textContent = 'Show Charts';
+    } else {
+      icon.className = 'fas fa-chevron-up';
+      text.textContent = 'Hide Charts';
+    }
+  });
+}
+
+// Update charts when theme changes
+function updateChartsTheme() {
+  if (typeof Chart === 'undefined' || !allStartups.length) return;
+  
+  const isDark = document.documentElement.classList.contains('dark');
+  const textColor = isDark ? '#e5e7eb' : '#374151';
+  const gridColor = isDark ? '#4b5563' : '#e5e7eb';
+
+  // Update each chart's theme
+  Object.values(charts).forEach(chart => {
+    if (chart) {
+      // Update scales colors
+      if (chart.options.scales) {
+        if (chart.options.scales.y) {
+          chart.options.scales.y.ticks.color = textColor;
+          chart.options.scales.y.grid.color = gridColor;
+        }
+        if (chart.options.scales.x) {
+          chart.options.scales.x.ticks.color = textColor;
+          chart.options.scales.x.grid.color = gridColor;
+        }
+      }
+      // Update legend colors
+      if (chart.options.plugins && chart.options.plugins.legend && chart.options.plugins.legend.labels) {
+        chart.options.plugins.legend.labels.color = textColor;
+      }
+      chart.update();
+    }
+  });
 }
 
 // Initialize the app when DOM is ready
