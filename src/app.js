@@ -4,6 +4,7 @@ let allStartups = [];
 let filteredStartups = [];
 let currentPage = 1;
 const startupsPerPage = 12;
+let fuse; // Fuse.js instance for fuzzy search
 
 // Performance optimization: Use requestAnimationFrame for smooth rendering
 
@@ -74,6 +75,7 @@ async function init() {
   try {
     showPreloader();
     await loadStartups();
+    initializeFuse();
     populateFilters();
     displayStartups(allStartups);
     setupEventListeners();
@@ -138,6 +140,27 @@ async function loadStartups() {
     console.error('Error loading startups:', error);
     throw error;
   }
+}
+
+// Initialize Fuse.js for fuzzy search
+function initializeFuse() {
+  const fuseOptions = {
+    keys: [
+      { name: 'name', weight: 2 },
+      { name: 'description', weight: 1.5 },
+      { name: 'category', weight: 1.2 },
+      { name: 'country', weight: 1 },
+      { name: 'region', weight: 1 },
+      { name: 'founders', weight: 0.8 },
+      { name: 'investors', weight: 0.8 }
+    ],
+    threshold: 0.4,
+    ignoreLocation: true,
+    useExtendedSearch: false,
+    includeScore: true
+  };
+  
+  fuse = new Fuse(allStartups, fuseOptions);
 }
 
 // Populate filter dropdowns
@@ -372,7 +395,7 @@ function createStartupCard(startup) {
 
 // Filter startups based on search and category
 function filterStartups() {
-  const searchTerm = searchInput.value.toLowerCase().trim();
+  const searchTerm = searchInput.value.trim();
   const selectedCategory = categoryFilter.value;
   const selectedCountry = countryFilter.value;
   const selectedRegion = regionFilter.value;
@@ -381,20 +404,20 @@ function filterStartups() {
   const normalizedCategory = selectedCategory.toLowerCase();
   const normalizedCountry = selectedCountry.toLowerCase();
   const normalizedRegion = selectedRegion.toLowerCase();
-    
-  filteredStartups = allStartups.filter(startup => {
-    // Check search term
-    const founders = Array.isArray(startup.founders) ? startup.founders.join(' ').toLowerCase() : '';
-    const investors = Array.isArray(startup.investors) ? startup.investors.join(' ').toLowerCase() : '';
-    const matchesSearch = searchTerm === '' ||
-            startup.name.toLowerCase().includes(searchTerm) ||
-            startup.description.toLowerCase().includes(searchTerm) ||
-            startup.category.toLowerCase().includes(searchTerm) ||
-            startup.country.toLowerCase().includes(searchTerm) ||
-            startup.region.toLowerCase().includes(searchTerm) ||
-            founders.includes(searchTerm) ||
-            investors.includes(searchTerm);
-        
+  
+  // Start with all startups or fuzzy search results
+  let results;
+  if (searchTerm === '') {
+    // No search term, use all startups
+    results = allStartups;
+  } else {
+    // Use Fuse.js for fuzzy search
+    const fuseResults = fuse.search(searchTerm);
+    results = fuseResults.map(result => result.item);
+  }
+  
+  // Apply filters to the search results
+  filteredStartups = results.filter(startup => {
     // Check category
     const matchesCategory = selectedCategory === 'all' || 
             startup.category.toLowerCase() === normalizedCategory;
@@ -407,7 +430,7 @@ function filterStartups() {
     const matchesRegion = selectedRegion === 'all' ||
             startup.region.toLowerCase() === normalizedRegion;
         
-    return matchesSearch && matchesCategory && matchesCountry && matchesRegion;
+    return matchesCategory && matchesCountry && matchesRegion;
   });
 
   // Sort the filtered startups

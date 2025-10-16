@@ -6,7 +6,7 @@ A responsive web application showcasing innovative startups from around the worl
 
 ## Features
 
-- 🔍 **Search Functionality** - Search startups by name, description, founders, investors, category, country, or region
+- 🔍 **Enhanced Fuzzy Search** - Intelligent search powered by Fuse.js with typo tolerance and relevance scoring. Search startups by name, description, founders, investors, category, country, or region
 - 🏷️ **Multi-Filter System** - Filter by category, country, and region simultaneously
 - 📊 **Sort Options** - Sort startups by name or founded date
 - 📈 **Data Visualization** - Interactive charts powered by Chart.js showing startup distribution by category, country, region, and founding year trends
@@ -17,6 +17,7 @@ A responsive web application showcasing innovative startups from around the worl
 - 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
 - ⚡ **Fast & Lightweight** - Automated build pipeline with minified CSS and JavaScript
 - 🎨 **Clean UI** - Modern design using Tailwind CSS v4
+- ✨ **Smooth Animations** - Scroll animations powered by AOS (Animate On Scroll)
 - 📲 **PWA Ready** - Progressive Web App support with manifest.json
 - 🚀 **Auto-Deploy** - GitHub Actions automatically builds and deploys on push
 
@@ -205,11 +206,72 @@ We chose Chart.js for several reasons:
 
 Learn more about Chart.js at [chartjs.org](https://www.chartjs.org/).
 
+## Intelligent Search with Fuse.js
+
+This project uses [Fuse.js](https://www.fusejs.io/), a powerful lightweight fuzzy-search library, to provide an intelligent search experience. Fuse.js is Apache-2.0 licensed and delivers fast, typo-tolerant search with relevance scoring.
+
+### Search Features
+
+- **Fuzzy Matching** - Find results even with typos or partial matches
+- **Multi-Field Search** - Search across name, description, category, country, region, founders, and investors
+- **Weighted Results** - More relevant fields (like name) have higher priority in search results
+- **Performance** - Fast client-side search with no server required
+
+### How It Works
+
+The search intelligently ranks results based on relevance:
+
+1. **Name** (highest weight) - Startup names get the most priority
+2. **Description** (high weight) - Detailed descriptions are highly relevant
+3. **Category** (medium weight) - Industry categories help narrow results
+4. **Location** (medium weight) - Country and region information
+5. **People** (lower weight) - Founders and investors are searchable but with lower priority
+
+### Why Fuse.js?
+
+We chose Fuse.js for several reasons:
+
+- **Open Source** - Fully open source under the Apache-2.0 license
+- **Zero Dependencies** - Lightweight with no external dependencies
+- **Typo Tolerance** - Finds results even when users make spelling mistakes
+- **Configurable** - Highly customizable scoring and matching algorithms
+- **Client-Side** - Fast, local search with no backend required
+- **Well-Documented** - Clear documentation and examples
+
+Learn more about Fuse.js at [fusejs.io](https://www.fusejs.io/).
+
+## Smooth Animations with AOS
+
+This project uses [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/), an open-source library for scroll animations. AOS is MIT licensed and provides smooth, performant animations triggered by scrolling.
+
+### Animation Features
+
+- **Scroll-Triggered** - Elements animate as they enter the viewport
+- **Performance** - Hardware-accelerated CSS animations
+- **Customizable** - Multiple animation types and timing options
+- **Accessibility** - Respects user's `prefers-reduced-motion` settings
+- **Easy Integration** - Simple data attributes for animation configuration
+
+### Why AOS?
+
+We chose AOS for several reasons:
+
+- **Open Source** - Fully open source under the MIT license
+- **Lightweight** - Small footprint with minimal performance impact
+- **User Experience** - Smooth animations enhance visual appeal
+- **Accessibility** - Built-in support for reduced motion preferences
+- **Easy to Use** - Simple API with data attributes
+
+Learn more about AOS at [michalsnik.github.io/aos](https://michalsnik.github.io/aos/).
+
 ## Technologies Used
 
 - **Frontend:** Vanilla JavaScript (ES6+), HTML5, CSS3
 - **Styling:** Tailwind CSS v4
-- **Data Visualization:** Chart.js v4.4.1 (open source charting library)
+- **Search:** Fuse.js v7.0.0 (fuzzy search library)
+- **Data Visualization:** Chart.js v4.4.1 (charting library)
+- **Animations:** AOS v2.3.1 (Animate On Scroll library)
+- **Icons:** Font Awesome v6.0
 - **Build Tools:** Terser (JS minification), Tailwind CLI (CSS compilation)
 - **CI/CD:** GitHub Actions
 - **Deployment:** GitHub Pages
